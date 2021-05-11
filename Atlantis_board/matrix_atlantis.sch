@@ -1,0 +1,5238 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	-850 -2950 -950 -2950
+Wire Wire Line
+	-850 -2850 -950 -2850
+Text GLabel -950 -2950 0    50   Input ~ 0
+SPI1_MOSI
+Text GLabel -950 -2850 0    50   Input ~ 0
+SPI1_CLK
+Wire Wire Line
+	-200 -2950 0    -2950
+Wire Wire Line
+	0    -2950 0    -2150
+Wire Wire Line
+	0    -2150 -950 -2150
+Wire Wire Line
+	-200 -2850 -100 -2850
+Wire Wire Line
+	-100 -2850 -100 -2250
+Wire Wire Line
+	-100 -2250 -1050 -2250
+Wire Wire Line
+	-950 600  -850 600 
+Wire Wire Line
+	-1050 700  -850 700 
+Wire Wire Line
+	550  700  650  700 
+Wire Wire Line
+	-200 700  -100 700 
+Wire Wire Line
+	-200 600  -100 600 
+$Comp
+L power:+5V #PWR073
+U 1 1 605979D4
+P 350 1100
+F 0 "#PWR073" H 350 950 50  0001 C CNN
+F 1 "+5V" H 365 1273 50  0000 C CNN
+F 2 "" H 350 1100 50  0001 C CNN
+F 3 "" H 350 1100 50  0001 C CNN
+	1    350  1100
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR058
+U 1 1 605979D3
+P 150 1100
+F 0 "#PWR058" H 150 850 50  0001 C CNN
+F 1 "GND" H 155 927 50  0000 C CNN
+F 2 "" H 150 1100 50  0001 C CNN
+F 3 "" H 150 1100 50  0001 C CNN
+	1    150  1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR043
+U 1 1 608F4D6C
+P -400 1100
+F 0 "#PWR043" H -400 950 50  0001 C CNN
+F 1 "+5V" H -385 1273 50  0000 C CNN
+F 2 "" H -400 1100 50  0001 C CNN
+F 3 "" H -400 1100 50  0001 C CNN
+	1    -400 1100
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR027
+U 1 1 608F4D66
+P -600 1100
+F 0 "#PWR027" H -600 850 50  0001 C CNN
+F 1 "GND" H -595 927 50  0000 C CNN
+F 2 "" H -600 1100 50  0001 C CNN
+F 3 "" H -600 1100 50  0001 C CNN
+	1    -600 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-b-2
+U 1 1 608EBFA2
+P 250 650
+F 0 "LED-b-2" H 225 873 50  0000 C CNN
+F 1 "SK9822-EC20" H 225 874 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 250 650 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 250 650 50  0001 C CNN
+	1    250  650 
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-b-1
+U 1 1 608EBF9C
+P -500 650
+F 0 "LED-b-1" H -525 873 50  0000 C CNN
+F 1 "SK9822-EC20" H -525 874 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H -500 650 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H -500 650 50  0001 C CNN
+	1    -500 650 
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-c-3
+U 1 1 6090F716
+P 1000 1800
+F 0 "LED-c-3" H 975 2023 50  0000 C CNN
+F 1 "SK9822-EC20" H 975 2024 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 1000 1800 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 1000 1800 50  0001 C CNN
+	1    1000 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-c-1
+U 1 1 6090F71C
+P -500 1800
+F 0 "LED-c-1" H -525 2023 50  0000 C CNN
+F 1 "SK9822-EC20" H -525 2024 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H -500 1800 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H -500 1800 50  0001 C CNN
+	1    -500 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-c-2
+U 1 1 6090F722
+P 250 1800
+F 0 "LED-c-2" H 225 2023 50  0000 C CNN
+F 1 "SK9822-EC20" H 225 2024 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 250 1800 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 250 1800 50  0001 C CNN
+	1    250  1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR028
+U 1 1 6090F73A
+P -600 2250
+F 0 "#PWR028" H -600 2000 50  0001 C CNN
+F 1 "GND" H -595 2077 50  0000 C CNN
+F 2 "" H -600 2250 50  0001 C CNN
+F 3 "" H -600 2250 50  0001 C CNN
+	1    -600 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR044
+U 1 1 6090F740
+P -400 2250
+F 0 "#PWR044" H -400 2100 50  0001 C CNN
+F 1 "+5V" H -385 2423 50  0000 C CNN
+F 2 "" H -400 2250 50  0001 C CNN
+F 3 "" H -400 2250 50  0001 C CNN
+	1    -400 2250
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR059
+U 1 1 605979E5
+P 150 2250
+F 0 "#PWR059" H 150 2000 50  0001 C CNN
+F 1 "GND" H 155 2077 50  0000 C CNN
+F 2 "" H 150 2250 50  0001 C CNN
+F 3 "" H 150 2250 50  0001 C CNN
+	1    150  2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR074
+U 1 1 605979E6
+P 350 2250
+F 0 "#PWR074" H 350 2100 50  0001 C CNN
+F 1 "+5V" H 365 2423 50  0000 C CNN
+F 2 "" H 350 2250 50  0001 C CNN
+F 3 "" H 350 2250 50  0001 C CNN
+	1    350  2250
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR089
+U 1 1 605979E7
+P 900 2250
+F 0 "#PWR089" H 900 2000 50  0001 C CNN
+F 1 "GND" H 905 2077 50  0000 C CNN
+F 2 "" H 900 2250 50  0001 C CNN
+F 3 "" H 900 2250 50  0001 C CNN
+	1    900  2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0104
+U 1 1 6090F758
+P 1100 2250
+F 0 "#PWR0104" H 1100 2100 50  0001 C CNN
+F 1 "+5V" H 1115 2423 50  0000 C CNN
+F 2 "" H 1100 2250 50  0001 C CNN
+F 3 "" H 1100 2250 50  0001 C CNN
+	1    1100 2250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	-200 1750 -100 1750
+Wire Wire Line
+	-200 1850 -100 1850
+Wire Wire Line
+	550  1750 650  1750
+Wire Wire Line
+	550  1850 650  1850
+Wire Wire Line
+	1300 1850 1400 1850
+Wire Wire Line
+	-1050 1850 -850 1850
+Wire Wire Line
+	-1050 1350 -1050 1850
+Wire Wire Line
+	-950 1750 -850 1750
+Wire Wire Line
+	-950 1450 -950 1750
+$Comp
+L _addressable_leds:SK9822-EC20 LED-d-3
+U 1 1 605979EF
+P 1000 2950
+F 0 "LED-d-3" H 975 3173 50  0000 C CNN
+F 1 "SK9822-EC20" H 975 3174 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 1000 2950 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 1000 2950 50  0001 C CNN
+	1    1000 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-d-1
+U 1 1 605979F0
+P -500 2950
+F 0 "LED-d-1" H -525 3173 50  0000 C CNN
+F 1 "SK9822-EC20" H -525 3174 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H -500 2950 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H -500 2950 50  0001 C CNN
+	1    -500 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-d-2
+U 1 1 6095E4B1
+P 250 2950
+F 0 "LED-d-2" H 225 3173 50  0000 C CNN
+F 1 "SK9822-EC20" H 225 3174 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 250 2950 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 250 2950 50  0001 C CNN
+	1    250  2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-d-4
+U 1 1 605979F2
+P 1750 2950
+F 0 "LED-d-4" H 1725 3173 50  0000 C CNN
+F 1 "SK9822-EC20" H 1725 3174 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 1750 2950 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 1750 2950 50  0001 C CNN
+	1    1750 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-d-5
+U 1 1 6095E4BD
+P 2500 2950
+F 0 "LED-d-5" H 2475 3173 50  0000 C CNN
+F 1 "SK9822-EC20" H 2475 3174 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 2500 2950 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 2500 2950 50  0001 C CNN
+	1    2500 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-d-6
+U 1 1 605979F4
+P 3250 2950
+F 0 "LED-d-6" H 3225 3173 50  0000 C CNN
+F 1 "SK9822-EC20" H 3225 3174 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 3250 2950 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 3250 2950 50  0001 C CNN
+	1    3250 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR029
+U 1 1 605979F5
+P -600 3400
+F 0 "#PWR029" H -600 3150 50  0001 C CNN
+F 1 "GND" H -595 3227 50  0000 C CNN
+F 2 "" H -600 3400 50  0001 C CNN
+F 3 "" H -600 3400 50  0001 C CNN
+	1    -600 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR045
+U 1 1 605979F6
+P -400 3400
+F 0 "#PWR045" H -400 3250 50  0001 C CNN
+F 1 "+5V" H -385 3573 50  0000 C CNN
+F 2 "" H -400 3400 50  0001 C CNN
+F 3 "" H -400 3400 50  0001 C CNN
+	1    -400 3400
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR060
+U 1 1 605979F7
+P 150 3400
+F 0 "#PWR060" H 150 3150 50  0001 C CNN
+F 1 "GND" H 155 3227 50  0000 C CNN
+F 2 "" H 150 3400 50  0001 C CNN
+F 3 "" H 150 3400 50  0001 C CNN
+	1    150  3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR075
+U 1 1 605979F8
+P 350 3400
+F 0 "#PWR075" H 350 3250 50  0001 C CNN
+F 1 "+5V" H 365 3573 50  0000 C CNN
+F 2 "" H 350 3400 50  0001 C CNN
+F 3 "" H 350 3400 50  0001 C CNN
+	1    350  3400
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR090
+U 1 1 605979F9
+P 900 3400
+F 0 "#PWR090" H 900 3150 50  0001 C CNN
+F 1 "GND" H 905 3227 50  0000 C CNN
+F 2 "" H 900 3400 50  0001 C CNN
+F 3 "" H 900 3400 50  0001 C CNN
+	1    900  3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0105
+U 1 1 605979FA
+P 1100 3400
+F 0 "#PWR0105" H 1100 3250 50  0001 C CNN
+F 1 "+5V" H 1115 3573 50  0000 C CNN
+F 2 "" H 1100 3400 50  0001 C CNN
+F 3 "" H 1100 3400 50  0001 C CNN
+	1    1100 3400
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0120
+U 1 1 6095E4ED
+P 1650 3400
+F 0 "#PWR0120" H 1650 3150 50  0001 C CNN
+F 1 "GND" H 1655 3227 50  0000 C CNN
+F 2 "" H 1650 3400 50  0001 C CNN
+F 3 "" H 1650 3400 50  0001 C CNN
+	1    1650 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0135
+U 1 1 605979FC
+P 1850 3400
+F 0 "#PWR0135" H 1850 3250 50  0001 C CNN
+F 1 "+5V" H 1865 3573 50  0000 C CNN
+F 2 "" H 1850 3400 50  0001 C CNN
+F 3 "" H 1850 3400 50  0001 C CNN
+	1    1850 3400
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0150
+U 1 1 605979FD
+P 2400 3400
+F 0 "#PWR0150" H 2400 3150 50  0001 C CNN
+F 1 "GND" H 2405 3227 50  0000 C CNN
+F 2 "" H 2400 3400 50  0001 C CNN
+F 3 "" H 2400 3400 50  0001 C CNN
+	1    2400 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0164
+U 1 1 605979FE
+P 2600 3400
+F 0 "#PWR0164" H 2600 3250 50  0001 C CNN
+F 1 "+5V" H 2615 3573 50  0000 C CNN
+F 2 "" H 2600 3400 50  0001 C CNN
+F 3 "" H 2600 3400 50  0001 C CNN
+	1    2600 3400
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0177
+U 1 1 605979FF
+P 3150 3400
+F 0 "#PWR0177" H 3150 3150 50  0001 C CNN
+F 1 "GND" H 3155 3227 50  0000 C CNN
+F 2 "" H 3150 3400 50  0001 C CNN
+F 3 "" H 3150 3400 50  0001 C CNN
+	1    3150 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0190
+U 1 1 6095E50B
+P 3350 3400
+F 0 "#PWR0190" H 3350 3250 50  0001 C CNN
+F 1 "+5V" H 3365 3573 50  0000 C CNN
+F 2 "" H 3350 3400 50  0001 C CNN
+F 3 "" H 3350 3400 50  0001 C CNN
+	1    3350 3400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	-200 2900 -100 2900
+Wire Wire Line
+	-200 3000 -100 3000
+Wire Wire Line
+	550  2900 650  2900
+Wire Wire Line
+	550  3000 650  3000
+Wire Wire Line
+	1300 2900 1400 2900
+Wire Wire Line
+	1300 3000 1400 3000
+Wire Wire Line
+	2050 2900 2150 2900
+Wire Wire Line
+	2050 3000 2150 3000
+Wire Wire Line
+	2800 2900 2900 2900
+Wire Wire Line
+	2800 3000 2900 3000
+Wire Wire Line
+	-1050 3000 -850 3000
+Wire Wire Line
+	-1050 2500 -1050 3000
+Wire Wire Line
+	-950 2900 -850 2900
+Wire Wire Line
+	-950 2600 -950 2900
+$Comp
+L _addressable_leds:SK9822-EC20 LED-e-3
+U 1 1 60597A01
+P 1000 4100
+F 0 "LED-e-3" H 975 4323 50  0000 C CNN
+F 1 "SK9822-EC20" H 975 4324 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 1000 4100 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 1000 4100 50  0001 C CNN
+	1    1000 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-e-1
+U 1 1 60597A02
+P -500 4100
+F 0 "LED-e-1" H -525 4323 50  0000 C CNN
+F 1 "SK9822-EC20" H -525 4324 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H -500 4100 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H -500 4100 50  0001 C CNN
+	1    -500 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-e-2
+U 1 1 60971391
+P 250 4100
+F 0 "LED-e-2" H 225 4323 50  0000 C CNN
+F 1 "SK9822-EC20" H 225 4324 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 250 4100 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 250 4100 50  0001 C CNN
+	1    250  4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-e-4
+U 1 1 60971397
+P 1750 4100
+F 0 "LED-e-4" H 1725 4323 50  0000 C CNN
+F 1 "SK9822-EC20" H 1725 4324 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 1750 4100 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 1750 4100 50  0001 C CNN
+	1    1750 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-e-5
+U 1 1 6097139D
+P 2500 4100
+F 0 "LED-e-5" H 2475 4323 50  0000 C CNN
+F 1 "SK9822-EC20" H 2475 4324 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 2500 4100 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 2500 4100 50  0001 C CNN
+	1    2500 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-e-6
+U 1 1 609713A3
+P 3250 4100
+F 0 "LED-e-6" H 3225 4323 50  0000 C CNN
+F 1 "SK9822-EC20" H 3225 4324 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 3250 4100 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 3250 4100 50  0001 C CNN
+	1    3250 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR030
+U 1 1 609713A9
+P -600 4550
+F 0 "#PWR030" H -600 4300 50  0001 C CNN
+F 1 "GND" H -595 4377 50  0000 C CNN
+F 2 "" H -600 4550 50  0001 C CNN
+F 3 "" H -600 4550 50  0001 C CNN
+	1    -600 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR046
+U 1 1 60597A08
+P -400 4550
+F 0 "#PWR046" H -400 4400 50  0001 C CNN
+F 1 "+5V" H -385 4723 50  0000 C CNN
+F 2 "" H -400 4550 50  0001 C CNN
+F 3 "" H -400 4550 50  0001 C CNN
+	1    -400 4550
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR061
+U 1 1 60597A09
+P 150 4550
+F 0 "#PWR061" H 150 4300 50  0001 C CNN
+F 1 "GND" H 155 4377 50  0000 C CNN
+F 2 "" H 150 4550 50  0001 C CNN
+F 3 "" H 150 4550 50  0001 C CNN
+	1    150  4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR076
+U 1 1 60597A0A
+P 350 4550
+F 0 "#PWR076" H 350 4400 50  0001 C CNN
+F 1 "+5V" H 365 4723 50  0000 C CNN
+F 2 "" H 350 4550 50  0001 C CNN
+F 3 "" H 350 4550 50  0001 C CNN
+	1    350  4550
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR091
+U 1 1 60597A0B
+P 900 4550
+F 0 "#PWR091" H 900 4300 50  0001 C CNN
+F 1 "GND" H 905 4377 50  0000 C CNN
+F 2 "" H 900 4550 50  0001 C CNN
+F 3 "" H 900 4550 50  0001 C CNN
+	1    900  4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0106
+U 1 1 60597A0C
+P 1100 4550
+F 0 "#PWR0106" H 1100 4400 50  0001 C CNN
+F 1 "+5V" H 1115 4723 50  0000 C CNN
+F 2 "" H 1100 4550 50  0001 C CNN
+F 3 "" H 1100 4550 50  0001 C CNN
+	1    1100 4550
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0121
+U 1 1 60597A0D
+P 1650 4550
+F 0 "#PWR0121" H 1650 4300 50  0001 C CNN
+F 1 "GND" H 1655 4377 50  0000 C CNN
+F 2 "" H 1650 4550 50  0001 C CNN
+F 3 "" H 1650 4550 50  0001 C CNN
+	1    1650 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0136
+U 1 1 60597A0E
+P 1850 4550
+F 0 "#PWR0136" H 1850 4400 50  0001 C CNN
+F 1 "+5V" H 1865 4723 50  0000 C CNN
+F 2 "" H 1850 4550 50  0001 C CNN
+F 3 "" H 1850 4550 50  0001 C CNN
+	1    1850 4550
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0151
+U 1 1 609713D9
+P 2400 4550
+F 0 "#PWR0151" H 2400 4300 50  0001 C CNN
+F 1 "GND" H 2405 4377 50  0000 C CNN
+F 2 "" H 2400 4550 50  0001 C CNN
+F 3 "" H 2400 4550 50  0001 C CNN
+	1    2400 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0165
+U 1 1 609713DF
+P 2600 4550
+F 0 "#PWR0165" H 2600 4400 50  0001 C CNN
+F 1 "+5V" H 2615 4723 50  0000 C CNN
+F 2 "" H 2600 4550 50  0001 C CNN
+F 3 "" H 2600 4550 50  0001 C CNN
+	1    2600 4550
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0178
+U 1 1 609713E5
+P 3150 4550
+F 0 "#PWR0178" H 3150 4300 50  0001 C CNN
+F 1 "GND" H 3155 4377 50  0000 C CNN
+F 2 "" H 3150 4550 50  0001 C CNN
+F 3 "" H 3150 4550 50  0001 C CNN
+	1    3150 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0191
+U 1 1 609713EB
+P 3350 4550
+F 0 "#PWR0191" H 3350 4400 50  0001 C CNN
+F 1 "+5V" H 3365 4723 50  0000 C CNN
+F 2 "" H 3350 4550 50  0001 C CNN
+F 3 "" H 3350 4550 50  0001 C CNN
+	1    3350 4550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	-200 4050 -100 4050
+Wire Wire Line
+	-200 4150 -100 4150
+Wire Wire Line
+	550  4050 650  4050
+Wire Wire Line
+	550  4150 650  4150
+Wire Wire Line
+	1300 4050 1400 4050
+Wire Wire Line
+	1300 4150 1400 4150
+Wire Wire Line
+	2050 4050 2150 4050
+Wire Wire Line
+	2050 4150 2150 4150
+Wire Wire Line
+	2800 4050 2900 4050
+Wire Wire Line
+	2800 4150 2900 4150
+Wire Wire Line
+	3750 3750 -950 3750
+Wire Wire Line
+	3750 2900 3750 3750
+Wire Wire Line
+	3650 3000 3650 3650
+Wire Wire Line
+	3650 3650 -1050 3650
+Wire Wire Line
+	-1050 4150 -850 4150
+Wire Wire Line
+	-1050 3650 -1050 4150
+Wire Wire Line
+	-950 4050 -850 4050
+Wire Wire Line
+	-950 3750 -950 4050
+Wire Wire Line
+	3650 3000 3550 3000
+Wire Wire Line
+	3750 2900 3550 2900
+$Comp
+L _addressable_leds:SK9822-EC20 LED-f-3
+U 1 1 60984408
+P 1000 5250
+F 0 "LED-f-3" H 975 5473 50  0000 C CNN
+F 1 "SK9822-EC20" H 975 5474 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 1000 5250 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 1000 5250 50  0001 C CNN
+	1    1000 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-f-1
+U 1 1 6098440E
+P -500 5250
+F 0 "LED-f-1" H -525 5473 50  0000 C CNN
+F 1 "SK9822-EC20" H -525 5474 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H -500 5250 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H -500 5250 50  0001 C CNN
+	1    -500 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-f-2
+U 1 1 60984414
+P 250 5250
+F 0 "LED-f-2" H 225 5473 50  0000 C CNN
+F 1 "SK9822-EC20" H 225 5474 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 250 5250 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 250 5250 50  0001 C CNN
+	1    250  5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-f-4
+U 1 1 60597A16
+P 1750 5250
+F 0 "LED-f-4" H 1725 5473 50  0000 C CNN
+F 1 "SK9822-EC20" H 1725 5474 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 1750 5250 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 1750 5250 50  0001 C CNN
+	1    1750 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-f-5
+U 1 1 60984420
+P 2500 5250
+F 0 "LED-f-5" H 2475 5473 50  0000 C CNN
+F 1 "SK9822-EC20" H 2475 5474 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 2500 5250 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 2500 5250 50  0001 C CNN
+	1    2500 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-f-6
+U 1 1 60984426
+P 3250 5250
+F 0 "LED-f-6" H 3225 5473 50  0000 C CNN
+F 1 "SK9822-EC20" H 3225 5474 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 3250 5250 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 3250 5250 50  0001 C CNN
+	1    3250 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR031
+U 1 1 6098442C
+P -600 5700
+F 0 "#PWR031" H -600 5450 50  0001 C CNN
+F 1 "GND" H -595 5527 50  0000 C CNN
+F 2 "" H -600 5700 50  0001 C CNN
+F 3 "" H -600 5700 50  0001 C CNN
+	1    -600 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR047
+U 1 1 60984432
+P -400 5700
+F 0 "#PWR047" H -400 5550 50  0001 C CNN
+F 1 "+5V" H -385 5873 50  0000 C CNN
+F 2 "" H -400 5700 50  0001 C CNN
+F 3 "" H -400 5700 50  0001 C CNN
+	1    -400 5700
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR062
+U 1 1 60984438
+P 150 5700
+F 0 "#PWR062" H 150 5450 50  0001 C CNN
+F 1 "GND" H 155 5527 50  0000 C CNN
+F 2 "" H 150 5700 50  0001 C CNN
+F 3 "" H 150 5700 50  0001 C CNN
+	1    150  5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR077
+U 1 1 60597A1C
+P 350 5700
+F 0 "#PWR077" H 350 5550 50  0001 C CNN
+F 1 "+5V" H 365 5873 50  0000 C CNN
+F 2 "" H 350 5700 50  0001 C CNN
+F 3 "" H 350 5700 50  0001 C CNN
+	1    350  5700
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR092
+U 1 1 60984444
+P 900 5700
+F 0 "#PWR092" H 900 5450 50  0001 C CNN
+F 1 "GND" H 905 5527 50  0000 C CNN
+F 2 "" H 900 5700 50  0001 C CNN
+F 3 "" H 900 5700 50  0001 C CNN
+	1    900  5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0107
+U 1 1 6098444A
+P 1100 5700
+F 0 "#PWR0107" H 1100 5550 50  0001 C CNN
+F 1 "+5V" H 1115 5873 50  0000 C CNN
+F 2 "" H 1100 5700 50  0001 C CNN
+F 3 "" H 1100 5700 50  0001 C CNN
+	1    1100 5700
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0122
+U 1 1 60984450
+P 1650 5700
+F 0 "#PWR0122" H 1650 5450 50  0001 C CNN
+F 1 "GND" H 1655 5527 50  0000 C CNN
+F 2 "" H 1650 5700 50  0001 C CNN
+F 3 "" H 1650 5700 50  0001 C CNN
+	1    1650 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0137
+U 1 1 60984456
+P 1850 5700
+F 0 "#PWR0137" H 1850 5550 50  0001 C CNN
+F 1 "+5V" H 1865 5873 50  0000 C CNN
+F 2 "" H 1850 5700 50  0001 C CNN
+F 3 "" H 1850 5700 50  0001 C CNN
+	1    1850 5700
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0152
+U 1 1 6098445C
+P 2400 5700
+F 0 "#PWR0152" H 2400 5450 50  0001 C CNN
+F 1 "GND" H 2405 5527 50  0000 C CNN
+F 2 "" H 2400 5700 50  0001 C CNN
+F 3 "" H 2400 5700 50  0001 C CNN
+	1    2400 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0166
+U 1 1 60597A22
+P 2600 5700
+F 0 "#PWR0166" H 2600 5550 50  0001 C CNN
+F 1 "+5V" H 2615 5873 50  0000 C CNN
+F 2 "" H 2600 5700 50  0001 C CNN
+F 3 "" H 2600 5700 50  0001 C CNN
+	1    2600 5700
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0179
+U 1 1 60984468
+P 3150 5700
+F 0 "#PWR0179" H 3150 5450 50  0001 C CNN
+F 1 "GND" H 3155 5527 50  0000 C CNN
+F 2 "" H 3150 5700 50  0001 C CNN
+F 3 "" H 3150 5700 50  0001 C CNN
+	1    3150 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0192
+U 1 1 60597A24
+P 3350 5700
+F 0 "#PWR0192" H 3350 5550 50  0001 C CNN
+F 1 "+5V" H 3365 5873 50  0000 C CNN
+F 2 "" H 3350 5700 50  0001 C CNN
+F 3 "" H 3350 5700 50  0001 C CNN
+	1    3350 5700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	-200 5200 -100 5200
+Wire Wire Line
+	-200 5300 -100 5300
+Wire Wire Line
+	550  5200 650  5200
+Wire Wire Line
+	550  5300 650  5300
+Wire Wire Line
+	1300 5200 1400 5200
+Wire Wire Line
+	1300 5300 1400 5300
+Wire Wire Line
+	2050 5200 2150 5200
+Wire Wire Line
+	2050 5300 2150 5300
+Wire Wire Line
+	2800 5200 2900 5200
+Wire Wire Line
+	2800 5300 2900 5300
+Wire Wire Line
+	3750 4050 3750 4900
+Wire Wire Line
+	3650 4150 3650 4800
+Wire Wire Line
+	3650 4800 -1050 4800
+Wire Wire Line
+	-1050 5300 -850 5300
+Wire Wire Line
+	-1050 4800 -1050 5300
+Wire Wire Line
+	-950 5200 -850 5200
+Wire Wire Line
+	-950 4900 -950 5200
+Wire Wire Line
+	3650 4150 3550 4150
+Wire Wire Line
+	3750 4050 3550 4050
+$Comp
+L _addressable_leds:SK9822-EC20 LED-g-3
+U 1 1 60597A25
+P 1000 6400
+F 0 "LED-g-3" H 975 6623 50  0000 C CNN
+F 1 "SK9822-EC20" H 975 6624 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 1000 6400 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 1000 6400 50  0001 C CNN
+	1    1000 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-g-1
+U 1 1 6099C77D
+P -500 6400
+F 0 "LED-g-1" H -525 6623 50  0000 C CNN
+F 1 "SK9822-EC20" H -525 6624 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H -500 6400 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H -500 6400 50  0001 C CNN
+	1    -500 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-g-2
+U 1 1 6099C783
+P 250 6400
+F 0 "LED-g-2" H 225 6623 50  0000 C CNN
+F 1 "SK9822-EC20" H 225 6624 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 250 6400 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 250 6400 50  0001 C CNN
+	1    250  6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-g-4
+U 1 1 6099C789
+P 1750 6400
+F 0 "LED-g-4" H 1725 6623 50  0000 C CNN
+F 1 "SK9822-EC20" H 1725 6624 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 1750 6400 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 1750 6400 50  0001 C CNN
+	1    1750 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-g-5
+U 1 1 6099C78F
+P 2500 6400
+F 0 "LED-g-5" H 2475 6623 50  0000 C CNN
+F 1 "SK9822-EC20" H 2475 6624 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 2500 6400 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 2500 6400 50  0001 C CNN
+	1    2500 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-g-6
+U 1 1 60597A2A
+P 3250 6400
+F 0 "LED-g-6" H 3225 6623 50  0000 C CNN
+F 1 "SK9822-EC20" H 3225 6624 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 3250 6400 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 3250 6400 50  0001 C CNN
+	1    3250 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR032
+U 1 1 60597A2B
+P -600 6850
+F 0 "#PWR032" H -600 6600 50  0001 C CNN
+F 1 "GND" H -595 6677 50  0000 C CNN
+F 2 "" H -600 6850 50  0001 C CNN
+F 3 "" H -600 6850 50  0001 C CNN
+	1    -600 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR048
+U 1 1 60597A2C
+P -400 6850
+F 0 "#PWR048" H -400 6700 50  0001 C CNN
+F 1 "+5V" H -385 7023 50  0000 C CNN
+F 2 "" H -400 6850 50  0001 C CNN
+F 3 "" H -400 6850 50  0001 C CNN
+	1    -400 6850
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR063
+U 1 1 60597A2D
+P 150 6850
+F 0 "#PWR063" H 150 6600 50  0001 C CNN
+F 1 "GND" H 155 6677 50  0000 C CNN
+F 2 "" H 150 6850 50  0001 C CNN
+F 3 "" H 150 6850 50  0001 C CNN
+	1    150  6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR078
+U 1 1 60597A2E
+P 350 6850
+F 0 "#PWR078" H 350 6700 50  0001 C CNN
+F 1 "+5V" H 365 7023 50  0000 C CNN
+F 2 "" H 350 6850 50  0001 C CNN
+F 3 "" H 350 6850 50  0001 C CNN
+	1    350  6850
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR093
+U 1 1 60597A2F
+P 900 6850
+F 0 "#PWR093" H 900 6600 50  0001 C CNN
+F 1 "GND" H 905 6677 50  0000 C CNN
+F 2 "" H 900 6850 50  0001 C CNN
+F 3 "" H 900 6850 50  0001 C CNN
+	1    900  6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0108
+U 1 1 60597A30
+P 1100 6850
+F 0 "#PWR0108" H 1100 6700 50  0001 C CNN
+F 1 "+5V" H 1115 7023 50  0000 C CNN
+F 2 "" H 1100 6850 50  0001 C CNN
+F 3 "" H 1100 6850 50  0001 C CNN
+	1    1100 6850
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0123
+U 1 1 60597A31
+P 1650 6850
+F 0 "#PWR0123" H 1650 6600 50  0001 C CNN
+F 1 "GND" H 1655 6677 50  0000 C CNN
+F 2 "" H 1650 6850 50  0001 C CNN
+F 3 "" H 1650 6850 50  0001 C CNN
+	1    1650 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0138
+U 1 1 60597A32
+P 1850 6850
+F 0 "#PWR0138" H 1850 6700 50  0001 C CNN
+F 1 "+5V" H 1865 7023 50  0000 C CNN
+F 2 "" H 1850 6850 50  0001 C CNN
+F 3 "" H 1850 6850 50  0001 C CNN
+	1    1850 6850
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0153
+U 1 1 6099C7CB
+P 2400 6850
+F 0 "#PWR0153" H 2400 6600 50  0001 C CNN
+F 1 "GND" H 2405 6677 50  0000 C CNN
+F 2 "" H 2400 6850 50  0001 C CNN
+F 3 "" H 2400 6850 50  0001 C CNN
+	1    2400 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0167
+U 1 1 60597A34
+P 2600 6850
+F 0 "#PWR0167" H 2600 6700 50  0001 C CNN
+F 1 "+5V" H 2615 7023 50  0000 C CNN
+F 2 "" H 2600 6850 50  0001 C CNN
+F 3 "" H 2600 6850 50  0001 C CNN
+	1    2600 6850
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0180
+U 1 1 60597A35
+P 3150 6850
+F 0 "#PWR0180" H 3150 6600 50  0001 C CNN
+F 1 "GND" H 3155 6677 50  0000 C CNN
+F 2 "" H 3150 6850 50  0001 C CNN
+F 3 "" H 3150 6850 50  0001 C CNN
+	1    3150 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0193
+U 1 1 6099C7DD
+P 3350 6850
+F 0 "#PWR0193" H 3350 6700 50  0001 C CNN
+F 1 "+5V" H 3365 7023 50  0000 C CNN
+F 2 "" H 3350 6850 50  0001 C CNN
+F 3 "" H 3350 6850 50  0001 C CNN
+	1    3350 6850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	-200 6350 -100 6350
+Wire Wire Line
+	-200 6450 -100 6450
+Wire Wire Line
+	550  6350 650  6350
+Wire Wire Line
+	550  6450 650  6450
+Wire Wire Line
+	1300 6350 1400 6350
+Wire Wire Line
+	1300 6450 1400 6450
+Wire Wire Line
+	2050 6350 2150 6350
+Wire Wire Line
+	2050 6450 2150 6450
+Wire Wire Line
+	2800 6350 2900 6350
+Wire Wire Line
+	2800 6450 2900 6450
+Wire Wire Line
+	3750 6050 -950 6050
+Wire Wire Line
+	3750 5200 3750 6050
+Wire Wire Line
+	3650 5300 3650 5950
+Wire Wire Line
+	3650 5950 -1050 5950
+Wire Wire Line
+	-1050 6450 -850 6450
+Wire Wire Line
+	-1050 5950 -1050 6450
+Wire Wire Line
+	-950 6350 -850 6350
+Wire Wire Line
+	-950 6050 -950 6350
+Wire Wire Line
+	3650 5300 3550 5300
+Wire Wire Line
+	3750 5200 3550 5200
+$Comp
+L _addressable_leds:SK9822-EC20 LED-h-3
+U 1 1 609B7BA4
+P 1000 7550
+F 0 "LED-h-3" H 975 7773 50  0000 C CNN
+F 1 "SK9822-EC20" H 975 7774 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 1000 7550 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 1000 7550 50  0001 C CNN
+	1    1000 7550
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-h-1
+U 1 1 60597A38
+P -500 7550
+F 0 "LED-h-1" H -525 7773 50  0000 C CNN
+F 1 "SK9822-EC20" H -525 7774 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H -500 7550 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H -500 7550 50  0001 C CNN
+	1    -500 7550
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-h-2
+U 1 1 60597A39
+P 250 7550
+F 0 "LED-h-2" H 225 7773 50  0000 C CNN
+F 1 "SK9822-EC20" H 225 7774 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 250 7550 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 250 7550 50  0001 C CNN
+	1    250  7550
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-h-4
+U 1 1 60597A3A
+P 1750 7550
+F 0 "LED-h-4" H 1725 7773 50  0000 C CNN
+F 1 "SK9822-EC20" H 1725 7774 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 1750 7550 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 1750 7550 50  0001 C CNN
+	1    1750 7550
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-h-5
+U 1 1 60597A3B
+P 2500 7550
+F 0 "LED-h-5" H 2475 7773 50  0000 C CNN
+F 1 "SK9822-EC20" H 2475 7774 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 2500 7550 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 2500 7550 50  0001 C CNN
+	1    2500 7550
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-h-6
+U 1 1 60597A3C
+P 3250 7550
+F 0 "LED-h-6" H 3225 7773 50  0000 C CNN
+F 1 "SK9822-EC20" H 3225 7774 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 3250 7550 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 3250 7550 50  0001 C CNN
+	1    3250 7550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR033
+U 1 1 60597A3D
+P -600 8000
+F 0 "#PWR033" H -600 7750 50  0001 C CNN
+F 1 "GND" H -595 7827 50  0000 C CNN
+F 2 "" H -600 8000 50  0001 C CNN
+F 3 "" H -600 8000 50  0001 C CNN
+	1    -600 8000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR049
+U 1 1 609B7BCE
+P -400 8000
+F 0 "#PWR049" H -400 7850 50  0001 C CNN
+F 1 "+5V" H -385 8173 50  0000 C CNN
+F 2 "" H -400 8000 50  0001 C CNN
+F 3 "" H -400 8000 50  0001 C CNN
+	1    -400 8000
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR064
+U 1 1 609B7BD4
+P 150 8000
+F 0 "#PWR064" H 150 7750 50  0001 C CNN
+F 1 "GND" H 155 7827 50  0000 C CNN
+F 2 "" H 150 8000 50  0001 C CNN
+F 3 "" H 150 8000 50  0001 C CNN
+	1    150  8000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR079
+U 1 1 609B7BDA
+P 350 8000
+F 0 "#PWR079" H 350 7850 50  0001 C CNN
+F 1 "+5V" H 365 8173 50  0000 C CNN
+F 2 "" H 350 8000 50  0001 C CNN
+F 3 "" H 350 8000 50  0001 C CNN
+	1    350  8000
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR094
+U 1 1 609B7BE0
+P 900 8000
+F 0 "#PWR094" H 900 7750 50  0001 C CNN
+F 1 "GND" H 905 7827 50  0000 C CNN
+F 2 "" H 900 8000 50  0001 C CNN
+F 3 "" H 900 8000 50  0001 C CNN
+	1    900  8000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0109
+U 1 1 609B7BE6
+P 1100 8000
+F 0 "#PWR0109" H 1100 7850 50  0001 C CNN
+F 1 "+5V" H 1115 8173 50  0000 C CNN
+F 2 "" H 1100 8000 50  0001 C CNN
+F 3 "" H 1100 8000 50  0001 C CNN
+	1    1100 8000
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0124
+U 1 1 609B7BEC
+P 1650 8000
+F 0 "#PWR0124" H 1650 7750 50  0001 C CNN
+F 1 "GND" H 1655 7827 50  0000 C CNN
+F 2 "" H 1650 8000 50  0001 C CNN
+F 3 "" H 1650 8000 50  0001 C CNN
+	1    1650 8000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0139
+U 1 1 60597A44
+P 1850 8000
+F 0 "#PWR0139" H 1850 7850 50  0001 C CNN
+F 1 "+5V" H 1865 8173 50  0000 C CNN
+F 2 "" H 1850 8000 50  0001 C CNN
+F 3 "" H 1850 8000 50  0001 C CNN
+	1    1850 8000
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0154
+U 1 1 60597A45
+P 2400 8000
+F 0 "#PWR0154" H 2400 7750 50  0001 C CNN
+F 1 "GND" H 2405 7827 50  0000 C CNN
+F 2 "" H 2400 8000 50  0001 C CNN
+F 3 "" H 2400 8000 50  0001 C CNN
+	1    2400 8000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0168
+U 1 1 60597A46
+P 2600 8000
+F 0 "#PWR0168" H 2600 7850 50  0001 C CNN
+F 1 "+5V" H 2615 8173 50  0000 C CNN
+F 2 "" H 2600 8000 50  0001 C CNN
+F 3 "" H 2600 8000 50  0001 C CNN
+	1    2600 8000
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0181
+U 1 1 609B7C04
+P 3150 8000
+F 0 "#PWR0181" H 3150 7750 50  0001 C CNN
+F 1 "GND" H 3155 7827 50  0000 C CNN
+F 2 "" H 3150 8000 50  0001 C CNN
+F 3 "" H 3150 8000 50  0001 C CNN
+	1    3150 8000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0194
+U 1 1 609B7C0A
+P 3350 8000
+F 0 "#PWR0194" H 3350 7850 50  0001 C CNN
+F 1 "+5V" H 3365 8173 50  0000 C CNN
+F 2 "" H 3350 8000 50  0001 C CNN
+F 3 "" H 3350 8000 50  0001 C CNN
+	1    3350 8000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	-200 7500 -100 7500
+Wire Wire Line
+	-200 7600 -100 7600
+Wire Wire Line
+	550  7500 650  7500
+Wire Wire Line
+	550  7600 650  7600
+Wire Wire Line
+	1300 7500 1400 7500
+Wire Wire Line
+	1300 7600 1400 7600
+Wire Wire Line
+	2050 7500 2150 7500
+Wire Wire Line
+	2050 7600 2150 7600
+Wire Wire Line
+	2800 7500 2900 7500
+Wire Wire Line
+	2800 7600 2900 7600
+Wire Wire Line
+	3750 7200 -950 7200
+Wire Wire Line
+	3750 6350 3750 7200
+Wire Wire Line
+	3650 6450 3650 7100
+Wire Wire Line
+	3650 7100 -1050 7100
+Wire Wire Line
+	-1050 7600 -850 7600
+Wire Wire Line
+	-1050 7100 -1050 7600
+Wire Wire Line
+	-950 7500 -850 7500
+Wire Wire Line
+	-950 7200 -950 7500
+Wire Wire Line
+	3650 6450 3550 6450
+Wire Wire Line
+	3750 6350 3550 6350
+$Comp
+L _addressable_leds:SK9822-EC20 LED-i-3
+U 1 1 60597A49
+P 1000 8700
+F 0 "LED-i-3" H 975 8923 50  0000 C CNN
+F 1 "SK9822-EC20" H 975 8924 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 1000 8700 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 1000 8700 50  0001 C CNN
+	1    1000 8700
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-i-1
+U 1 1 60597A4A
+P -500 8700
+F 0 "LED-i-1" H -525 8923 50  0000 C CNN
+F 1 "SK9822-EC20" H -525 8924 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H -500 8700 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H -500 8700 50  0001 C CNN
+	1    -500 8700
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-i-2
+U 1 1 609D9841
+P 250 8700
+F 0 "LED-i-2" H 225 8923 50  0000 C CNN
+F 1 "SK9822-EC20" H 225 8924 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 250 8700 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 250 8700 50  0001 C CNN
+	1    250  8700
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-i-4
+U 1 1 609D9847
+P 1750 8700
+F 0 "LED-i-4" H 1725 8923 50  0000 C CNN
+F 1 "SK9822-EC20" H 1725 8924 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 1750 8700 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 1750 8700 50  0001 C CNN
+	1    1750 8700
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-i-5
+U 1 1 609D984D
+P 2500 8700
+F 0 "LED-i-5" H 2475 8923 50  0000 C CNN
+F 1 "SK9822-EC20" H 2475 8924 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 2500 8700 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 2500 8700 50  0001 C CNN
+	1    2500 8700
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-i-6
+U 1 1 60597A4E
+P 3250 8700
+F 0 "LED-i-6" H 3225 8923 50  0000 C CNN
+F 1 "SK9822-EC20" H 3225 8924 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 3250 8700 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 3250 8700 50  0001 C CNN
+	1    3250 8700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR034
+U 1 1 609D9859
+P -600 9150
+F 0 "#PWR034" H -600 8900 50  0001 C CNN
+F 1 "GND" H -595 8977 50  0000 C CNN
+F 2 "" H -600 9150 50  0001 C CNN
+F 3 "" H -600 9150 50  0001 C CNN
+	1    -600 9150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR050
+U 1 1 609D985F
+P -400 9150
+F 0 "#PWR050" H -400 9000 50  0001 C CNN
+F 1 "+5V" H -385 9323 50  0000 C CNN
+F 2 "" H -400 9150 50  0001 C CNN
+F 3 "" H -400 9150 50  0001 C CNN
+	1    -400 9150
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR065
+U 1 1 609D9865
+P 150 9150
+F 0 "#PWR065" H 150 8900 50  0001 C CNN
+F 1 "GND" H 155 8977 50  0000 C CNN
+F 2 "" H 150 9150 50  0001 C CNN
+F 3 "" H 150 9150 50  0001 C CNN
+	1    150  9150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR080
+U 1 1 60597A52
+P 350 9150
+F 0 "#PWR080" H 350 9000 50  0001 C CNN
+F 1 "+5V" H 365 9323 50  0000 C CNN
+F 2 "" H 350 9150 50  0001 C CNN
+F 3 "" H 350 9150 50  0001 C CNN
+	1    350  9150
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR095
+U 1 1 609D9871
+P 900 9150
+F 0 "#PWR095" H 900 8900 50  0001 C CNN
+F 1 "GND" H 905 8977 50  0000 C CNN
+F 2 "" H 900 9150 50  0001 C CNN
+F 3 "" H 900 9150 50  0001 C CNN
+	1    900  9150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0110
+U 1 1 609D9877
+P 1100 9150
+F 0 "#PWR0110" H 1100 9000 50  0001 C CNN
+F 1 "+5V" H 1115 9323 50  0000 C CNN
+F 2 "" H 1100 9150 50  0001 C CNN
+F 3 "" H 1100 9150 50  0001 C CNN
+	1    1100 9150
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0125
+U 1 1 609D987D
+P 1650 9150
+F 0 "#PWR0125" H 1650 8900 50  0001 C CNN
+F 1 "GND" H 1655 8977 50  0000 C CNN
+F 2 "" H 1650 9150 50  0001 C CNN
+F 3 "" H 1650 9150 50  0001 C CNN
+	1    1650 9150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0140
+U 1 1 60597A56
+P 1850 9150
+F 0 "#PWR0140" H 1850 9000 50  0001 C CNN
+F 1 "+5V" H 1865 9323 50  0000 C CNN
+F 2 "" H 1850 9150 50  0001 C CNN
+F 3 "" H 1850 9150 50  0001 C CNN
+	1    1850 9150
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0155
+U 1 1 609D9889
+P 2400 9150
+F 0 "#PWR0155" H 2400 8900 50  0001 C CNN
+F 1 "GND" H 2405 8977 50  0000 C CNN
+F 2 "" H 2400 9150 50  0001 C CNN
+F 3 "" H 2400 9150 50  0001 C CNN
+	1    2400 9150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0169
+U 1 1 60597A58
+P 2600 9150
+F 0 "#PWR0169" H 2600 9000 50  0001 C CNN
+F 1 "+5V" H 2615 9323 50  0000 C CNN
+F 2 "" H 2600 9150 50  0001 C CNN
+F 3 "" H 2600 9150 50  0001 C CNN
+	1    2600 9150
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0182
+U 1 1 609D9895
+P 3150 9150
+F 0 "#PWR0182" H 3150 8900 50  0001 C CNN
+F 1 "GND" H 3155 8977 50  0000 C CNN
+F 2 "" H 3150 9150 50  0001 C CNN
+F 3 "" H 3150 9150 50  0001 C CNN
+	1    3150 9150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0195
+U 1 1 609D989B
+P 3350 9150
+F 0 "#PWR0195" H 3350 9000 50  0001 C CNN
+F 1 "+5V" H 3365 9323 50  0000 C CNN
+F 2 "" H 3350 9150 50  0001 C CNN
+F 3 "" H 3350 9150 50  0001 C CNN
+	1    3350 9150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	-200 8650 -100 8650
+Wire Wire Line
+	-200 8750 -100 8750
+Wire Wire Line
+	550  8650 650  8650
+Wire Wire Line
+	550  8750 650  8750
+Wire Wire Line
+	1300 8650 1400 8650
+Wire Wire Line
+	1300 8750 1400 8750
+Wire Wire Line
+	2050 8650 2150 8650
+Wire Wire Line
+	2050 8750 2150 8750
+Wire Wire Line
+	2800 8650 2900 8650
+Wire Wire Line
+	2800 8750 2900 8750
+Wire Wire Line
+	3750 8350 -950 8350
+Wire Wire Line
+	3750 7500 3750 8350
+Wire Wire Line
+	3650 7600 3650 8250
+Wire Wire Line
+	3650 8250 -1050 8250
+Wire Wire Line
+	-1050 8750 -850 8750
+Wire Wire Line
+	-1050 8250 -1050 8750
+Wire Wire Line
+	-950 8650 -850 8650
+Wire Wire Line
+	-950 8350 -950 8650
+Wire Wire Line
+	3650 7600 3550 7600
+Wire Wire Line
+	3750 7500 3550 7500
+$Comp
+L _addressable_leds:SK9822-EC20 LED-j-3
+U 1 1 60A02D51
+P 1000 9850
+F 0 "LED-j-3" H 975 10073 50  0000 C CNN
+F 1 "SK9822-EC20" H 975 10074 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 1000 9850 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 1000 9850 50  0001 C CNN
+	1    1000 9850
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-j-1
+U 1 1 60A02D57
+P -500 9850
+F 0 "LED-j-1" H -525 10073 50  0000 C CNN
+F 1 "SK9822-EC20" H -525 10074 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H -500 9850 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H -500 9850 50  0001 C CNN
+	1    -500 9850
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-j-2
+U 1 1 60A02D5D
+P 250 9850
+F 0 "LED-j-2" H 225 10073 50  0000 C CNN
+F 1 "SK9822-EC20" H 225 10074 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 250 9850 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 250 9850 50  0001 C CNN
+	1    250  9850
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-j-4
+U 1 1 60A02D63
+P 1750 9850
+F 0 "LED-j-4" H 1725 10073 50  0000 C CNN
+F 1 "SK9822-EC20" H 1725 10074 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 1750 9850 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 1750 9850 50  0001 C CNN
+	1    1750 9850
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-j-5
+U 1 1 60A02D69
+P 2500 9850
+F 0 "LED-j-5" H 2475 10073 50  0000 C CNN
+F 1 "SK9822-EC20" H 2475 10074 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 2500 9850 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 2500 9850 50  0001 C CNN
+	1    2500 9850
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-j-6
+U 1 1 60597A60
+P 3250 9850
+F 0 "LED-j-6" H 3225 10073 50  0000 C CNN
+F 1 "SK9822-EC20" H 3225 10074 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 3250 9850 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 3250 9850 50  0001 C CNN
+	1    3250 9850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR035
+U 1 1 60A02D75
+P -600 10300
+F 0 "#PWR035" H -600 10050 50  0001 C CNN
+F 1 "GND" H -595 10127 50  0000 C CNN
+F 2 "" H -600 10300 50  0001 C CNN
+F 3 "" H -600 10300 50  0001 C CNN
+	1    -600 10300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR051
+U 1 1 60A02D7B
+P -400 10300
+F 0 "#PWR051" H -400 10150 50  0001 C CNN
+F 1 "+5V" H -385 10473 50  0000 C CNN
+F 2 "" H -400 10300 50  0001 C CNN
+F 3 "" H -400 10300 50  0001 C CNN
+	1    -400 10300
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR066
+U 1 1 60A02D81
+P 150 10300
+F 0 "#PWR066" H 150 10050 50  0001 C CNN
+F 1 "GND" H 155 10127 50  0000 C CNN
+F 2 "" H 150 10300 50  0001 C CNN
+F 3 "" H 150 10300 50  0001 C CNN
+	1    150  10300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR081
+U 1 1 60A02D87
+P 350 10300
+F 0 "#PWR081" H 350 10150 50  0001 C CNN
+F 1 "+5V" H 365 10473 50  0000 C CNN
+F 2 "" H 350 10300 50  0001 C CNN
+F 3 "" H 350 10300 50  0001 C CNN
+	1    350  10300
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR096
+U 1 1 60A02D8D
+P 900 10300
+F 0 "#PWR096" H 900 10050 50  0001 C CNN
+F 1 "GND" H 905 10127 50  0000 C CNN
+F 2 "" H 900 10300 50  0001 C CNN
+F 3 "" H 900 10300 50  0001 C CNN
+	1    900  10300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0111
+U 1 1 60597A66
+P 1100 10300
+F 0 "#PWR0111" H 1100 10150 50  0001 C CNN
+F 1 "+5V" H 1115 10473 50  0000 C CNN
+F 2 "" H 1100 10300 50  0001 C CNN
+F 3 "" H 1100 10300 50  0001 C CNN
+	1    1100 10300
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0126
+U 1 1 60597A67
+P 1650 10300
+F 0 "#PWR0126" H 1650 10050 50  0001 C CNN
+F 1 "GND" H 1655 10127 50  0000 C CNN
+F 2 "" H 1650 10300 50  0001 C CNN
+F 3 "" H 1650 10300 50  0001 C CNN
+	1    1650 10300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0141
+U 1 1 60597A68
+P 1850 10300
+F 0 "#PWR0141" H 1850 10150 50  0001 C CNN
+F 1 "+5V" H 1865 10473 50  0000 C CNN
+F 2 "" H 1850 10300 50  0001 C CNN
+F 3 "" H 1850 10300 50  0001 C CNN
+	1    1850 10300
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0156
+U 1 1 60A02DA5
+P 2400 10300
+F 0 "#PWR0156" H 2400 10050 50  0001 C CNN
+F 1 "GND" H 2405 10127 50  0000 C CNN
+F 2 "" H 2400 10300 50  0001 C CNN
+F 3 "" H 2400 10300 50  0001 C CNN
+	1    2400 10300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0170
+U 1 1 60597A6A
+P 2600 10300
+F 0 "#PWR0170" H 2600 10150 50  0001 C CNN
+F 1 "+5V" H 2615 10473 50  0000 C CNN
+F 2 "" H 2600 10300 50  0001 C CNN
+F 3 "" H 2600 10300 50  0001 C CNN
+	1    2600 10300
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0183
+U 1 1 60597A6B
+P 3150 10300
+F 0 "#PWR0183" H 3150 10050 50  0001 C CNN
+F 1 "GND" H 3155 10127 50  0000 C CNN
+F 2 "" H 3150 10300 50  0001 C CNN
+F 3 "" H 3150 10300 50  0001 C CNN
+	1    3150 10300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0196
+U 1 1 60597A6C
+P 3350 10300
+F 0 "#PWR0196" H 3350 10150 50  0001 C CNN
+F 1 "+5V" H 3365 10473 50  0000 C CNN
+F 2 "" H 3350 10300 50  0001 C CNN
+F 3 "" H 3350 10300 50  0001 C CNN
+	1    3350 10300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	-200 9800 -100 9800
+Wire Wire Line
+	-200 9900 -100 9900
+Wire Wire Line
+	550  9800 650  9800
+Wire Wire Line
+	550  9900 650  9900
+Wire Wire Line
+	1300 9800 1400 9800
+Wire Wire Line
+	1300 9900 1400 9900
+Wire Wire Line
+	2050 9800 2150 9800
+Wire Wire Line
+	2050 9900 2150 9900
+Wire Wire Line
+	2800 9800 2900 9800
+Wire Wire Line
+	2800 9900 2900 9900
+Wire Wire Line
+	-1050 9900 -850 9900
+Wire Wire Line
+	-1050 9400 -1050 9900
+Wire Wire Line
+	-950 9800 -850 9800
+Wire Wire Line
+	-950 9500 -950 9800
+Wire Wire Line
+	6200 -350 6400 -350
+Wire Wire Line
+	6300 -450 6400 -450
+$Comp
+L power:+5V #PWR041
+U 1 1 605979C6
+P -400 -2450
+F 0 "#PWR041" H -400 -2600 50  0001 C CNN
+F 1 "+5V" H -385 -2277 50  0000 C CNN
+F 2 "" H -400 -2450 50  0001 C CNN
+F 3 "" H -400 -2450 50  0001 C CNN
+	1    -400 -2450
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR025
+U 1 1 605979C5
+P -600 -2450
+F 0 "#PWR025" H -600 -2700 50  0001 C CNN
+F 1 "GND" H -595 -2623 50  0000 C CNN
+F 2 "" H -600 -2450 50  0001 C CNN
+F 3 "" H -600 -2450 50  0001 C CNN
+	1    -600 -2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-0
+U 1 1 608E1C4C
+P -500 -2900
+F 0 "LED-0" H -525 -2677 50  0000 C CNN
+F 1 "SK9822-EC20" H -525 -2676 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H -500 -2900 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H -500 -2900 50  0001 C CNN
+	1    -500 -2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	-600 -2500 -600 -2450
+Wire Wire Line
+	-400 -2500 -400 -2450
+Wire Wire Line
+	350  1050 350  1100
+Wire Wire Line
+	150  1050 150  1100
+Wire Wire Line
+	-400 1050 -400 1100
+Wire Wire Line
+	-600 1050 -600 1100
+Wire Wire Line
+	1100 2200 1100 2250
+Wire Wire Line
+	900  2200 900  2250
+Wire Wire Line
+	350  2200 350  2250
+Wire Wire Line
+	150  2200 150  2250
+Wire Wire Line
+	-400 2200 -400 2250
+Wire Wire Line
+	-600 2200 -600 2250
+Wire Wire Line
+	-600 3350 -600 3400
+Wire Wire Line
+	-400 3350 -400 3400
+Wire Wire Line
+	150  3350 150  3400
+Wire Wire Line
+	350  3350 350  3400
+Wire Wire Line
+	900  3350 900  3400
+Wire Wire Line
+	1100 3350 1100 3400
+Wire Wire Line
+	1650 3350 1650 3400
+Wire Wire Line
+	1850 3350 1850 3400
+Wire Wire Line
+	2400 3350 2400 3400
+Wire Wire Line
+	2600 3350 2600 3400
+Wire Wire Line
+	3150 3350 3150 3400
+Wire Wire Line
+	3350 3350 3350 3400
+Wire Wire Line
+	3350 4500 3350 4550
+Wire Wire Line
+	3150 4500 3150 4550
+Wire Wire Line
+	2600 4500 2600 4550
+Wire Wire Line
+	2400 4500 2400 4550
+Wire Wire Line
+	1850 4500 1850 4550
+Wire Wire Line
+	1650 4500 1650 4550
+Wire Wire Line
+	1100 4500 1100 4550
+Wire Wire Line
+	900  4500 900  4550
+Wire Wire Line
+	350  4500 350  4550
+Wire Wire Line
+	150  4500 150  4550
+Wire Wire Line
+	-400 4500 -400 4550
+Wire Wire Line
+	-600 4500 -600 4550
+Wire Wire Line
+	-600 5650 -600 5700
+Wire Wire Line
+	-400 5650 -400 5700
+Wire Wire Line
+	900  5650 900  5700
+Wire Wire Line
+	1100 5650 1100 5700
+Wire Wire Line
+	1650 5700 1650 5650
+Wire Wire Line
+	1850 5700 1850 5650
+Wire Wire Line
+	2400 5700 2400 5650
+Wire Wire Line
+	2600 5700 2600 5650
+Wire Wire Line
+	3150 5700 3150 5650
+Wire Wire Line
+	3350 5700 3350 5650
+Wire Wire Line
+	3350 6850 3350 6800
+Wire Wire Line
+	2600 6850 2600 6800
+Wire Wire Line
+	2400 6850 2400 6800
+Wire Wire Line
+	1850 6850 1850 6800
+Wire Wire Line
+	1650 6850 1650 6800
+Wire Wire Line
+	1100 6850 1100 6800
+Wire Wire Line
+	900  6850 900  6800
+Wire Wire Line
+	350  6850 350  6800
+Wire Wire Line
+	150  6850 150  6800
+Wire Wire Line
+	-400 6850 -400 6800
+Wire Wire Line
+	-600 6850 -600 6800
+Wire Wire Line
+	-600 8000 -600 7950
+Wire Wire Line
+	-400 8000 -400 7950
+Wire Wire Line
+	150  8000 150  7950
+Wire Wire Line
+	350  8000 350  7950
+Wire Wire Line
+	900  8000 900  7950
+Wire Wire Line
+	1100 8000 1100 7950
+Wire Wire Line
+	1650 8000 1650 7950
+Wire Wire Line
+	1850 8000 1850 7950
+Wire Wire Line
+	2400 8000 2400 7950
+Wire Wire Line
+	2600 8000 2600 7950
+Wire Wire Line
+	3150 8000 3150 7950
+Wire Wire Line
+	3350 8000 3350 7950
+Wire Wire Line
+	-600 9150 -600 9100
+Wire Wire Line
+	-400 9150 -400 9100
+Wire Wire Line
+	150  9150 150  9100
+Wire Wire Line
+	350  9150 350  9100
+Wire Wire Line
+	900  9150 900  9100
+Wire Wire Line
+	1100 9150 1100 9100
+Wire Wire Line
+	1650 9150 1650 9100
+Wire Wire Line
+	1850 9150 1850 9100
+Wire Wire Line
+	2400 9150 2400 9100
+Wire Wire Line
+	2600 9150 2600 9100
+Wire Wire Line
+	3150 9150 3150 9100
+Wire Wire Line
+	3350 9150 3350 9100
+Wire Wire Line
+	3350 10300 3350 10250
+Wire Wire Line
+	3150 10300 3150 10250
+Wire Wire Line
+	2600 10300 2600 10250
+Wire Wire Line
+	2400 10300 2400 10250
+Wire Wire Line
+	1850 10300 1850 10250
+Wire Wire Line
+	1650 10300 1650 10250
+Wire Wire Line
+	1100 10300 1100 10250
+Wire Wire Line
+	900  10300 900  10250
+Wire Wire Line
+	350  10300 350  10250
+Wire Wire Line
+	150  10300 150  10250
+Wire Wire Line
+	-400 10300 -400 10250
+Wire Wire Line
+	-600 10300 -600 10250
+Wire Wire Line
+	3150 6850 3150 6800
+Wire Wire Line
+	350  5650 350  5700
+Wire Wire Line
+	150  5650 150  5700
+Wire Wire Line
+	-950 1450 800  1450
+Wire Wire Line
+	800  1450 800  600 
+Wire Wire Line
+	550  600  800  600 
+Wire Wire Line
+	-1050 1350 650  1350
+Wire Wire Line
+	650  1350 650  700 
+Wire Wire Line
+	-950 2600 1550 2600
+Wire Wire Line
+	1550 2600 1550 1750
+Wire Wire Line
+	1300 1750 1550 1750
+Wire Wire Line
+	-1050 2500 1400 2500
+Wire Wire Line
+	1400 2500 1400 1850
+$Comp
+L _addressable_leds:SK9822-EC20 LED-i-7
+U 1 1 609032AB
+P 4050 8700
+F 0 "LED-i-7" H 4025 8923 50  0000 C CNN
+F 1 "SK9822-EC20" H 4025 8924 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 4050 8700 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 4050 8700 50  0001 C CNN
+	1    4050 8700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 609032B1
+P 3950 9150
+F 0 "#PWR0101" H 3950 8900 50  0001 C CNN
+F 1 "GND" H 3955 8977 50  0000 C CNN
+F 2 "" H 3950 9150 50  0001 C CNN
+F 3 "" H 3950 9150 50  0001 C CNN
+	1    3950 9150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0102
+U 1 1 609032B7
+P 4150 9150
+F 0 "#PWR0102" H 4150 9000 50  0001 C CNN
+F 1 "+5V" H 4165 9323 50  0000 C CNN
+F 2 "" H 4150 9150 50  0001 C CNN
+F 3 "" H 4150 9150 50  0001 C CNN
+	1    4150 9150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3950 9150 3950 9100
+Wire Wire Line
+	4150 9150 4150 9100
+Wire Wire Line
+	3550 8650 3700 8650
+Wire Wire Line
+	3550 8750 3700 8750
+Wire Wire Line
+	4550 9500 4550 8650
+Wire Wire Line
+	4550 8650 4350 8650
+Wire Wire Line
+	-950 9500 4550 9500
+Wire Wire Line
+	4450 9400 4450 8750
+Wire Wire Line
+	4450 8750 4350 8750
+Wire Wire Line
+	-1050 9400 4450 9400
+Wire Wire Line
+	5900 9800 5900 -1600
+Wire Wire Line
+	5900 -1600 6400 -1600
+Wire Wire Line
+	3550 9800 5900 9800
+Wire Wire Line
+	6000 9900 6000 -1500
+Wire Wire Line
+	6000 -1500 6400 -1500
+Wire Wire Line
+	3550 9900 6000 9900
+$Comp
+L _addressable_leds:SK9822-EC20 LED-l-3
+U 1 1 60C8310A
+P 8250 -400
+F 0 "LED-l-3" H 8225 -177 50  0000 C CNN
+F 1 "SK9822-EC20" H 8225 -176 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 8250 -400 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 8250 -400 50  0001 C CNN
+	1    8250 -400
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-l-1
+U 1 1 60C83110
+P 6750 -400
+F 0 "LED-l-1" H 6725 -177 50  0000 C CNN
+F 1 "SK9822-EC20" H 6725 -176 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 6750 -400 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 6750 -400 50  0001 C CNN
+	1    6750 -400
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-l-2
+U 1 1 60C83116
+P 7500 -400
+F 0 "LED-l-2" H 7475 -177 50  0000 C CNN
+F 1 "SK9822-EC20" H 7475 -176 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 7500 -400 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 7500 -400 50  0001 C CNN
+	1    7500 -400
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-l-4
+U 1 1 60C8311C
+P 9000 -400
+F 0 "LED-l-4" H 8975 -177 50  0000 C CNN
+F 1 "SK9822-EC20" H 8975 -176 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 9000 -400 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 9000 -400 50  0001 C CNN
+	1    9000 -400
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-l-5
+U 1 1 60C83122
+P 9750 -400
+F 0 "LED-l-5" H 9725 -177 50  0000 C CNN
+F 1 "SK9822-EC20" H 9725 -176 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 9750 -400 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 9750 -400 50  0001 C CNN
+	1    9750 -400
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-l-6
+U 1 1 60C83128
+P 10500 -400
+F 0 "LED-l-6" H 10475 -177 50  0000 C CNN
+F 1 "SK9822-EC20" H 10475 -176 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 10500 -400 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 10500 -400 50  0001 C CNN
+	1    10500 -400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 60C8312E
+P 6650 50
+F 0 "#PWR0103" H 6650 -200 50  0001 C CNN
+F 1 "GND" H 6655 -123 50  0000 C CNN
+F 2 "" H 6650 50  50  0001 C CNN
+F 3 "" H 6650 50  50  0001 C CNN
+	1    6650 50  
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0113
+U 1 1 60C83134
+P 6850 50
+F 0 "#PWR0113" H 6850 -100 50  0001 C CNN
+F 1 "+5V" H 6865 223 50  0000 C CNN
+F 2 "" H 6850 50  50  0001 C CNN
+F 3 "" H 6850 50  50  0001 C CNN
+	1    6850 50  
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0114
+U 1 1 60C8313A
+P 7400 50
+F 0 "#PWR0114" H 7400 -200 50  0001 C CNN
+F 1 "GND" H 7405 -123 50  0000 C CNN
+F 2 "" H 7400 50  50  0001 C CNN
+F 3 "" H 7400 50  50  0001 C CNN
+	1    7400 50  
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0115
+U 1 1 60C83140
+P 7600 50
+F 0 "#PWR0115" H 7600 -100 50  0001 C CNN
+F 1 "+5V" H 7615 223 50  0000 C CNN
+F 2 "" H 7600 50  50  0001 C CNN
+F 3 "" H 7600 50  50  0001 C CNN
+	1    7600 50  
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0116
+U 1 1 60C83146
+P 8150 50
+F 0 "#PWR0116" H 8150 -200 50  0001 C CNN
+F 1 "GND" H 8155 -123 50  0000 C CNN
+F 2 "" H 8150 50  50  0001 C CNN
+F 3 "" H 8150 50  50  0001 C CNN
+	1    8150 50  
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0117
+U 1 1 60C8314C
+P 8350 50
+F 0 "#PWR0117" H 8350 -100 50  0001 C CNN
+F 1 "+5V" H 8365 223 50  0000 C CNN
+F 2 "" H 8350 50  50  0001 C CNN
+F 3 "" H 8350 50  50  0001 C CNN
+	1    8350 50  
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0118
+U 1 1 60C83152
+P 8900 50
+F 0 "#PWR0118" H 8900 -200 50  0001 C CNN
+F 1 "GND" H 8905 -123 50  0000 C CNN
+F 2 "" H 8900 50  50  0001 C CNN
+F 3 "" H 8900 50  50  0001 C CNN
+	1    8900 50  
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0119
+U 1 1 60C83158
+P 9100 50
+F 0 "#PWR0119" H 9100 -100 50  0001 C CNN
+F 1 "+5V" H 9115 223 50  0000 C CNN
+F 2 "" H 9100 50  50  0001 C CNN
+F 3 "" H 9100 50  50  0001 C CNN
+	1    9100 50  
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0128
+U 1 1 60C8315E
+P 9650 50
+F 0 "#PWR0128" H 9650 -200 50  0001 C CNN
+F 1 "GND" H 9655 -123 50  0000 C CNN
+F 2 "" H 9650 50  50  0001 C CNN
+F 3 "" H 9650 50  50  0001 C CNN
+	1    9650 50  
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0129
+U 1 1 60C83164
+P 9850 50
+F 0 "#PWR0129" H 9850 -100 50  0001 C CNN
+F 1 "+5V" H 9865 223 50  0000 C CNN
+F 2 "" H 9850 50  50  0001 C CNN
+F 3 "" H 9850 50  50  0001 C CNN
+	1    9850 50  
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0130
+U 1 1 60C8316A
+P 10400 50
+F 0 "#PWR0130" H 10400 -200 50  0001 C CNN
+F 1 "GND" H 10405 -123 50  0000 C CNN
+F 2 "" H 10400 50  50  0001 C CNN
+F 3 "" H 10400 50  50  0001 C CNN
+	1    10400 50  
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0131
+U 1 1 60C83170
+P 10600 50
+F 0 "#PWR0131" H 10600 -100 50  0001 C CNN
+F 1 "+5V" H 10615 223 50  0000 C CNN
+F 2 "" H 10600 50  50  0001 C CNN
+F 3 "" H 10600 50  50  0001 C CNN
+	1    10600 50  
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7050 -450 7150 -450
+Wire Wire Line
+	7050 -350 7150 -350
+Wire Wire Line
+	7800 -450 7900 -450
+Wire Wire Line
+	7800 -350 7900 -350
+Wire Wire Line
+	8550 -450 8650 -450
+Wire Wire Line
+	8550 -350 8650 -350
+Wire Wire Line
+	9300 -450 9400 -450
+Wire Wire Line
+	9300 -350 9400 -350
+Wire Wire Line
+	10050 -450 10150 -450
+Wire Wire Line
+	10050 -350 10150 -350
+Wire Wire Line
+	6650 50   6650 0   
+Wire Wire Line
+	6850 50   6850 0   
+Wire Wire Line
+	7400 50   7400 0   
+Wire Wire Line
+	7600 50   7600 0   
+Wire Wire Line
+	8150 50   8150 0   
+Wire Wire Line
+	8350 50   8350 0   
+Wire Wire Line
+	8900 50   8900 0   
+Wire Wire Line
+	9100 50   9100 0   
+Wire Wire Line
+	9650 50   9650 0   
+Wire Wire Line
+	9850 50   9850 0   
+Wire Wire Line
+	10400 50   10400 0   
+Wire Wire Line
+	10600 50   10600 0   
+$Comp
+L _addressable_leds:SK9822-EC20 LED-l-7
+U 1 1 60C8318C
+P 11250 -400
+F 0 "LED-l-7" H 11225 -177 50  0000 C CNN
+F 1 "SK9822-EC20" H 11225 -176 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 11250 -400 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 11250 -400 50  0001 C CNN
+	1    11250 -400
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-l-8
+U 1 1 60C83192
+P 12000 -400
+F 0 "LED-l-8" H 11975 -177 50  0000 C CNN
+F 1 "SK9822-EC20" H 11975 -176 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 12000 -400 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 12000 -400 50  0001 C CNN
+	1    12000 -400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0132
+U 1 1 60C83198
+P 11150 50
+F 0 "#PWR0132" H 11150 -200 50  0001 C CNN
+F 1 "GND" H 11155 -123 50  0000 C CNN
+F 2 "" H 11150 50  50  0001 C CNN
+F 3 "" H 11150 50  50  0001 C CNN
+	1    11150 50  
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0133
+U 1 1 60C8319E
+P 11350 50
+F 0 "#PWR0133" H 11350 -100 50  0001 C CNN
+F 1 "+5V" H 11365 223 50  0000 C CNN
+F 2 "" H 11350 50  50  0001 C CNN
+F 3 "" H 11350 50  50  0001 C CNN
+	1    11350 50  
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0134
+U 1 1 60C831A4
+P 11900 50
+F 0 "#PWR0134" H 11900 -200 50  0001 C CNN
+F 1 "GND" H 11905 -123 50  0000 C CNN
+F 2 "" H 11900 50  50  0001 C CNN
+F 3 "" H 11900 50  50  0001 C CNN
+	1    11900 50  
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0143
+U 1 1 60C831AA
+P 12100 50
+F 0 "#PWR0143" H 12100 -100 50  0001 C CNN
+F 1 "+5V" H 12115 223 50  0000 C CNN
+F 2 "" H 12100 50  50  0001 C CNN
+F 3 "" H 12100 50  50  0001 C CNN
+	1    12100 50  
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10800 -450 10900 -450
+Wire Wire Line
+	10800 -350 10900 -350
+Wire Wire Line
+	11550 -450 11650 -450
+Wire Wire Line
+	11550 -350 11650 -350
+Wire Wire Line
+	11150 50   11150 0   
+Wire Wire Line
+	11350 50   11350 0   
+Wire Wire Line
+	11900 50   11900 0   
+Wire Wire Line
+	12100 50   12100 0   
+Wire Wire Line
+	6300 -750 6300 -450
+Wire Wire Line
+	6200 -850 6200 -350
+Wire Wire Line
+	12400 -850 12400 -1500
+Wire Wire Line
+	6200 -850 12400 -850
+Wire Wire Line
+	12500 -750 12500 -1600
+Wire Wire Line
+	6300 -750 12500 -750
+Wire Wire Line
+	12500 -1600 12300 -1600
+Wire Wire Line
+	12400 -1500 12300 -1500
+Wire Wire Line
+	12100 -1100 12100 -1150
+Wire Wire Line
+	11900 -1100 11900 -1150
+Wire Wire Line
+	11350 -1100 11350 -1150
+Wire Wire Line
+	11150 -1100 11150 -1150
+Wire Wire Line
+	11550 -1500 11650 -1500
+Wire Wire Line
+	11550 -1600 11650 -1600
+Wire Wire Line
+	10800 -1500 10900 -1500
+Wire Wire Line
+	10800 -1600 10900 -1600
+$Comp
+L power:+5V #PWR0144
+U 1 1 60BB85C5
+P 12100 -1100
+F 0 "#PWR0144" H 12100 -1250 50  0001 C CNN
+F 1 "+5V" H 12115 -927 50  0000 C CNN
+F 2 "" H 12100 -1100 50  0001 C CNN
+F 3 "" H 12100 -1100 50  0001 C CNN
+	1    12100 -1100
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0145
+U 1 1 60BB85BF
+P 11900 -1100
+F 0 "#PWR0145" H 11900 -1350 50  0001 C CNN
+F 1 "GND" H 11905 -1273 50  0000 C CNN
+F 2 "" H 11900 -1100 50  0001 C CNN
+F 3 "" H 11900 -1100 50  0001 C CNN
+	1    11900 -1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0146
+U 1 1 60BB85B9
+P 11350 -1100
+F 0 "#PWR0146" H 11350 -1250 50  0001 C CNN
+F 1 "+5V" H 11365 -927 50  0000 C CNN
+F 2 "" H 11350 -1100 50  0001 C CNN
+F 3 "" H 11350 -1100 50  0001 C CNN
+	1    11350 -1100
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0147
+U 1 1 60BB85B3
+P 11150 -1100
+F 0 "#PWR0147" H 11150 -1350 50  0001 C CNN
+F 1 "GND" H 11155 -1273 50  0000 C CNN
+F 2 "" H 11150 -1100 50  0001 C CNN
+F 3 "" H 11150 -1100 50  0001 C CNN
+	1    11150 -1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-k-8
+U 1 1 60BB85AD
+P 12000 -1550
+F 0 "LED-k-8" H 11975 -1327 50  0000 C CNN
+F 1 "SK9822-EC20" H 11975 -1326 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 12000 -1550 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 12000 -1550 50  0001 C CNN
+	1    12000 -1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-k-7
+U 1 1 60BB85A7
+P 11250 -1550
+F 0 "LED-k-7" H 11225 -1327 50  0000 C CNN
+F 1 "SK9822-EC20" H 11225 -1326 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 11250 -1550 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 11250 -1550 50  0001 C CNN
+	1    11250 -1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10600 -1100 10600 -1150
+Wire Wire Line
+	10400 -1100 10400 -1150
+Wire Wire Line
+	9850 -1100 9850 -1150
+Wire Wire Line
+	9650 -1100 9650 -1150
+Wire Wire Line
+	9100 -1100 9100 -1150
+Wire Wire Line
+	8900 -1100 8900 -1150
+Wire Wire Line
+	8350 -1100 8350 -1150
+Wire Wire Line
+	8150 -1100 8150 -1150
+Wire Wire Line
+	7600 -1100 7600 -1150
+Wire Wire Line
+	7400 -1100 7400 -1150
+Wire Wire Line
+	6850 -1100 6850 -1150
+Wire Wire Line
+	6650 -1100 6650 -1150
+Wire Wire Line
+	10050 -1500 10150 -1500
+Wire Wire Line
+	10050 -1600 10150 -1600
+Wire Wire Line
+	9300 -1500 9400 -1500
+Wire Wire Line
+	9300 -1600 9400 -1600
+Wire Wire Line
+	8550 -1500 8650 -1500
+Wire Wire Line
+	8550 -1600 8650 -1600
+Wire Wire Line
+	7800 -1500 7900 -1500
+Wire Wire Line
+	7800 -1600 7900 -1600
+Wire Wire Line
+	7050 -1500 7150 -1500
+Wire Wire Line
+	7050 -1600 7150 -1600
+$Comp
+L power:+5V #PWR0197
+U 1 1 60597A7E
+P 10600 -1100
+F 0 "#PWR0197" H 10600 -1250 50  0001 C CNN
+F 1 "+5V" H 10615 -927 50  0000 C CNN
+F 2 "" H 10600 -1100 50  0001 C CNN
+F 3 "" H 10600 -1100 50  0001 C CNN
+	1    10600 -1100
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0184
+U 1 1 60A374B7
+P 10400 -1100
+F 0 "#PWR0184" H 10400 -1350 50  0001 C CNN
+F 1 "GND" H 10405 -1273 50  0000 C CNN
+F 2 "" H 10400 -1100 50  0001 C CNN
+F 3 "" H 10400 -1100 50  0001 C CNN
+	1    10400 -1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0171
+U 1 1 60A374B1
+P 9850 -1100
+F 0 "#PWR0171" H 9850 -1250 50  0001 C CNN
+F 1 "+5V" H 9865 -927 50  0000 C CNN
+F 2 "" H 9850 -1100 50  0001 C CNN
+F 3 "" H 9850 -1100 50  0001 C CNN
+	1    9850 -1100
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0157
+U 1 1 60A374AB
+P 9650 -1100
+F 0 "#PWR0157" H 9650 -1350 50  0001 C CNN
+F 1 "GND" H 9655 -1273 50  0000 C CNN
+F 2 "" H 9650 -1100 50  0001 C CNN
+F 3 "" H 9650 -1100 50  0001 C CNN
+	1    9650 -1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0142
+U 1 1 60A374A5
+P 9100 -1100
+F 0 "#PWR0142" H 9100 -1250 50  0001 C CNN
+F 1 "+5V" H 9115 -927 50  0000 C CNN
+F 2 "" H 9100 -1100 50  0001 C CNN
+F 3 "" H 9100 -1100 50  0001 C CNN
+	1    9100 -1100
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0127
+U 1 1 60597A79
+P 8900 -1100
+F 0 "#PWR0127" H 8900 -1350 50  0001 C CNN
+F 1 "GND" H 8905 -1273 50  0000 C CNN
+F 2 "" H 8900 -1100 50  0001 C CNN
+F 3 "" H 8900 -1100 50  0001 C CNN
+	1    8900 -1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0112
+U 1 1 60597A78
+P 8350 -1100
+F 0 "#PWR0112" H 8350 -1250 50  0001 C CNN
+F 1 "+5V" H 8365 -927 50  0000 C CNN
+F 2 "" H 8350 -1100 50  0001 C CNN
+F 3 "" H 8350 -1100 50  0001 C CNN
+	1    8350 -1100
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR097
+U 1 1 60A37493
+P 8150 -1100
+F 0 "#PWR097" H 8150 -1350 50  0001 C CNN
+F 1 "GND" H 8155 -1273 50  0000 C CNN
+F 2 "" H 8150 -1100 50  0001 C CNN
+F 3 "" H 8150 -1100 50  0001 C CNN
+	1    8150 -1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR082
+U 1 1 60597A76
+P 7600 -1100
+F 0 "#PWR082" H 7600 -1250 50  0001 C CNN
+F 1 "+5V" H 7615 -927 50  0000 C CNN
+F 2 "" H 7600 -1100 50  0001 C CNN
+F 3 "" H 7600 -1100 50  0001 C CNN
+	1    7600 -1100
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR067
+U 1 1 60597A75
+P 7400 -1100
+F 0 "#PWR067" H 7400 -1350 50  0001 C CNN
+F 1 "GND" H 7405 -1273 50  0000 C CNN
+F 2 "" H 7400 -1100 50  0001 C CNN
+F 3 "" H 7400 -1100 50  0001 C CNN
+	1    7400 -1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR052
+U 1 1 60597A74
+P 6850 -1100
+F 0 "#PWR052" H 6850 -1250 50  0001 C CNN
+F 1 "+5V" H 6865 -927 50  0000 C CNN
+F 2 "" H 6850 -1100 50  0001 C CNN
+F 3 "" H 6850 -1100 50  0001 C CNN
+	1    6850 -1100
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR036
+U 1 1 60A3747B
+P 6650 -1100
+F 0 "#PWR036" H 6650 -1350 50  0001 C CNN
+F 1 "GND" H 6655 -1273 50  0000 C CNN
+F 2 "" H 6650 -1100 50  0001 C CNN
+F 3 "" H 6650 -1100 50  0001 C CNN
+	1    6650 -1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-k-6
+U 1 1 60597A72
+P 10500 -1550
+F 0 "LED-k-6" H 10475 -1327 50  0000 C CNN
+F 1 "SK9822-EC20" H 10475 -1326 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 10500 -1550 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 10500 -1550 50  0001 C CNN
+	1    10500 -1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-k-5
+U 1 1 60597A71
+P 9750 -1550
+F 0 "LED-k-5" H 9725 -1327 50  0000 C CNN
+F 1 "SK9822-EC20" H 9725 -1326 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 9750 -1550 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 9750 -1550 50  0001 C CNN
+	1    9750 -1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-k-4
+U 1 1 60597A70
+P 9000 -1550
+F 0 "LED-k-4" H 8975 -1327 50  0000 C CNN
+F 1 "SK9822-EC20" H 8975 -1326 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 9000 -1550 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 9000 -1550 50  0001 C CNN
+	1    9000 -1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-k-2
+U 1 1 60597A6F
+P 7500 -1550
+F 0 "LED-k-2" H 7475 -1327 50  0000 C CNN
+F 1 "SK9822-EC20" H 7475 -1326 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 7500 -1550 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 7500 -1550 50  0001 C CNN
+	1    7500 -1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-k-1
+U 1 1 60597A6E
+P 6750 -1550
+F 0 "LED-k-1" H 6725 -1327 50  0000 C CNN
+F 1 "SK9822-EC20" H 6725 -1326 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 6750 -1550 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 6750 -1550 50  0001 C CNN
+	1    6750 -1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-k-3
+U 1 1 60A37457
+P 8250 -1550
+F 0 "LED-k-3" H 8225 -1327 50  0000 C CNN
+F 1 "SK9822-EC20" H 8225 -1326 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 8250 -1550 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 8250 -1550 50  0001 C CNN
+	1    8250 -1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12500 -450 12300 -450
+Wire Wire Line
+	12400 -350 12300 -350
+Wire Wire Line
+	6200 800  6400 800 
+Wire Wire Line
+	6300 700  6400 700 
+$Comp
+L _addressable_leds:SK9822-EC20 LED-m-3
+U 1 1 60D6C9EB
+P 8250 750
+F 0 "LED-m-3" H 8225 973 50  0000 C CNN
+F 1 "SK9822-EC20" H 8225 974 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 8250 750 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 8250 750 50  0001 C CNN
+	1    8250 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-m-1
+U 1 1 60D6C9F1
+P 6750 750
+F 0 "LED-m-1" H 6725 973 50  0000 C CNN
+F 1 "SK9822-EC20" H 6725 974 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 6750 750 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 6750 750 50  0001 C CNN
+	1    6750 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-m-2
+U 1 1 60D6C9F7
+P 7500 750
+F 0 "LED-m-2" H 7475 973 50  0000 C CNN
+F 1 "SK9822-EC20" H 7475 974 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 7500 750 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 7500 750 50  0001 C CNN
+	1    7500 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-m-4
+U 1 1 60D6C9FD
+P 9000 750
+F 0 "LED-m-4" H 8975 973 50  0000 C CNN
+F 1 "SK9822-EC20" H 8975 974 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 9000 750 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 9000 750 50  0001 C CNN
+	1    9000 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-m-5
+U 1 1 60D6CA03
+P 9750 750
+F 0 "LED-m-5" H 9725 973 50  0000 C CNN
+F 1 "SK9822-EC20" H 9725 974 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 9750 750 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 9750 750 50  0001 C CNN
+	1    9750 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-m-6
+U 1 1 60D6CA09
+P 10500 750
+F 0 "LED-m-6" H 10475 973 50  0000 C CNN
+F 1 "SK9822-EC20" H 10475 974 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 10500 750 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 10500 750 50  0001 C CNN
+	1    10500 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0148
+U 1 1 60D6CA0F
+P 6650 1200
+F 0 "#PWR0148" H 6650 950 50  0001 C CNN
+F 1 "GND" H 6655 1027 50  0000 C CNN
+F 2 "" H 6650 1200 50  0001 C CNN
+F 3 "" H 6650 1200 50  0001 C CNN
+	1    6650 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0149
+U 1 1 60D6CA15
+P 6850 1200
+F 0 "#PWR0149" H 6850 1050 50  0001 C CNN
+F 1 "+5V" H 6865 1373 50  0000 C CNN
+F 2 "" H 6850 1200 50  0001 C CNN
+F 3 "" H 6850 1200 50  0001 C CNN
+	1    6850 1200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0158
+U 1 1 60D6CA1B
+P 7400 1200
+F 0 "#PWR0158" H 7400 950 50  0001 C CNN
+F 1 "GND" H 7405 1027 50  0000 C CNN
+F 2 "" H 7400 1200 50  0001 C CNN
+F 3 "" H 7400 1200 50  0001 C CNN
+	1    7400 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0159
+U 1 1 60D6CA21
+P 7600 1200
+F 0 "#PWR0159" H 7600 1050 50  0001 C CNN
+F 1 "+5V" H 7615 1373 50  0000 C CNN
+F 2 "" H 7600 1200 50  0001 C CNN
+F 3 "" H 7600 1200 50  0001 C CNN
+	1    7600 1200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0160
+U 1 1 60D6CA27
+P 8150 1200
+F 0 "#PWR0160" H 8150 950 50  0001 C CNN
+F 1 "GND" H 8155 1027 50  0000 C CNN
+F 2 "" H 8150 1200 50  0001 C CNN
+F 3 "" H 8150 1200 50  0001 C CNN
+	1    8150 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0161
+U 1 1 60D6CA2D
+P 8350 1200
+F 0 "#PWR0161" H 8350 1050 50  0001 C CNN
+F 1 "+5V" H 8365 1373 50  0000 C CNN
+F 2 "" H 8350 1200 50  0001 C CNN
+F 3 "" H 8350 1200 50  0001 C CNN
+	1    8350 1200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0162
+U 1 1 60D6CA33
+P 8900 1200
+F 0 "#PWR0162" H 8900 950 50  0001 C CNN
+F 1 "GND" H 8905 1027 50  0000 C CNN
+F 2 "" H 8900 1200 50  0001 C CNN
+F 3 "" H 8900 1200 50  0001 C CNN
+	1    8900 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0163
+U 1 1 60D6CA39
+P 9100 1200
+F 0 "#PWR0163" H 9100 1050 50  0001 C CNN
+F 1 "+5V" H 9115 1373 50  0000 C CNN
+F 2 "" H 9100 1200 50  0001 C CNN
+F 3 "" H 9100 1200 50  0001 C CNN
+	1    9100 1200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0172
+U 1 1 60D6CA3F
+P 9650 1200
+F 0 "#PWR0172" H 9650 950 50  0001 C CNN
+F 1 "GND" H 9655 1027 50  0000 C CNN
+F 2 "" H 9650 1200 50  0001 C CNN
+F 3 "" H 9650 1200 50  0001 C CNN
+	1    9650 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0173
+U 1 1 60D6CA45
+P 9850 1200
+F 0 "#PWR0173" H 9850 1050 50  0001 C CNN
+F 1 "+5V" H 9865 1373 50  0000 C CNN
+F 2 "" H 9850 1200 50  0001 C CNN
+F 3 "" H 9850 1200 50  0001 C CNN
+	1    9850 1200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0174
+U 1 1 60D6CA4B
+P 10400 1200
+F 0 "#PWR0174" H 10400 950 50  0001 C CNN
+F 1 "GND" H 10405 1027 50  0000 C CNN
+F 2 "" H 10400 1200 50  0001 C CNN
+F 3 "" H 10400 1200 50  0001 C CNN
+	1    10400 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0175
+U 1 1 60D6CA51
+P 10600 1200
+F 0 "#PWR0175" H 10600 1050 50  0001 C CNN
+F 1 "+5V" H 10615 1373 50  0000 C CNN
+F 2 "" H 10600 1200 50  0001 C CNN
+F 3 "" H 10600 1200 50  0001 C CNN
+	1    10600 1200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7050 700  7150 700 
+Wire Wire Line
+	7050 800  7150 800 
+Wire Wire Line
+	7800 700  7900 700 
+Wire Wire Line
+	7800 800  7900 800 
+Wire Wire Line
+	8550 700  8650 700 
+Wire Wire Line
+	8550 800  8650 800 
+Wire Wire Line
+	9300 700  9400 700 
+Wire Wire Line
+	9300 800  9400 800 
+Wire Wire Line
+	10050 700  10150 700 
+Wire Wire Line
+	10050 800  10150 800 
+Wire Wire Line
+	6650 1200 6650 1150
+Wire Wire Line
+	6850 1200 6850 1150
+Wire Wire Line
+	7400 1200 7400 1150
+Wire Wire Line
+	7600 1200 7600 1150
+Wire Wire Line
+	8150 1200 8150 1150
+Wire Wire Line
+	8350 1200 8350 1150
+Wire Wire Line
+	8900 1200 8900 1150
+Wire Wire Line
+	9100 1200 9100 1150
+Wire Wire Line
+	9650 1200 9650 1150
+Wire Wire Line
+	9850 1200 9850 1150
+Wire Wire Line
+	10400 1200 10400 1150
+Wire Wire Line
+	10600 1200 10600 1150
+$Comp
+L _addressable_leds:SK9822-EC20 LED-m-7
+U 1 1 60D6CA6D
+P 11250 750
+F 0 "LED-m-7" H 11225 973 50  0000 C CNN
+F 1 "SK9822-EC20" H 11225 974 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 11250 750 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 11250 750 50  0001 C CNN
+	1    11250 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-m-8
+U 1 1 60D6CA73
+P 12000 750
+F 0 "LED-m-8" H 11975 973 50  0000 C CNN
+F 1 "SK9822-EC20" H 11975 974 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 12000 750 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 12000 750 50  0001 C CNN
+	1    12000 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0176
+U 1 1 60D6CA79
+P 11150 1200
+F 0 "#PWR0176" H 11150 950 50  0001 C CNN
+F 1 "GND" H 11155 1027 50  0000 C CNN
+F 2 "" H 11150 1200 50  0001 C CNN
+F 3 "" H 11150 1200 50  0001 C CNN
+	1    11150 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0185
+U 1 1 60D6CA7F
+P 11350 1200
+F 0 "#PWR0185" H 11350 1050 50  0001 C CNN
+F 1 "+5V" H 11365 1373 50  0000 C CNN
+F 2 "" H 11350 1200 50  0001 C CNN
+F 3 "" H 11350 1200 50  0001 C CNN
+	1    11350 1200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0186
+U 1 1 60D6CA85
+P 11900 1200
+F 0 "#PWR0186" H 11900 950 50  0001 C CNN
+F 1 "GND" H 11905 1027 50  0000 C CNN
+F 2 "" H 11900 1200 50  0001 C CNN
+F 3 "" H 11900 1200 50  0001 C CNN
+	1    11900 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0187
+U 1 1 60D6CA8B
+P 12100 1200
+F 0 "#PWR0187" H 12100 1050 50  0001 C CNN
+F 1 "+5V" H 12115 1373 50  0000 C CNN
+F 2 "" H 12100 1200 50  0001 C CNN
+F 3 "" H 12100 1200 50  0001 C CNN
+	1    12100 1200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10800 700  10900 700 
+Wire Wire Line
+	10800 800  10900 800 
+Wire Wire Line
+	11550 700  11650 700 
+Wire Wire Line
+	11550 800  11650 800 
+Wire Wire Line
+	11150 1200 11150 1150
+Wire Wire Line
+	11350 1200 11350 1150
+Wire Wire Line
+	11900 1200 11900 1150
+Wire Wire Line
+	12100 1200 12100 1150
+Wire Wire Line
+	6300 400  6300 700 
+Wire Wire Line
+	6200 300  6200 800 
+Wire Wire Line
+	12400 300  12400 -350
+Wire Wire Line
+	6200 300  12400 300 
+Wire Wire Line
+	12500 400  12500 -450
+Wire Wire Line
+	6300 400  12500 400 
+Wire Wire Line
+	12500 700  12300 700 
+Wire Wire Line
+	12400 800  12300 800 
+Wire Wire Line
+	6200 1950 6400 1950
+Wire Wire Line
+	6300 1850 6400 1850
+$Comp
+L _addressable_leds:SK9822-EC20 LED-n-3
+U 1 1 60D9CDFB
+P 8250 1900
+F 0 "LED-n-3" H 8225 2123 50  0000 C CNN
+F 1 "SK9822-EC20" H 8225 2124 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 8250 1900 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 8250 1900 50  0001 C CNN
+	1    8250 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-n-1
+U 1 1 60D9CE01
+P 6750 1900
+F 0 "LED-n-1" H 6725 2123 50  0000 C CNN
+F 1 "SK9822-EC20" H 6725 2124 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 6750 1900 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 6750 1900 50  0001 C CNN
+	1    6750 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-n-2
+U 1 1 60D9CE07
+P 7500 1900
+F 0 "LED-n-2" H 7475 2123 50  0000 C CNN
+F 1 "SK9822-EC20" H 7475 2124 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 7500 1900 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 7500 1900 50  0001 C CNN
+	1    7500 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-n-4
+U 1 1 60D9CE0D
+P 9000 1900
+F 0 "LED-n-4" H 8975 2123 50  0000 C CNN
+F 1 "SK9822-EC20" H 8975 2124 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 9000 1900 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 9000 1900 50  0001 C CNN
+	1    9000 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-n-5
+U 1 1 60D9CE13
+P 9750 1900
+F 0 "LED-n-5" H 9725 2123 50  0000 C CNN
+F 1 "SK9822-EC20" H 9725 2124 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 9750 1900 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 9750 1900 50  0001 C CNN
+	1    9750 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-n-6
+U 1 1 60D9CE19
+P 10500 1900
+F 0 "LED-n-6" H 10475 2123 50  0000 C CNN
+F 1 "SK9822-EC20" H 10475 2124 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 10500 1900 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 10500 1900 50  0001 C CNN
+	1    10500 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0188
+U 1 1 60D9CE1F
+P 6650 2350
+F 0 "#PWR0188" H 6650 2100 50  0001 C CNN
+F 1 "GND" H 6655 2177 50  0000 C CNN
+F 2 "" H 6650 2350 50  0001 C CNN
+F 3 "" H 6650 2350 50  0001 C CNN
+	1    6650 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0189
+U 1 1 60D9CE25
+P 6850 2350
+F 0 "#PWR0189" H 6850 2200 50  0001 C CNN
+F 1 "+5V" H 6865 2523 50  0000 C CNN
+F 2 "" H 6850 2350 50  0001 C CNN
+F 3 "" H 6850 2350 50  0001 C CNN
+	1    6850 2350
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0198
+U 1 1 60D9CE2B
+P 7400 2350
+F 0 "#PWR0198" H 7400 2100 50  0001 C CNN
+F 1 "GND" H 7405 2177 50  0000 C CNN
+F 2 "" H 7400 2350 50  0001 C CNN
+F 3 "" H 7400 2350 50  0001 C CNN
+	1    7400 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0199
+U 1 1 60D9CE31
+P 7600 2350
+F 0 "#PWR0199" H 7600 2200 50  0001 C CNN
+F 1 "+5V" H 7615 2523 50  0000 C CNN
+F 2 "" H 7600 2350 50  0001 C CNN
+F 3 "" H 7600 2350 50  0001 C CNN
+	1    7600 2350
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0200
+U 1 1 60D9CE37
+P 8150 2350
+F 0 "#PWR0200" H 8150 2100 50  0001 C CNN
+F 1 "GND" H 8155 2177 50  0000 C CNN
+F 2 "" H 8150 2350 50  0001 C CNN
+F 3 "" H 8150 2350 50  0001 C CNN
+	1    8150 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0201
+U 1 1 60D9CE3D
+P 8350 2350
+F 0 "#PWR0201" H 8350 2200 50  0001 C CNN
+F 1 "+5V" H 8365 2523 50  0000 C CNN
+F 2 "" H 8350 2350 50  0001 C CNN
+F 3 "" H 8350 2350 50  0001 C CNN
+	1    8350 2350
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0202
+U 1 1 60D9CE43
+P 8900 2350
+F 0 "#PWR0202" H 8900 2100 50  0001 C CNN
+F 1 "GND" H 8905 2177 50  0000 C CNN
+F 2 "" H 8900 2350 50  0001 C CNN
+F 3 "" H 8900 2350 50  0001 C CNN
+	1    8900 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0203
+U 1 1 60D9CE49
+P 9100 2350
+F 0 "#PWR0203" H 9100 2200 50  0001 C CNN
+F 1 "+5V" H 9115 2523 50  0000 C CNN
+F 2 "" H 9100 2350 50  0001 C CNN
+F 3 "" H 9100 2350 50  0001 C CNN
+	1    9100 2350
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0204
+U 1 1 60D9CE4F
+P 9650 2350
+F 0 "#PWR0204" H 9650 2100 50  0001 C CNN
+F 1 "GND" H 9655 2177 50  0000 C CNN
+F 2 "" H 9650 2350 50  0001 C CNN
+F 3 "" H 9650 2350 50  0001 C CNN
+	1    9650 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0205
+U 1 1 60D9CE55
+P 9850 2350
+F 0 "#PWR0205" H 9850 2200 50  0001 C CNN
+F 1 "+5V" H 9865 2523 50  0000 C CNN
+F 2 "" H 9850 2350 50  0001 C CNN
+F 3 "" H 9850 2350 50  0001 C CNN
+	1    9850 2350
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0206
+U 1 1 60D9CE5B
+P 10400 2350
+F 0 "#PWR0206" H 10400 2100 50  0001 C CNN
+F 1 "GND" H 10405 2177 50  0000 C CNN
+F 2 "" H 10400 2350 50  0001 C CNN
+F 3 "" H 10400 2350 50  0001 C CNN
+	1    10400 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0207
+U 1 1 60D9CE61
+P 10600 2350
+F 0 "#PWR0207" H 10600 2200 50  0001 C CNN
+F 1 "+5V" H 10615 2523 50  0000 C CNN
+F 2 "" H 10600 2350 50  0001 C CNN
+F 3 "" H 10600 2350 50  0001 C CNN
+	1    10600 2350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7050 1850 7150 1850
+Wire Wire Line
+	7050 1950 7150 1950
+Wire Wire Line
+	7800 1850 7900 1850
+Wire Wire Line
+	7800 1950 7900 1950
+Wire Wire Line
+	8550 1850 8650 1850
+Wire Wire Line
+	8550 1950 8650 1950
+Wire Wire Line
+	9300 1850 9400 1850
+Wire Wire Line
+	9300 1950 9400 1950
+Wire Wire Line
+	10050 1850 10150 1850
+Wire Wire Line
+	10050 1950 10150 1950
+Wire Wire Line
+	6650 2350 6650 2300
+Wire Wire Line
+	6850 2350 6850 2300
+Wire Wire Line
+	7400 2350 7400 2300
+Wire Wire Line
+	7600 2350 7600 2300
+Wire Wire Line
+	8150 2350 8150 2300
+Wire Wire Line
+	8350 2350 8350 2300
+Wire Wire Line
+	8900 2350 8900 2300
+Wire Wire Line
+	9100 2350 9100 2300
+Wire Wire Line
+	9650 2350 9650 2300
+Wire Wire Line
+	9850 2350 9850 2300
+Wire Wire Line
+	10400 2350 10400 2300
+Wire Wire Line
+	10600 2350 10600 2300
+$Comp
+L _addressable_leds:SK9822-EC20 LED-n-7
+U 1 1 60D9CE7D
+P 11250 1900
+F 0 "LED-n-7" H 11225 2123 50  0000 C CNN
+F 1 "SK9822-EC20" H 11225 2124 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 11250 1900 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 11250 1900 50  0001 C CNN
+	1    11250 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-n-8
+U 1 1 60D9CE83
+P 12000 1900
+F 0 "LED-n-8" H 11975 2123 50  0000 C CNN
+F 1 "SK9822-EC20" H 11975 2124 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 12000 1900 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 12000 1900 50  0001 C CNN
+	1    12000 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0208
+U 1 1 60D9CE89
+P 11150 2350
+F 0 "#PWR0208" H 11150 2100 50  0001 C CNN
+F 1 "GND" H 11155 2177 50  0000 C CNN
+F 2 "" H 11150 2350 50  0001 C CNN
+F 3 "" H 11150 2350 50  0001 C CNN
+	1    11150 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0209
+U 1 1 60D9CE8F
+P 11350 2350
+F 0 "#PWR0209" H 11350 2200 50  0001 C CNN
+F 1 "+5V" H 11365 2523 50  0000 C CNN
+F 2 "" H 11350 2350 50  0001 C CNN
+F 3 "" H 11350 2350 50  0001 C CNN
+	1    11350 2350
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0210
+U 1 1 60D9CE95
+P 11900 2350
+F 0 "#PWR0210" H 11900 2100 50  0001 C CNN
+F 1 "GND" H 11905 2177 50  0000 C CNN
+F 2 "" H 11900 2350 50  0001 C CNN
+F 3 "" H 11900 2350 50  0001 C CNN
+	1    11900 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0211
+U 1 1 60D9CE9B
+P 12100 2350
+F 0 "#PWR0211" H 12100 2200 50  0001 C CNN
+F 1 "+5V" H 12115 2523 50  0000 C CNN
+F 2 "" H 12100 2350 50  0001 C CNN
+F 3 "" H 12100 2350 50  0001 C CNN
+	1    12100 2350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10800 1850 10900 1850
+Wire Wire Line
+	10800 1950 10900 1950
+Wire Wire Line
+	11550 1850 11650 1850
+Wire Wire Line
+	11550 1950 11650 1950
+Wire Wire Line
+	11150 2350 11150 2300
+Wire Wire Line
+	11350 2350 11350 2300
+Wire Wire Line
+	11900 2350 11900 2300
+Wire Wire Line
+	12100 2350 12100 2300
+Wire Wire Line
+	6300 1550 6300 1850
+Wire Wire Line
+	6200 1450 6200 1950
+Wire Wire Line
+	12400 1450 12400 800 
+Wire Wire Line
+	6200 1450 12400 1450
+Wire Wire Line
+	12500 1550 12500 700 
+Wire Wire Line
+	6300 1550 12500 1550
+Wire Wire Line
+	12500 1850 12300 1850
+Wire Wire Line
+	12400 1950 12300 1950
+Wire Wire Line
+	6200 3100 6400 3100
+Wire Wire Line
+	6300 3000 6400 3000
+$Comp
+L _addressable_leds:SK9822-EC20 LED-o-3
+U 1 1 60DD3A89
+P 8250 3050
+F 0 "LED-o-3" H 8225 3273 50  0000 C CNN
+F 1 "SK9822-EC20" H 8225 3274 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 8250 3050 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 8250 3050 50  0001 C CNN
+	1    8250 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-o-1
+U 1 1 60DD3A8F
+P 6750 3050
+F 0 "LED-o-1" H 6725 3273 50  0000 C CNN
+F 1 "SK9822-EC20" H 6725 3274 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 6750 3050 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 6750 3050 50  0001 C CNN
+	1    6750 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-o-2
+U 1 1 60DD3A95
+P 7500 3050
+F 0 "LED-o-2" H 7475 3273 50  0000 C CNN
+F 1 "SK9822-EC20" H 7475 3274 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 7500 3050 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 7500 3050 50  0001 C CNN
+	1    7500 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-o-4
+U 1 1 60DD3A9B
+P 9000 3050
+F 0 "LED-o-4" H 8975 3273 50  0000 C CNN
+F 1 "SK9822-EC20" H 8975 3274 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 9000 3050 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 9000 3050 50  0001 C CNN
+	1    9000 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-o-5
+U 1 1 60DD3AA1
+P 9750 3050
+F 0 "LED-o-5" H 9725 3273 50  0000 C CNN
+F 1 "SK9822-EC20" H 9725 3274 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 9750 3050 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 9750 3050 50  0001 C CNN
+	1    9750 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-o-6
+U 1 1 60DD3AA7
+P 10500 3050
+F 0 "LED-o-6" H 10475 3273 50  0000 C CNN
+F 1 "SK9822-EC20" H 10475 3274 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 10500 3050 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 10500 3050 50  0001 C CNN
+	1    10500 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0212
+U 1 1 60DD3AAD
+P 6650 3500
+F 0 "#PWR0212" H 6650 3250 50  0001 C CNN
+F 1 "GND" H 6655 3327 50  0000 C CNN
+F 2 "" H 6650 3500 50  0001 C CNN
+F 3 "" H 6650 3500 50  0001 C CNN
+	1    6650 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0213
+U 1 1 60DD3AB3
+P 6850 3500
+F 0 "#PWR0213" H 6850 3350 50  0001 C CNN
+F 1 "+5V" H 6865 3673 50  0000 C CNN
+F 2 "" H 6850 3500 50  0001 C CNN
+F 3 "" H 6850 3500 50  0001 C CNN
+	1    6850 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0214
+U 1 1 60DD3AB9
+P 7400 3500
+F 0 "#PWR0214" H 7400 3250 50  0001 C CNN
+F 1 "GND" H 7405 3327 50  0000 C CNN
+F 2 "" H 7400 3500 50  0001 C CNN
+F 3 "" H 7400 3500 50  0001 C CNN
+	1    7400 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0215
+U 1 1 60DD3ABF
+P 7600 3500
+F 0 "#PWR0215" H 7600 3350 50  0001 C CNN
+F 1 "+5V" H 7615 3673 50  0000 C CNN
+F 2 "" H 7600 3500 50  0001 C CNN
+F 3 "" H 7600 3500 50  0001 C CNN
+	1    7600 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0216
+U 1 1 60DD3AC5
+P 8150 3500
+F 0 "#PWR0216" H 8150 3250 50  0001 C CNN
+F 1 "GND" H 8155 3327 50  0000 C CNN
+F 2 "" H 8150 3500 50  0001 C CNN
+F 3 "" H 8150 3500 50  0001 C CNN
+	1    8150 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0217
+U 1 1 60DD3ACB
+P 8350 3500
+F 0 "#PWR0217" H 8350 3350 50  0001 C CNN
+F 1 "+5V" H 8365 3673 50  0000 C CNN
+F 2 "" H 8350 3500 50  0001 C CNN
+F 3 "" H 8350 3500 50  0001 C CNN
+	1    8350 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0218
+U 1 1 60DD3AD1
+P 8900 3500
+F 0 "#PWR0218" H 8900 3250 50  0001 C CNN
+F 1 "GND" H 8905 3327 50  0000 C CNN
+F 2 "" H 8900 3500 50  0001 C CNN
+F 3 "" H 8900 3500 50  0001 C CNN
+	1    8900 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0219
+U 1 1 60DD3AD7
+P 9100 3500
+F 0 "#PWR0219" H 9100 3350 50  0001 C CNN
+F 1 "+5V" H 9115 3673 50  0000 C CNN
+F 2 "" H 9100 3500 50  0001 C CNN
+F 3 "" H 9100 3500 50  0001 C CNN
+	1    9100 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0220
+U 1 1 60DD3ADD
+P 9650 3500
+F 0 "#PWR0220" H 9650 3250 50  0001 C CNN
+F 1 "GND" H 9655 3327 50  0000 C CNN
+F 2 "" H 9650 3500 50  0001 C CNN
+F 3 "" H 9650 3500 50  0001 C CNN
+	1    9650 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0221
+U 1 1 60DD3AE3
+P 9850 3500
+F 0 "#PWR0221" H 9850 3350 50  0001 C CNN
+F 1 "+5V" H 9865 3673 50  0000 C CNN
+F 2 "" H 9850 3500 50  0001 C CNN
+F 3 "" H 9850 3500 50  0001 C CNN
+	1    9850 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0222
+U 1 1 60DD3AE9
+P 10400 3500
+F 0 "#PWR0222" H 10400 3250 50  0001 C CNN
+F 1 "GND" H 10405 3327 50  0000 C CNN
+F 2 "" H 10400 3500 50  0001 C CNN
+F 3 "" H 10400 3500 50  0001 C CNN
+	1    10400 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0223
+U 1 1 60DD3AEF
+P 10600 3500
+F 0 "#PWR0223" H 10600 3350 50  0001 C CNN
+F 1 "+5V" H 10615 3673 50  0000 C CNN
+F 2 "" H 10600 3500 50  0001 C CNN
+F 3 "" H 10600 3500 50  0001 C CNN
+	1    10600 3500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7050 3000 7150 3000
+Wire Wire Line
+	7050 3100 7150 3100
+Wire Wire Line
+	7800 3000 7900 3000
+Wire Wire Line
+	7800 3100 7900 3100
+Wire Wire Line
+	8550 3000 8650 3000
+Wire Wire Line
+	8550 3100 8650 3100
+Wire Wire Line
+	9300 3000 9400 3000
+Wire Wire Line
+	9300 3100 9400 3100
+Wire Wire Line
+	10050 3000 10150 3000
+Wire Wire Line
+	10050 3100 10150 3100
+Wire Wire Line
+	6650 3500 6650 3450
+Wire Wire Line
+	6850 3500 6850 3450
+Wire Wire Line
+	7400 3500 7400 3450
+Wire Wire Line
+	7600 3500 7600 3450
+Wire Wire Line
+	8150 3500 8150 3450
+Wire Wire Line
+	8350 3500 8350 3450
+Wire Wire Line
+	8900 3500 8900 3450
+Wire Wire Line
+	9100 3500 9100 3450
+Wire Wire Line
+	9650 3500 9650 3450
+Wire Wire Line
+	9850 3500 9850 3450
+Wire Wire Line
+	10400 3500 10400 3450
+Wire Wire Line
+	10600 3500 10600 3450
+$Comp
+L _addressable_leds:SK9822-EC20 LED-o-7
+U 1 1 60DD3B0B
+P 11250 3050
+F 0 "LED-o-7" H 11225 3273 50  0000 C CNN
+F 1 "SK9822-EC20" H 11225 3274 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 11250 3050 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 11250 3050 50  0001 C CNN
+	1    11250 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-o-8
+U 1 1 60DD3B11
+P 12000 3050
+F 0 "LED-o-8" H 11975 3273 50  0000 C CNN
+F 1 "SK9822-EC20" H 11975 3274 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 12000 3050 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 12000 3050 50  0001 C CNN
+	1    12000 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0224
+U 1 1 60DD3B17
+P 11150 3500
+F 0 "#PWR0224" H 11150 3250 50  0001 C CNN
+F 1 "GND" H 11155 3327 50  0000 C CNN
+F 2 "" H 11150 3500 50  0001 C CNN
+F 3 "" H 11150 3500 50  0001 C CNN
+	1    11150 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0225
+U 1 1 60DD3B1D
+P 11350 3500
+F 0 "#PWR0225" H 11350 3350 50  0001 C CNN
+F 1 "+5V" H 11365 3673 50  0000 C CNN
+F 2 "" H 11350 3500 50  0001 C CNN
+F 3 "" H 11350 3500 50  0001 C CNN
+	1    11350 3500
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0226
+U 1 1 60DD3B23
+P 11900 3500
+F 0 "#PWR0226" H 11900 3250 50  0001 C CNN
+F 1 "GND" H 11905 3327 50  0000 C CNN
+F 2 "" H 11900 3500 50  0001 C CNN
+F 3 "" H 11900 3500 50  0001 C CNN
+	1    11900 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0227
+U 1 1 60DD3B29
+P 12100 3500
+F 0 "#PWR0227" H 12100 3350 50  0001 C CNN
+F 1 "+5V" H 12115 3673 50  0000 C CNN
+F 2 "" H 12100 3500 50  0001 C CNN
+F 3 "" H 12100 3500 50  0001 C CNN
+	1    12100 3500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10800 3000 10900 3000
+Wire Wire Line
+	10800 3100 10900 3100
+Wire Wire Line
+	11550 3000 11650 3000
+Wire Wire Line
+	11550 3100 11650 3100
+Wire Wire Line
+	11150 3500 11150 3450
+Wire Wire Line
+	11350 3500 11350 3450
+Wire Wire Line
+	11900 3500 11900 3450
+Wire Wire Line
+	12100 3500 12100 3450
+Wire Wire Line
+	6300 2700 6300 3000
+Wire Wire Line
+	6200 2600 6200 3100
+Wire Wire Line
+	12400 2600 12400 1950
+Wire Wire Line
+	6200 2600 12400 2600
+Wire Wire Line
+	12500 2700 12500 1850
+Wire Wire Line
+	6300 2700 12500 2700
+$Comp
+L _addressable_leds:SK9822-EC20 LED-o-9
+U 1 1 60E08DE2
+P 12750 3050
+F 0 "LED-o-9" H 12725 3273 50  0000 C CNN
+F 1 "SK9822-EC20" H 12725 3274 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 12750 3050 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 12750 3050 50  0001 C CNN
+	1    12750 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0228
+U 1 1 60E08DE8
+P 12650 3500
+F 0 "#PWR0228" H 12650 3250 50  0001 C CNN
+F 1 "GND" H 12655 3327 50  0000 C CNN
+F 2 "" H 12650 3500 50  0001 C CNN
+F 3 "" H 12650 3500 50  0001 C CNN
+	1    12650 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0229
+U 1 1 60E08DEE
+P 12850 3500
+F 0 "#PWR0229" H 12850 3350 50  0001 C CNN
+F 1 "+5V" H 12865 3673 50  0000 C CNN
+F 2 "" H 12850 3500 50  0001 C CNN
+F 3 "" H 12850 3500 50  0001 C CNN
+	1    12850 3500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	12300 3000 12400 3000
+Wire Wire Line
+	12300 3100 12400 3100
+Wire Wire Line
+	12650 3500 12650 3450
+Wire Wire Line
+	12850 3500 12850 3450
+Wire Wire Line
+	13250 3000 13050 3000
+Wire Wire Line
+	13150 3100 13050 3100
+Wire Wire Line
+	13150 3750 13150 3100
+Wire Wire Line
+	13250 3850 13250 3000
+Wire Wire Line
+	6300 4150 6400 4150
+$Comp
+L _addressable_leds:SK9822-EC20 LED-p-3
+U 1 1 60EEBECA
+P 8250 4200
+F 0 "LED-p-3" H 8225 4423 50  0000 C CNN
+F 1 "SK9822-EC20" H 8225 4424 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 8250 4200 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 8250 4200 50  0001 C CNN
+	1    8250 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-p-1
+U 1 1 60EEBED0
+P 6750 4200
+F 0 "LED-p-1" H 6725 4423 50  0000 C CNN
+F 1 "SK9822-EC20" H 6725 4424 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 6750 4200 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 6750 4200 50  0001 C CNN
+	1    6750 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-p-2
+U 1 1 60EEBED6
+P 7500 4200
+F 0 "LED-p-2" H 7475 4423 50  0000 C CNN
+F 1 "SK9822-EC20" H 7475 4424 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 7500 4200 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 7500 4200 50  0001 C CNN
+	1    7500 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-p-4
+U 1 1 60EEBEDC
+P 9000 4200
+F 0 "LED-p-4" H 8975 4423 50  0000 C CNN
+F 1 "SK9822-EC20" H 8975 4424 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 9000 4200 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 9000 4200 50  0001 C CNN
+	1    9000 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-p-5
+U 1 1 60EEBEE2
+P 9750 4200
+F 0 "LED-p-5" H 9725 4423 50  0000 C CNN
+F 1 "SK9822-EC20" H 9725 4424 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 9750 4200 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 9750 4200 50  0001 C CNN
+	1    9750 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-p-6
+U 1 1 60EEBEE8
+P 10500 4200
+F 0 "LED-p-6" H 10475 4423 50  0000 C CNN
+F 1 "SK9822-EC20" H 10475 4424 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 10500 4200 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 10500 4200 50  0001 C CNN
+	1    10500 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0230
+U 1 1 60EEBEEE
+P 6650 4650
+F 0 "#PWR0230" H 6650 4400 50  0001 C CNN
+F 1 "GND" H 6655 4477 50  0000 C CNN
+F 2 "" H 6650 4650 50  0001 C CNN
+F 3 "" H 6650 4650 50  0001 C CNN
+	1    6650 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0231
+U 1 1 60EEBEF4
+P 6850 4650
+F 0 "#PWR0231" H 6850 4500 50  0001 C CNN
+F 1 "+5V" H 6865 4823 50  0000 C CNN
+F 2 "" H 6850 4650 50  0001 C CNN
+F 3 "" H 6850 4650 50  0001 C CNN
+	1    6850 4650
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0232
+U 1 1 60EEBEFA
+P 7400 4650
+F 0 "#PWR0232" H 7400 4400 50  0001 C CNN
+F 1 "GND" H 7405 4477 50  0000 C CNN
+F 2 "" H 7400 4650 50  0001 C CNN
+F 3 "" H 7400 4650 50  0001 C CNN
+	1    7400 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0233
+U 1 1 60EEBF00
+P 7600 4650
+F 0 "#PWR0233" H 7600 4500 50  0001 C CNN
+F 1 "+5V" H 7615 4823 50  0000 C CNN
+F 2 "" H 7600 4650 50  0001 C CNN
+F 3 "" H 7600 4650 50  0001 C CNN
+	1    7600 4650
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0234
+U 1 1 60EEBF06
+P 8150 4650
+F 0 "#PWR0234" H 8150 4400 50  0001 C CNN
+F 1 "GND" H 8155 4477 50  0000 C CNN
+F 2 "" H 8150 4650 50  0001 C CNN
+F 3 "" H 8150 4650 50  0001 C CNN
+	1    8150 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0235
+U 1 1 60EEBF0C
+P 8350 4650
+F 0 "#PWR0235" H 8350 4500 50  0001 C CNN
+F 1 "+5V" H 8365 4823 50  0000 C CNN
+F 2 "" H 8350 4650 50  0001 C CNN
+F 3 "" H 8350 4650 50  0001 C CNN
+	1    8350 4650
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0236
+U 1 1 60EEBF12
+P 8900 4650
+F 0 "#PWR0236" H 8900 4400 50  0001 C CNN
+F 1 "GND" H 8905 4477 50  0000 C CNN
+F 2 "" H 8900 4650 50  0001 C CNN
+F 3 "" H 8900 4650 50  0001 C CNN
+	1    8900 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0237
+U 1 1 60EEBF18
+P 9100 4650
+F 0 "#PWR0237" H 9100 4500 50  0001 C CNN
+F 1 "+5V" H 9115 4823 50  0000 C CNN
+F 2 "" H 9100 4650 50  0001 C CNN
+F 3 "" H 9100 4650 50  0001 C CNN
+	1    9100 4650
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0238
+U 1 1 60EEBF1E
+P 9650 4650
+F 0 "#PWR0238" H 9650 4400 50  0001 C CNN
+F 1 "GND" H 9655 4477 50  0000 C CNN
+F 2 "" H 9650 4650 50  0001 C CNN
+F 3 "" H 9650 4650 50  0001 C CNN
+	1    9650 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0239
+U 1 1 60EEBF24
+P 9850 4650
+F 0 "#PWR0239" H 9850 4500 50  0001 C CNN
+F 1 "+5V" H 9865 4823 50  0000 C CNN
+F 2 "" H 9850 4650 50  0001 C CNN
+F 3 "" H 9850 4650 50  0001 C CNN
+	1    9850 4650
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0240
+U 1 1 60EEBF2A
+P 10400 4650
+F 0 "#PWR0240" H 10400 4400 50  0001 C CNN
+F 1 "GND" H 10405 4477 50  0000 C CNN
+F 2 "" H 10400 4650 50  0001 C CNN
+F 3 "" H 10400 4650 50  0001 C CNN
+	1    10400 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0241
+U 1 1 60EEBF30
+P 10600 4650
+F 0 "#PWR0241" H 10600 4500 50  0001 C CNN
+F 1 "+5V" H 10615 4823 50  0000 C CNN
+F 2 "" H 10600 4650 50  0001 C CNN
+F 3 "" H 10600 4650 50  0001 C CNN
+	1    10600 4650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7050 4150 7150 4150
+Wire Wire Line
+	7800 4150 7900 4150
+Wire Wire Line
+	10050 4150 10150 4150
+Wire Wire Line
+	10050 4250 10150 4250
+Wire Wire Line
+	6650 4650 6650 4600
+Wire Wire Line
+	6850 4650 6850 4600
+Wire Wire Line
+	7400 4650 7400 4600
+Wire Wire Line
+	7600 4650 7600 4600
+Wire Wire Line
+	8150 4650 8150 4600
+Wire Wire Line
+	8350 4650 8350 4600
+Wire Wire Line
+	8900 4650 8900 4600
+Wire Wire Line
+	9100 4650 9100 4600
+Wire Wire Line
+	9650 4650 9650 4600
+Wire Wire Line
+	9850 4650 9850 4600
+Wire Wire Line
+	10400 4650 10400 4600
+Wire Wire Line
+	10600 4650 10600 4600
+$Comp
+L _addressable_leds:SK9822-EC20 LED-p-7
+U 1 1 60EEBF4C
+P 11250 4200
+F 0 "LED-p-7" H 11225 4423 50  0000 C CNN
+F 1 "SK9822-EC20" H 11225 4424 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 11250 4200 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 11250 4200 50  0001 C CNN
+	1    11250 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-p-8
+U 1 1 60EEBF52
+P 12000 4200
+F 0 "LED-p-8" H 11975 4423 50  0000 C CNN
+F 1 "SK9822-EC20" H 11975 4424 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 12000 4200 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 12000 4200 50  0001 C CNN
+	1    12000 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0242
+U 1 1 60EEBF58
+P 11150 4650
+F 0 "#PWR0242" H 11150 4400 50  0001 C CNN
+F 1 "GND" H 11155 4477 50  0000 C CNN
+F 2 "" H 11150 4650 50  0001 C CNN
+F 3 "" H 11150 4650 50  0001 C CNN
+	1    11150 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0243
+U 1 1 60EEBF5E
+P 11350 4650
+F 0 "#PWR0243" H 11350 4500 50  0001 C CNN
+F 1 "+5V" H 11365 4823 50  0000 C CNN
+F 2 "" H 11350 4650 50  0001 C CNN
+F 3 "" H 11350 4650 50  0001 C CNN
+	1    11350 4650
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0244
+U 1 1 60EEBF64
+P 11900 4650
+F 0 "#PWR0244" H 11900 4400 50  0001 C CNN
+F 1 "GND" H 11905 4477 50  0000 C CNN
+F 2 "" H 11900 4650 50  0001 C CNN
+F 3 "" H 11900 4650 50  0001 C CNN
+	1    11900 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0245
+U 1 1 60EEBF6A
+P 12100 4650
+F 0 "#PWR0245" H 12100 4500 50  0001 C CNN
+F 1 "+5V" H 12115 4823 50  0000 C CNN
+F 2 "" H 12100 4650 50  0001 C CNN
+F 3 "" H 12100 4650 50  0001 C CNN
+	1    12100 4650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10800 4150 10900 4150
+Wire Wire Line
+	10800 4250 10900 4250
+Wire Wire Line
+	11550 4150 11650 4150
+Wire Wire Line
+	11550 4250 11650 4250
+Wire Wire Line
+	11150 4650 11150 4600
+Wire Wire Line
+	11350 4650 11350 4600
+Wire Wire Line
+	11900 4650 11900 4600
+Wire Wire Line
+	12100 4650 12100 4600
+Wire Wire Line
+	6300 3850 6300 4150
+Wire Wire Line
+	6200 3750 6200 4250
+$Comp
+L _addressable_leds:SK9822-EC20 LED-p-9
+U 1 1 60EEBF7A
+P 12750 4200
+F 0 "LED-p-9" H 12725 4423 50  0000 C CNN
+F 1 "SK9822-EC20" H 12725 4424 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 12750 4200 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 12750 4200 50  0001 C CNN
+	1    12750 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0246
+U 1 1 60EEBF80
+P 12650 4650
+F 0 "#PWR0246" H 12650 4400 50  0001 C CNN
+F 1 "GND" H 12655 4477 50  0000 C CNN
+F 2 "" H 12650 4650 50  0001 C CNN
+F 3 "" H 12650 4650 50  0001 C CNN
+	1    12650 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0247
+U 1 1 60EEBF86
+P 12850 4650
+F 0 "#PWR0247" H 12850 4500 50  0001 C CNN
+F 1 "+5V" H 12865 4823 50  0000 C CNN
+F 2 "" H 12850 4650 50  0001 C CNN
+F 3 "" H 12850 4650 50  0001 C CNN
+	1    12850 4650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	12300 4150 12400 4150
+Wire Wire Line
+	12300 4250 12400 4250
+Wire Wire Line
+	12650 4650 12650 4600
+Wire Wire Line
+	12850 4650 12850 4600
+Wire Wire Line
+	13150 3750 6200 3750
+Wire Wire Line
+	13250 3850 6300 3850
+Wire Wire Line
+	9300 4250 9400 4250
+Wire Wire Line
+	9300 4150 9400 4150
+Wire Wire Line
+	8550 4250 8650 4250
+Wire Wire Line
+	8550 4150 8650 4150
+Wire Wire Line
+	7800 4250 7900 4250
+Wire Wire Line
+	7050 4250 7150 4250
+Wire Wire Line
+	6200 4250 6400 4250
+Wire Wire Line
+	13150 4900 13150 4250
+Wire Wire Line
+	13250 5000 13250 4150
+Wire Wire Line
+	6200 5400 6400 5400
+Wire Wire Line
+	6300 5300 6400 5300
+$Comp
+L _addressable_leds:SK9822-EC20 LED-q-3
+U 1 1 610840E7
+P 8250 5350
+F 0 "LED-q-3" H 8225 5573 50  0000 C CNN
+F 1 "SK9822-EC20" H 8225 5574 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 8250 5350 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 8250 5350 50  0001 C CNN
+	1    8250 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-q-1
+U 1 1 610840ED
+P 6750 5350
+F 0 "LED-q-1" H 6725 5573 50  0000 C CNN
+F 1 "SK9822-EC20" H 6725 5574 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 6750 5350 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 6750 5350 50  0001 C CNN
+	1    6750 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-q-2
+U 1 1 610840F3
+P 7500 5350
+F 0 "LED-q-2" H 7475 5573 50  0000 C CNN
+F 1 "SK9822-EC20" H 7475 5574 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 7500 5350 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 7500 5350 50  0001 C CNN
+	1    7500 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-q-4
+U 1 1 610840F9
+P 9000 5350
+F 0 "LED-q-4" H 8975 5573 50  0000 C CNN
+F 1 "SK9822-EC20" H 8975 5574 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 9000 5350 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 9000 5350 50  0001 C CNN
+	1    9000 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-q-5
+U 1 1 610840FF
+P 9750 5350
+F 0 "LED-q-5" H 9725 5573 50  0000 C CNN
+F 1 "SK9822-EC20" H 9725 5574 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 9750 5350 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 9750 5350 50  0001 C CNN
+	1    9750 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-q-6
+U 1 1 61084105
+P 10500 5350
+F 0 "LED-q-6" H 10475 5573 50  0000 C CNN
+F 1 "SK9822-EC20" H 10475 5574 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 10500 5350 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 10500 5350 50  0001 C CNN
+	1    10500 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0248
+U 1 1 6108410B
+P 6650 5800
+F 0 "#PWR0248" H 6650 5550 50  0001 C CNN
+F 1 "GND" H 6655 5627 50  0000 C CNN
+F 2 "" H 6650 5800 50  0001 C CNN
+F 3 "" H 6650 5800 50  0001 C CNN
+	1    6650 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0249
+U 1 1 61084111
+P 6850 5800
+F 0 "#PWR0249" H 6850 5650 50  0001 C CNN
+F 1 "+5V" H 6865 5973 50  0000 C CNN
+F 2 "" H 6850 5800 50  0001 C CNN
+F 3 "" H 6850 5800 50  0001 C CNN
+	1    6850 5800
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0250
+U 1 1 61084117
+P 7400 5800
+F 0 "#PWR0250" H 7400 5550 50  0001 C CNN
+F 1 "GND" H 7405 5627 50  0000 C CNN
+F 2 "" H 7400 5800 50  0001 C CNN
+F 3 "" H 7400 5800 50  0001 C CNN
+	1    7400 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0251
+U 1 1 6108411D
+P 7600 5800
+F 0 "#PWR0251" H 7600 5650 50  0001 C CNN
+F 1 "+5V" H 7615 5973 50  0000 C CNN
+F 2 "" H 7600 5800 50  0001 C CNN
+F 3 "" H 7600 5800 50  0001 C CNN
+	1    7600 5800
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0252
+U 1 1 61084123
+P 8150 5800
+F 0 "#PWR0252" H 8150 5550 50  0001 C CNN
+F 1 "GND" H 8155 5627 50  0000 C CNN
+F 2 "" H 8150 5800 50  0001 C CNN
+F 3 "" H 8150 5800 50  0001 C CNN
+	1    8150 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0253
+U 1 1 61084129
+P 8350 5800
+F 0 "#PWR0253" H 8350 5650 50  0001 C CNN
+F 1 "+5V" H 8365 5973 50  0000 C CNN
+F 2 "" H 8350 5800 50  0001 C CNN
+F 3 "" H 8350 5800 50  0001 C CNN
+	1    8350 5800
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0254
+U 1 1 6108412F
+P 8900 5800
+F 0 "#PWR0254" H 8900 5550 50  0001 C CNN
+F 1 "GND" H 8905 5627 50  0000 C CNN
+F 2 "" H 8900 5800 50  0001 C CNN
+F 3 "" H 8900 5800 50  0001 C CNN
+	1    8900 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0255
+U 1 1 61084135
+P 9100 5800
+F 0 "#PWR0255" H 9100 5650 50  0001 C CNN
+F 1 "+5V" H 9115 5973 50  0000 C CNN
+F 2 "" H 9100 5800 50  0001 C CNN
+F 3 "" H 9100 5800 50  0001 C CNN
+	1    9100 5800
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0256
+U 1 1 6108413B
+P 9650 5800
+F 0 "#PWR0256" H 9650 5550 50  0001 C CNN
+F 1 "GND" H 9655 5627 50  0000 C CNN
+F 2 "" H 9650 5800 50  0001 C CNN
+F 3 "" H 9650 5800 50  0001 C CNN
+	1    9650 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0257
+U 1 1 61084141
+P 9850 5800
+F 0 "#PWR0257" H 9850 5650 50  0001 C CNN
+F 1 "+5V" H 9865 5973 50  0000 C CNN
+F 2 "" H 9850 5800 50  0001 C CNN
+F 3 "" H 9850 5800 50  0001 C CNN
+	1    9850 5800
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0258
+U 1 1 61084147
+P 10400 5800
+F 0 "#PWR0258" H 10400 5550 50  0001 C CNN
+F 1 "GND" H 10405 5627 50  0000 C CNN
+F 2 "" H 10400 5800 50  0001 C CNN
+F 3 "" H 10400 5800 50  0001 C CNN
+	1    10400 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0259
+U 1 1 6108414D
+P 10600 5800
+F 0 "#PWR0259" H 10600 5650 50  0001 C CNN
+F 1 "+5V" H 10615 5973 50  0000 C CNN
+F 2 "" H 10600 5800 50  0001 C CNN
+F 3 "" H 10600 5800 50  0001 C CNN
+	1    10600 5800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7050 5300 7150 5300
+Wire Wire Line
+	7050 5400 7150 5400
+Wire Wire Line
+	7800 5300 7900 5300
+Wire Wire Line
+	7800 5400 7900 5400
+Wire Wire Line
+	8550 5300 8650 5300
+Wire Wire Line
+	8550 5400 8650 5400
+Wire Wire Line
+	9300 5300 9400 5300
+Wire Wire Line
+	9300 5400 9400 5400
+Wire Wire Line
+	10050 5300 10150 5300
+Wire Wire Line
+	10050 5400 10150 5400
+Wire Wire Line
+	6650 5800 6650 5750
+Wire Wire Line
+	6850 5800 6850 5750
+Wire Wire Line
+	7400 5800 7400 5750
+Wire Wire Line
+	7600 5800 7600 5750
+Wire Wire Line
+	8150 5800 8150 5750
+Wire Wire Line
+	8350 5800 8350 5750
+Wire Wire Line
+	8900 5800 8900 5750
+Wire Wire Line
+	9100 5800 9100 5750
+Wire Wire Line
+	9650 5800 9650 5750
+Wire Wire Line
+	9850 5800 9850 5750
+Wire Wire Line
+	10400 5800 10400 5750
+Wire Wire Line
+	10600 5800 10600 5750
+$Comp
+L _addressable_leds:SK9822-EC20 LED-q-7
+U 1 1 61084169
+P 11250 5350
+F 0 "LED-q-7" H 11225 5573 50  0000 C CNN
+F 1 "SK9822-EC20" H 11225 5574 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 11250 5350 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 11250 5350 50  0001 C CNN
+	1    11250 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-q-8
+U 1 1 6108416F
+P 12000 5350
+F 0 "LED-q-8" H 11975 5573 50  0000 C CNN
+F 1 "SK9822-EC20" H 11975 5574 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 12000 5350 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 12000 5350 50  0001 C CNN
+	1    12000 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0260
+U 1 1 61084175
+P 11150 5800
+F 0 "#PWR0260" H 11150 5550 50  0001 C CNN
+F 1 "GND" H 11155 5627 50  0000 C CNN
+F 2 "" H 11150 5800 50  0001 C CNN
+F 3 "" H 11150 5800 50  0001 C CNN
+	1    11150 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0261
+U 1 1 6108417B
+P 11350 5800
+F 0 "#PWR0261" H 11350 5650 50  0001 C CNN
+F 1 "+5V" H 11365 5973 50  0000 C CNN
+F 2 "" H 11350 5800 50  0001 C CNN
+F 3 "" H 11350 5800 50  0001 C CNN
+	1    11350 5800
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0262
+U 1 1 61084181
+P 11900 5800
+F 0 "#PWR0262" H 11900 5550 50  0001 C CNN
+F 1 "GND" H 11905 5627 50  0000 C CNN
+F 2 "" H 11900 5800 50  0001 C CNN
+F 3 "" H 11900 5800 50  0001 C CNN
+	1    11900 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0263
+U 1 1 61084187
+P 12100 5800
+F 0 "#PWR0263" H 12100 5650 50  0001 C CNN
+F 1 "+5V" H 12115 5973 50  0000 C CNN
+F 2 "" H 12100 5800 50  0001 C CNN
+F 3 "" H 12100 5800 50  0001 C CNN
+	1    12100 5800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10800 5300 10900 5300
+Wire Wire Line
+	10800 5400 10900 5400
+Wire Wire Line
+	11550 5300 11650 5300
+Wire Wire Line
+	11550 5400 11650 5400
+Wire Wire Line
+	11150 5800 11150 5750
+Wire Wire Line
+	11350 5800 11350 5750
+Wire Wire Line
+	11900 5800 11900 5750
+Wire Wire Line
+	12100 5800 12100 5750
+Wire Wire Line
+	6300 5000 6300 5300
+Wire Wire Line
+	6200 4900 6200 5400
+$Comp
+L _addressable_leds:SK9822-EC20 LED-q-9
+U 1 1 61084197
+P 12750 5350
+F 0 "LED-q-9" H 12725 5573 50  0000 C CNN
+F 1 "SK9822-EC20" H 12725 5574 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 12750 5350 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 12750 5350 50  0001 C CNN
+	1    12750 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0264
+U 1 1 6108419D
+P 12650 5800
+F 0 "#PWR0264" H 12650 5550 50  0001 C CNN
+F 1 "GND" H 12655 5627 50  0000 C CNN
+F 2 "" H 12650 5800 50  0001 C CNN
+F 3 "" H 12650 5800 50  0001 C CNN
+	1    12650 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0265
+U 1 1 610841A3
+P 12850 5800
+F 0 "#PWR0265" H 12850 5650 50  0001 C CNN
+F 1 "+5V" H 12865 5973 50  0000 C CNN
+F 2 "" H 12850 5800 50  0001 C CNN
+F 3 "" H 12850 5800 50  0001 C CNN
+	1    12850 5800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	12300 5300 12400 5300
+Wire Wire Line
+	12300 5400 12400 5400
+Wire Wire Line
+	12650 5800 12650 5750
+Wire Wire Line
+	12850 5800 12850 5750
+Wire Wire Line
+	13250 5000 6300 5000
+Wire Wire Line
+	13150 4250 13050 4250
+Wire Wire Line
+	13250 4150 13050 4150
+Wire Wire Line
+	13150 6050 13150 5400
+Wire Wire Line
+	13250 6150 13250 5300
+Wire Wire Line
+	6200 6550 6400 6550
+Wire Wire Line
+	6300 6450 6400 6450
+$Comp
+L _addressable_leds:SK9822-EC20 LED-r-3
+U 1 1 6120C622
+P 8250 6500
+F 0 "LED-r-3" H 8225 6723 50  0000 C CNN
+F 1 "SK9822-EC20" H 8225 6724 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 8250 6500 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 8250 6500 50  0001 C CNN
+	1    8250 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-r-1
+U 1 1 6120C628
+P 6750 6500
+F 0 "LED-r-1" H 6725 6723 50  0000 C CNN
+F 1 "SK9822-EC20" H 6725 6724 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 6750 6500 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 6750 6500 50  0001 C CNN
+	1    6750 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-r-2
+U 1 1 6120C62E
+P 7500 6500
+F 0 "LED-r-2" H 7475 6723 50  0000 C CNN
+F 1 "SK9822-EC20" H 7475 6724 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 7500 6500 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 7500 6500 50  0001 C CNN
+	1    7500 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-r-4
+U 1 1 6120C634
+P 9000 6500
+F 0 "LED-r-4" H 8975 6723 50  0000 C CNN
+F 1 "SK9822-EC20" H 8975 6724 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 9000 6500 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 9000 6500 50  0001 C CNN
+	1    9000 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-r-5
+U 1 1 6120C63A
+P 9750 6500
+F 0 "LED-r-5" H 9725 6723 50  0000 C CNN
+F 1 "SK9822-EC20" H 9725 6724 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 9750 6500 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 9750 6500 50  0001 C CNN
+	1    9750 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-r-6
+U 1 1 6120C640
+P 10500 6500
+F 0 "LED-r-6" H 10475 6723 50  0000 C CNN
+F 1 "SK9822-EC20" H 10475 6724 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 10500 6500 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 10500 6500 50  0001 C CNN
+	1    10500 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0266
+U 1 1 6120C646
+P 6650 6950
+F 0 "#PWR0266" H 6650 6700 50  0001 C CNN
+F 1 "GND" H 6655 6777 50  0000 C CNN
+F 2 "" H 6650 6950 50  0001 C CNN
+F 3 "" H 6650 6950 50  0001 C CNN
+	1    6650 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0267
+U 1 1 6120C64C
+P 6850 6950
+F 0 "#PWR0267" H 6850 6800 50  0001 C CNN
+F 1 "+5V" H 6865 7123 50  0000 C CNN
+F 2 "" H 6850 6950 50  0001 C CNN
+F 3 "" H 6850 6950 50  0001 C CNN
+	1    6850 6950
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0268
+U 1 1 6120C652
+P 7400 6950
+F 0 "#PWR0268" H 7400 6700 50  0001 C CNN
+F 1 "GND" H 7405 6777 50  0000 C CNN
+F 2 "" H 7400 6950 50  0001 C CNN
+F 3 "" H 7400 6950 50  0001 C CNN
+	1    7400 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0269
+U 1 1 6120C658
+P 7600 6950
+F 0 "#PWR0269" H 7600 6800 50  0001 C CNN
+F 1 "+5V" H 7615 7123 50  0000 C CNN
+F 2 "" H 7600 6950 50  0001 C CNN
+F 3 "" H 7600 6950 50  0001 C CNN
+	1    7600 6950
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0270
+U 1 1 6120C65E
+P 8150 6950
+F 0 "#PWR0270" H 8150 6700 50  0001 C CNN
+F 1 "GND" H 8155 6777 50  0000 C CNN
+F 2 "" H 8150 6950 50  0001 C CNN
+F 3 "" H 8150 6950 50  0001 C CNN
+	1    8150 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0271
+U 1 1 6120C664
+P 8350 6950
+F 0 "#PWR0271" H 8350 6800 50  0001 C CNN
+F 1 "+5V" H 8365 7123 50  0000 C CNN
+F 2 "" H 8350 6950 50  0001 C CNN
+F 3 "" H 8350 6950 50  0001 C CNN
+	1    8350 6950
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0272
+U 1 1 6120C66A
+P 8900 6950
+F 0 "#PWR0272" H 8900 6700 50  0001 C CNN
+F 1 "GND" H 8905 6777 50  0000 C CNN
+F 2 "" H 8900 6950 50  0001 C CNN
+F 3 "" H 8900 6950 50  0001 C CNN
+	1    8900 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0273
+U 1 1 6120C670
+P 9100 6950
+F 0 "#PWR0273" H 9100 6800 50  0001 C CNN
+F 1 "+5V" H 9115 7123 50  0000 C CNN
+F 2 "" H 9100 6950 50  0001 C CNN
+F 3 "" H 9100 6950 50  0001 C CNN
+	1    9100 6950
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0274
+U 1 1 6120C676
+P 9650 6950
+F 0 "#PWR0274" H 9650 6700 50  0001 C CNN
+F 1 "GND" H 9655 6777 50  0000 C CNN
+F 2 "" H 9650 6950 50  0001 C CNN
+F 3 "" H 9650 6950 50  0001 C CNN
+	1    9650 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0275
+U 1 1 6120C67C
+P 9850 6950
+F 0 "#PWR0275" H 9850 6800 50  0001 C CNN
+F 1 "+5V" H 9865 7123 50  0000 C CNN
+F 2 "" H 9850 6950 50  0001 C CNN
+F 3 "" H 9850 6950 50  0001 C CNN
+	1    9850 6950
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0276
+U 1 1 6120C682
+P 10400 6950
+F 0 "#PWR0276" H 10400 6700 50  0001 C CNN
+F 1 "GND" H 10405 6777 50  0000 C CNN
+F 2 "" H 10400 6950 50  0001 C CNN
+F 3 "" H 10400 6950 50  0001 C CNN
+	1    10400 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0277
+U 1 1 6120C688
+P 10600 6950
+F 0 "#PWR0277" H 10600 6800 50  0001 C CNN
+F 1 "+5V" H 10615 7123 50  0000 C CNN
+F 2 "" H 10600 6950 50  0001 C CNN
+F 3 "" H 10600 6950 50  0001 C CNN
+	1    10600 6950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7050 6450 7150 6450
+Wire Wire Line
+	7050 6550 7150 6550
+Wire Wire Line
+	7800 6450 7900 6450
+Wire Wire Line
+	7800 6550 7900 6550
+Wire Wire Line
+	8550 6450 8650 6450
+Wire Wire Line
+	8550 6550 8650 6550
+Wire Wire Line
+	9300 6450 9400 6450
+Wire Wire Line
+	9300 6550 9400 6550
+Wire Wire Line
+	10050 6450 10150 6450
+Wire Wire Line
+	10050 6550 10150 6550
+Wire Wire Line
+	6650 6950 6650 6900
+Wire Wire Line
+	6850 6950 6850 6900
+Wire Wire Line
+	7400 6950 7400 6900
+Wire Wire Line
+	7600 6950 7600 6900
+Wire Wire Line
+	8150 6950 8150 6900
+Wire Wire Line
+	8350 6950 8350 6900
+Wire Wire Line
+	8900 6950 8900 6900
+Wire Wire Line
+	9100 6950 9100 6900
+Wire Wire Line
+	9650 6950 9650 6900
+Wire Wire Line
+	9850 6950 9850 6900
+Wire Wire Line
+	10400 6950 10400 6900
+Wire Wire Line
+	10600 6950 10600 6900
+$Comp
+L _addressable_leds:SK9822-EC20 LED-r-7
+U 1 1 6120C6A4
+P 11250 6500
+F 0 "LED-r-7" H 11225 6723 50  0000 C CNN
+F 1 "SK9822-EC20" H 11225 6724 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 11250 6500 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 11250 6500 50  0001 C CNN
+	1    11250 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-r-8
+U 1 1 6120C6AA
+P 12000 6500
+F 0 "LED-r-8" H 11975 6723 50  0000 C CNN
+F 1 "SK9822-EC20" H 11975 6724 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 12000 6500 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 12000 6500 50  0001 C CNN
+	1    12000 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0278
+U 1 1 6120C6B0
+P 11150 6950
+F 0 "#PWR0278" H 11150 6700 50  0001 C CNN
+F 1 "GND" H 11155 6777 50  0000 C CNN
+F 2 "" H 11150 6950 50  0001 C CNN
+F 3 "" H 11150 6950 50  0001 C CNN
+	1    11150 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0279
+U 1 1 6120C6B6
+P 11350 6950
+F 0 "#PWR0279" H 11350 6800 50  0001 C CNN
+F 1 "+5V" H 11365 7123 50  0000 C CNN
+F 2 "" H 11350 6950 50  0001 C CNN
+F 3 "" H 11350 6950 50  0001 C CNN
+	1    11350 6950
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0280
+U 1 1 6120C6BC
+P 11900 6950
+F 0 "#PWR0280" H 11900 6700 50  0001 C CNN
+F 1 "GND" H 11905 6777 50  0000 C CNN
+F 2 "" H 11900 6950 50  0001 C CNN
+F 3 "" H 11900 6950 50  0001 C CNN
+	1    11900 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0281
+U 1 1 6120C6C2
+P 12100 6950
+F 0 "#PWR0281" H 12100 6800 50  0001 C CNN
+F 1 "+5V" H 12115 7123 50  0000 C CNN
+F 2 "" H 12100 6950 50  0001 C CNN
+F 3 "" H 12100 6950 50  0001 C CNN
+	1    12100 6950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10800 6450 10900 6450
+Wire Wire Line
+	10800 6550 10900 6550
+Wire Wire Line
+	11550 6450 11650 6450
+Wire Wire Line
+	11550 6550 11650 6550
+Wire Wire Line
+	11150 6950 11150 6900
+Wire Wire Line
+	11350 6950 11350 6900
+Wire Wire Line
+	11900 6950 11900 6900
+Wire Wire Line
+	12100 6950 12100 6900
+Wire Wire Line
+	6300 6150 6300 6450
+Wire Wire Line
+	6200 6050 6200 6550
+Wire Wire Line
+	13250 6150 6300 6150
+Wire Wire Line
+	6200 6050 13150 6050
+Wire Wire Line
+	13150 5400 13050 5400
+Wire Wire Line
+	13250 5300 13050 5300
+NoConn ~ 12300 6450
+NoConn ~ 12300 6550
+Wire Wire Line
+	6200 4900 13150 4900
+Wire Wire Line
+	-950 4900 3750 4900
+$Comp
+L _addressable_leds:SK9822-EC20 LED-PLACE-1
+U 1 1 608DE193
+P -500 -1800
+F 0 "LED-PLACE-1" H -525 -1577 50  0000 C CNN
+F 1 "SK9822-EC20" H -525 -1576 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H -500 -1800 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H -500 -1800 50  0001 C CNN
+	1    -500 -1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-PLACE-2
+U 1 1 608DE3E9
+P 250 -1800
+F 0 "LED-PLACE-2" H 225 -1577 50  0000 C CNN
+F 1 "SK9822-EC20" H 225 -1576 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 250 -1800 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 250 -1800 50  0001 C CNN
+	1    250  -1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	-950 -1000 -950 -700
+Wire Wire Line
+	-1050 -1100 -1050 -600
+$Comp
+L power:GND #PWR026
+U 1 1 608F2266
+P -600 -1350
+F 0 "#PWR026" H -600 -1600 50  0001 C CNN
+F 1 "GND" H -595 -1523 50  0000 C CNN
+F 2 "" H -600 -1350 50  0001 C CNN
+F 3 "" H -600 -1350 50  0001 C CNN
+	1    -600 -1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR042
+U 1 1 608F226C
+P -400 -1350
+F 0 "#PWR042" H -400 -1500 50  0001 C CNN
+F 1 "+5V" H -385 -1177 50  0000 C CNN
+F 2 "" H -400 -1350 50  0001 C CNN
+F 3 "" H -400 -1350 50  0001 C CNN
+	1    -400 -1350
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR057
+U 1 1 608F3162
+P 150 -1350
+F 0 "#PWR057" H 150 -1600 50  0001 C CNN
+F 1 "GND" H 155 -1523 50  0000 C CNN
+F 2 "" H 150 -1350 50  0001 C CNN
+F 3 "" H 150 -1350 50  0001 C CNN
+	1    150  -1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR072
+U 1 1 608F3168
+P 350 -1350
+F 0 "#PWR072" H 350 -1500 50  0001 C CNN
+F 1 "+5V" H 365 -1177 50  0000 C CNN
+F 2 "" H 350 -1350 50  0001 C CNN
+F 3 "" H 350 -1350 50  0001 C CNN
+	1    350  -1350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	-600 -1400 -600 -1350
+Wire Wire Line
+	-400 -1400 -400 -1350
+Wire Wire Line
+	150  -1400 150  -1350
+Wire Wire Line
+	350  -1400 350  -1350
+Wire Wire Line
+	-950 -1000 800  -1000
+Wire Wire Line
+	800  -1000 800  -1850
+Wire Wire Line
+	-1050 -1100 650  -1100
+Wire Wire Line
+	650  -1100 650  -1750
+Wire Wire Line
+	550  -1850 800  -1850
+Wire Wire Line
+	550  -1750 650  -1750
+Wire Wire Line
+	-200 -1750 -100 -1750
+Wire Wire Line
+	-200 -1850 -100 -1850
+Wire Wire Line
+	-1050 -1750 -850 -1750
+Wire Wire Line
+	-1050 -2250 -1050 -1750
+Wire Wire Line
+	-950 -1850 -850 -1850
+Wire Wire Line
+	-950 -2150 -950 -1850
+$Comp
+L _addressable_leds:SK9822-EC20 LED-a-1
+U 1 1 619618F9
+P -500 -650
+F 0 "LED-a-1" H -525 -427 50  0000 C CNN
+F 1 "SK9822-EC20" H -525 -426 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H -500 -650 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H -500 -650 50  0001 C CNN
+	1    -500 -650
+	1    0    0    -1  
+$EndComp
+$Comp
+L _addressable_leds:SK9822-EC20 LED-a-2
+U 1 1 619618FF
+P 250 -650
+F 0 "LED-a-2" H 225 -427 50  0000 C CNN
+F 1 "SK9822-EC20" H 225 -426 50  0001 C CNN
+F 2 "_addressable_leds_footprint:SK9822-EC20" H 250 -650 50  0001 C CNN
+F 3 "http://www.normandled.com/upload/201906/EC20-9822(SK9822-2020)%20LED%20Datasheet.pdf" H 250 -650 50  0001 C CNN
+	1    250  -650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0282
+U 1 1 61961905
+P -600 -200
+F 0 "#PWR0282" H -600 -450 50  0001 C CNN
+F 1 "GND" H -595 -373 50  0000 C CNN
+F 2 "" H -600 -200 50  0001 C CNN
+F 3 "" H -600 -200 50  0001 C CNN
+	1    -600 -200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0283
+U 1 1 6196190B
+P -400 -200
+F 0 "#PWR0283" H -400 -350 50  0001 C CNN
+F 1 "+5V" H -385 -27 50  0000 C CNN
+F 2 "" H -400 -200 50  0001 C CNN
+F 3 "" H -400 -200 50  0001 C CNN
+	1    -400 -200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0284
+U 1 1 61961911
+P 150 -200
+F 0 "#PWR0284" H 150 -450 50  0001 C CNN
+F 1 "GND" H 155 -373 50  0000 C CNN
+F 2 "" H 150 -200 50  0001 C CNN
+F 3 "" H 150 -200 50  0001 C CNN
+	1    150  -200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0285
+U 1 1 61961917
+P 350 -200
+F 0 "#PWR0285" H 350 -350 50  0001 C CNN
+F 1 "+5V" H 365 -27 50  0000 C CNN
+F 2 "" H 350 -200 50  0001 C CNN
+F 3 "" H 350 -200 50  0001 C CNN
+	1    350  -200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	-600 -250 -600 -200
+Wire Wire Line
+	-400 -250 -400 -200
+Wire Wire Line
+	150  -250 150  -200
+Wire Wire Line
+	350  -250 350  -200
+Wire Wire Line
+	-950 150  800  150 
+Wire Wire Line
+	800  150  800  -700
+Wire Wire Line
+	-1050 50   650  50  
+Wire Wire Line
+	650  50   650  -600
+Wire Wire Line
+	550  -700 800  -700
+Wire Wire Line
+	550  -600 650  -600
+Wire Wire Line
+	-200 -600 -100 -600
+Wire Wire Line
+	-200 -700 -100 -700
+Wire Wire Line
+	-1050 -600 -850 -600
+Wire Wire Line
+	-950 -700 -850 -700
+Wire Wire Line
+	-1050 50   -1050 700 
+Wire Wire Line
+	-950 150  -950 600 
+$EndSCHEMATC
