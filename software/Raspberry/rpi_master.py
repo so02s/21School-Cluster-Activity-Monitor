@@ -8,6 +8,7 @@ MAX_R = 25 # KOm
 MIN_R = 0.4 # KOm
 LUX_100 = MIN_R # Maximum brightness; needs to be calibrated
 LUX_10 = MAX_R # Minimum brightness; needs to be calibrated
+ADC_PIN = 3 # GPIO4 on Rpi
 
 class STM32:
     def __init__(self, addr) -> None:
@@ -40,7 +41,7 @@ class ADC:
 
 class Master:
     def __init__(self, num_of_clusters) -> None:
-        self.adc = ADC()
+        self.adc = ADC(ADC_PIN)
         self.bus = smbus.SMBus(1)
         self.stm32 = [num_of_clusters]
         self.db = ClusterDB()
