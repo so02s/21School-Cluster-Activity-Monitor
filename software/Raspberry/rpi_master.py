@@ -59,7 +59,7 @@ class Master:
         #self.bus = smbus.SMBus(1)
         self.stm32 = [None]*num_of_clusters
         self.db = ClusterDB()
-        #self.grafana = Grafana(self.db)
+        self.grafana = Grafana(self.db)
         self.clusters = ['oasis', 'illusion', 'mirage', 'atlantis', 'atrium']
         self.num_of_clusters = num_of_clusters
     def init_slaves(self):
@@ -74,7 +74,10 @@ class Master:
         # parse metrics data for each cluster
         # ask bd if any changes per mac (try to change status)
         # based on return value construct msg to stm, at the end update stm32
-        #self.grafana.get_metrics() # grafana class updates bd
+        # self.grafana.get_metrics() # grafana class updates bd
+        self.db.change_mac_status('oasis', 'a3', int(Status.EXAM))
+        self.db.change_mac_status('oasis', 'a1', int(Status.USED))
+        self.db.change_mac_status('oasis', 'a4', int(Status.EXAM))
         for cluster in self.clusters:
             # get number of leds in cluster
             # get value by led id

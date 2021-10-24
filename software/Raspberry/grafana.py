@@ -1,33 +1,36 @@
-#!/usr/bin/env python
-
 import requests
 import json
+from credentials import HOST, API_KEY
+from rpi_DB import Status
 
-HOST = 'https://grafometheus.21-school.ru'
-API_KEY = 'eyJrIjoiVTBmTEtkazYwS3dSNDlsdEo2WkNyWFRGZzNLS0pBNUQiLCJuIjoiMjFkYXNoIiwiaWQiOjF9'
+# mi-g6.msk.21-school.ru: empty
+# ox-o4.msk.21-school.ru: empty
+# at-k8.msk.21-school.ru: empty
+# ga-o4.msk.21-school.ru: empty
 
-
-def main():
-    headers = {'Authorization': 'Bearer %s' % (API_KEY,)}
-
-#    r = requests.get('%s/api/search?query=&' % (HOST,), headers=headers)
-#    dashboards = r.json()
-#    print (dashboards) # we can get all dashboards uid and other
+class Grafana:
+    def __init__(self, db):
+        self.db = db
+        self.headers = {'Authorization': 'Bearer %s' % (API_KEY,)}
+        self.clusters = {'oa' : 'oasis', 'il' : 'illusion', 'mi' : 'mirage', 'at' : 'atlantis', 'am' : 'atrium'}
     
-    print ('----- GET data from DB/query -----')
-    
-# in data_url need place url with query_request
-    data_url ='/api/datasources/proxy/1/api/v1/query?query=iMacUser_status{instance=~\".*\"}'
-    r = requests.get('%s%s' % (HOST, data_url,), headers=headers)
-    data = r.json()
-    macs = {}
-    print('----- Save each host status in {host:status} -----')
-    for each in data['data']['result']:
-       # uncomment for print data in tty
-        status = each['metric']['instance']+': '+each['metric']['login']
-        print(status)
-        macs[each['metric']['instance']] = each['metric']['login']
-
-
-if __name__ == '__main__':
-    main()
+    def get_metrics(self):
+        data_url ='/api/datasources/proxy/1/api/v1/query?query=iMacUser_status{instance=~\".*\"}'
+        r = requests.get('%s%s' % (HOST, data_url,), headers=self.headers)
+        data = r.json()
+        # macs = {}
+        for each in data['data']['result']:
+            status = each['metric']['instance']+': '+each['metric']['login']
+            # 'am-i2.msk.21-school.ru'
+            mac = status.split(": ")[0].split(".")[0]
+            cluster = mac.split("-")[0]
+            mac = mac.split("-")[1]
+            status = status.split(": ")[1]
+            cluster = self.clusters.get(cluster)
+            print(cluster)
+            if status == 'empty':
+                status = Status.FREE
+            else:
+                status = Status.USED
+            self.db.change_mac_status(cluster, mac, int(status))
+            # macs[each['metric']['instance']] = each['metric']['login']

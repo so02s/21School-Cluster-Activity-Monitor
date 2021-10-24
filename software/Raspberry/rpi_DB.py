@@ -1,9 +1,9 @@
 import sqlite3
 from sqlite3 import Error
-from enum import Enum
+from enum import IntEnum
 from Clusters import Clusters
 
-class Status(Enum):
+class Status(IntEnum):
     FREE = 0
     USED = 1
     COVID = 2
@@ -109,7 +109,7 @@ class ClusterDB:
                     led_index = led_index + 1
             led_index = 0
 
-    # params = (status, mac_id)
+    # params = (status, mac_id, status)
     def change_mac_status(self, cluster, id, status):
         # check if status didn't change
         # return False in this case
