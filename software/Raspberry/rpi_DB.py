@@ -4,10 +4,10 @@ from enum import IntEnum
 from Clusters import Clusters
 
 class Status(IntEnum):
-    FREE = 0
-    USED = 1
-    COVID = 2
-    EXAM = 3
+    FREE = 1
+    USED = 2
+    COVID = 3
+    EXAM = 4
 
 
 class ClusterDB:
