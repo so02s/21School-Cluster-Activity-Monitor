@@ -5,7 +5,7 @@ import time
 #import Adafruit_ADS1x15
 import ADS1x15
 from rpi_DB import Status, ClusterDB
-from STM32 import STM32_addr, STM32_leds
+from STM32 import STM32_addr, STM32_leds, STM32_rooms
 from Grafana import Grafana
 
 config = ConfigParser()
@@ -16,18 +16,27 @@ LUX_100 = MIN_R # Maximum brightness; needs to be calibrated
 LUX_10 = MAX_R # Minimum brightness; needs to be calibrated
 ADC_PIN = int(config.get('settings', 'ADC_PIN')) # GPIO4 on Rpi
 CLUSTERS_NUM = int(config.get('settings', 'CLUSTERS_NUM'))
+COMMAND_SET_BRIGHTNESS = int(config.get('settings', 'COMMAND_SET_BRIGHTNESS'))
+COMMAND_SET_COLORS = int(config.get('settings', 'COMMAND_SET_COLORS'))
+COMMAND_SET_MATRIX = int(config.get('settings', 'COMMAND_SET_MATRIX'))
+COLOR_FREE = int(config.get('settings', 'COLOR_FREE'))
+COLOR_COVID = int(config.get('settings', 'COLOR_COVID'))
+COLOR_EXAM = int(config.get('settings', 'COLOR_EXAM'))
 
 class STM32:
-    def __init__(self, addr, name, leds) -> None:
+    def __init__(self, addr, name, leds, rooms) -> None:
         self.address = addr
         self.name = name
         self.leds_num = leds
+        self.rooms_num = rooms
     def addr(self):
         return self.address
     def name(self):
         return self.name
     def leds(self):
         return self.leds_num
+    def rooms(self):
+        return self.rooms_num
 
 class ADC:
     def __init__(self, pin) -> None:
@@ -69,7 +78,10 @@ class Master:
             cluster_name = self.clusters[stm32]
             i2c_addr = STM32_addr.get(cluster_name)
             leds = STM32_leds.get(cluster_name)
-            self.stm32[stm32] = STM32(i2c_addr, cluster_name, leds)
+            rooms = STM32_rooms.get(cluster_name)
+            self.stm32[stm32] = STM32(i2c_addr, cluster_name, leds, rooms)
+    def init_colors(self):
+        self.construct_packet(cluster, COMMAND_SET_COLORS)
 
     def monitor_clusters(self):
         # parse metrics data for each cluster
@@ -80,24 +92,45 @@ class Master:
             # get number of leds in cluster
             # get value by led id
             print(cluster)
-            self.construct_packet(cluster)
+            #self.construct_packet(cluster, COMMAND_SET_BRIGHTNESS)
+            self.construct_packet(cluster, COMMAND_SET_MATRIX)
     def update_bd(self):
         pass
-    def construct_packet(self, cluster):
+    def construct_packet(self, cluster, cmd):
         stm32 = self.clusters.index(cluster)
         leds = self.stm32[stm32].leds()
-        i2c_array = [None] * (6 + leds)
-        i2c_array[0] = int(Status.FREE)
-        i2c_array[1] = int(Status.USED)
-        i2c_array[2] = int(Status.COVID)
-        i2c_array[3] = int(Status.EXAM)
-        i2c_array[4] = 0 # WTF
-        i2c_array[5] = self.getBrightnessLevel()
-        self.fill_cluster_array(cluster, i2c_array, leds)
+        rooms = self.stm32[stm32].rooms()
+        i2c_array = [None] * (1 + leds + rooms)
+        if cmd == COMMAND_SET_MATRIX:
+            #i2c_array = [None] * (6 + leds)
+            i2c_array[0] = int(COMMAND_SET_MATRIX)
+            #i2c_array[0] = int(Status.FREE)
+            #i2c_array[1] = int(Status.USED)
+            #i2c_array[2] = int(Status.COVID)
+            #i2c_array[3] = int(Status.EXAM)
+            #i2c_array[4] = 0 # WTF
+            #i2c_array[5] = self.getBrightnessLevel()
+            self.fill_cluster_array(cluster, i2c_array, leds, rooms)
+        elif cmd == COMMAND_SET_BRIGHTNESS:
+            i2c_array[0] = int(COMMAND_SET_BRIGHTNESS)
+            i2c_array[1] = self.getBrightnessLevel()
+        elif cmd == COMMAND_SET_COLORS:
+            i2c_array[0] = int(COMMAND_SET_COLORS)
+            i2c_array[1] = COLOR_FREE & 0xff
+            i2c_array[2] = (COLOR_FREE >> 8) & 0xff
+            i2c_array[3] = (COLOR_FREE >> 16) & 0xff
+            i2c_array[4] = COLOR_COVID & 0xff
+            i2c_array[5] = (COLOR_COVID >> 8) & 0xff
+            i2c_array[6] = (COLOR_COVID >> 16) & 0xff
+            i2c_array[7] = COLOR_EXAM & 0xff
+            i2c_array[8] = (COLOR_EXAM >> 8) & 0xff
+            i2c_array[9] = (COLOR_EXAM >> 16) & 0xff
+
         stm32_addr = self.stm32[stm32].addr()
         try:
             self.send_packet(stm32_addr, i2c_array)
         except:
+            print("error sending packet!!!")
             pass
     def send_packet(self, addr, data):
         msg = i2c_msg.write(addr, data)
@@ -105,11 +138,17 @@ class Master:
         #data = data[32:]
         #if len(data) > 0:
         #    self.bus.write_i2c_block_data(addr, 0, data)
-    def fill_cluster_array(self, cluster, data, leds):
+    def fill_cluster_array(self, cluster, data, leds, rooms):
         # import data from db one by one
+        for room in range(0, rooms):
+            data[1+room] = 0
         for led in range(0, leds):
-            data[6+led] = self.db.fetch_cluster_led_status(cluster, led)
+            data[1+rooms+led] = self.db.fetch_cluster_led_status(cluster, led)
+            if not data[1+rooms+led]:
+                data[1+rooms+led] = int(Status.COVID)
+            #data[6+led] = self.db.fetch_cluster_led_status(cluster, led)
         print(data)
+        print(len(data))
         # cluster_data = []
         # cluster_status = self.db.fetch_cluster_led_status(cluster, 3)
         # cluster_data = self.db.fetch_cluster_data(cluster, cluster_data)
@@ -142,5 +181,8 @@ class Master:
 if __name__ == '__main__':
     rpi = Master(CLUSTERS_NUM)
     rpi.init_slaves()
-    rpi.monitor_clusters()
+    #rpi.init_colors()
+    while True:
+        rpi.monitor_clusters()
+        #time.sleep(1)
 
