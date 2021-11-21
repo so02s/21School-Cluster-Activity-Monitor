@@ -20,8 +20,10 @@ COMMAND_SET_BRIGHTNESS = int(config.get('settings', 'COMMAND_SET_BRIGHTNESS'))
 COMMAND_SET_COLORS = int(config.get('settings', 'COMMAND_SET_COLORS'))
 COMMAND_SET_MATRIX = int(config.get('settings', 'COMMAND_SET_MATRIX'))
 COLOR_FREE = int(config.get('settings', 'COLOR_FREE'))
+COLOR_USED = int(config.get('settings', 'COLOR_USED'))
 COLOR_COVID = int(config.get('settings', 'COLOR_COVID'))
 COLOR_EXAM = int(config.get('settings', 'COLOR_EXAM'))
+COLOR_HERE = int(config.get('settings', 'COLOR_HERE'))
 
 class STM32:
     def __init__(self, addr, name, leds, rooms) -> None:
@@ -81,7 +83,9 @@ class Master:
             rooms = STM32_rooms.get(cluster_name)
             self.stm32[stm32] = STM32(i2c_addr, cluster_name, leds, rooms)
     def init_colors(self):
-        self.construct_packet(cluster, COMMAND_SET_COLORS)
+        for cluster in self.clusters:
+            print(cluster)
+            self.construct_packet(cluster, COMMAND_SET_COLORS)
 
     def monitor_clusters(self):
         # parse metrics data for each cluster
@@ -93,6 +97,8 @@ class Master:
             # get value by led id
             print(cluster)
             #self.construct_packet(cluster, COMMAND_SET_BRIGHTNESS)
+            if cluster == 'atrium':
+                continue
             self.construct_packet(cluster, COMMAND_SET_MATRIX)
     def update_bd(self):
         pass
@@ -100,7 +106,7 @@ class Master:
         stm32 = self.clusters.index(cluster)
         leds = self.stm32[stm32].leds()
         rooms = self.stm32[stm32].rooms()
-        i2c_array = [None] * (1 + leds + rooms)
+        i2c_array = [0] * (1 + leds + rooms)
         if cmd == COMMAND_SET_MATRIX:
             #i2c_array = [None] * (6 + leds)
             i2c_array[0] = int(COMMAND_SET_MATRIX)
@@ -116,15 +122,22 @@ class Master:
             i2c_array[1] = self.getBrightnessLevel()
         elif cmd == COMMAND_SET_COLORS:
             i2c_array[0] = int(COMMAND_SET_COLORS)
-            i2c_array[1] = COLOR_FREE & 0xff
-            i2c_array[2] = (COLOR_FREE >> 8) & 0xff
-            i2c_array[3] = (COLOR_FREE >> 16) & 0xff
-            i2c_array[4] = COLOR_COVID & 0xff
-            i2c_array[5] = (COLOR_COVID >> 8) & 0xff
-            i2c_array[6] = (COLOR_COVID >> 16) & 0xff
-            i2c_array[7] = COLOR_EXAM & 0xff
-            i2c_array[8] = (COLOR_EXAM >> 8) & 0xff
-            i2c_array[9] = (COLOR_EXAM >> 16) & 0xff
+            i2c_array[1] = (COLOR_FREE & 0xff0000) >> 16
+            i2c_array[2] = (COLOR_FREE & 0x00ff00) >> 8
+            i2c_array[3] = (COLOR_FREE & 0x0000ff)
+            i2c_array[4] = (COLOR_USED & 0xff0000) >> 16
+            i2c_array[5] = (COLOR_USED & 0x00ff00) >> 8
+            i2c_array[6] = (COLOR_USED & 0x0000ff)
+            i2c_array[7] = (COLOR_COVID & 0xff0000) >> 16
+            i2c_array[8] = (COLOR_COVID & 0x00ff00) >> 8
+            i2c_array[9] = (COLOR_COVID & 0x0000ff)
+            i2c_array[10] = (COLOR_EXAM & 0xff0000) >> 16
+            i2c_array[11] = (COLOR_EXAM & 0x00ff00) >> 8
+            i2c_array[12] = (COLOR_EXAM & 0x0000ff)
+            i2c_array[13] = (COLOR_HERE & 0xff0000) >> 16
+            i2c_array[14] = (COLOR_HERE & 0x00ff00) >> 8
+            i2c_array[15] = (COLOR_HERE & 0x0000ff)
+            print(i2c_array)
 
         stm32_addr = self.stm32[stm32].addr()
         try:
@@ -181,8 +194,8 @@ class Master:
 if __name__ == '__main__':
     rpi = Master(CLUSTERS_NUM)
     rpi.init_slaves()
-    #rpi.init_colors()
+    rpi.init_colors()
     while True:
         rpi.monitor_clusters()
-        #time.sleep(1)
+        time.sleep(0.5)
 

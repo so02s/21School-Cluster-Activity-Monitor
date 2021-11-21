@@ -8,6 +8,7 @@ class Status(IntEnum):
     USED = 2
     COVID = 3
     EXAM = 4
+    HERE = 5
 
 
 class ClusterDB:
