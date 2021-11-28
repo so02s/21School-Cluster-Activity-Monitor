@@ -10,10 +10,12 @@ from Grafana import Grafana
 
 config = ConfigParser()
 config.read('config.ini')
-MAX_R = float(config.get('settings', 'MAX_R')) # KOm
-MIN_R = float(config.get('settings', 'MIN_R')) # KOm
-LUX_100 = MIN_R # Maximum brightness; needs to be calibrated
-LUX_10 = MAX_R # Minimum brightness; needs to be calibrated
+BRIGHT = float(config.get('settings', 'BRIGHT')) # Volt
+DARK = float(config.get('settings', 'DARK')) # Volt
+MAX_LUX = float(config.get('settings', 'MAX_LUX'))
+MIN_LUX = float(config.get('settings', 'MIN_LUX'))
+POWER_FACTOR = (MAX_LUX - MIN_LUX)/(BRIGHT - DARK)
+
 ADC_PIN = int(config.get('settings', 'ADC_PIN')) # GPIO4 on Rpi
 CLUSTERS_NUM = int(config.get('settings', 'CLUSTERS_NUM'))
 COMMAND_SET_BRIGHTNESS = int(config.get('settings', 'COMMAND_SET_BRIGHTNESS'))
@@ -119,7 +121,7 @@ class Master:
             self.fill_cluster_array(cluster, i2c_array, leds, rooms)
         elif cmd == COMMAND_SET_BRIGHTNESS:
             i2c_array[0] = int(COMMAND_SET_BRIGHTNESS)
-            i2c_array[1] = self.getBrightnessLevel()
+            i2c_array[1] = self.get_brightness()
         elif cmd == COMMAND_SET_COLORS:
             i2c_array[0] = int(COMMAND_SET_COLORS)
             i2c_array[1] = (COLOR_FREE & 0xff0000) >> 16
@@ -175,18 +177,17 @@ class Master:
         self.bus.write_byte(address, value)
     def readByte(self, address):
         return self.bus.read_byte(address)
-    def getBrightnessLevel(self):
-        lvl = self.adc.read_pin(self.adc.pin)
-        # lux level processing here
-        lvl = 4
+    def get_brightness(self):
+        volt = self.adc.read_pin(self.adc.pin)
+        lvl = volt * POWER_FACTOR
         return lvl
-    def setBrightness(self, lvl, address):
-        # implement protocol here
-        self.writeByte(address, lvl)
-    def setBrightnessAll(self):
-        lux = self.getBrightnessLevel()
-        for stm in self.stm32:
-            self.setBrightness(stm.address, lux)
+    # def setBrightness(self, lvl, address):
+    #     # implement protocol here
+    #     self.writeByte(address, lvl)
+    # def setBrightnessAll(self):
+    #     lux = self.get_brightness()
+    #     for stm in self.stm32:
+    #         self.setBrightness(stm.address, lux)
 
 
 
