@@ -98,10 +98,13 @@ class Master:
             # get number of leds in cluster
             # get value by led id
             print(cluster)
-            #self.construct_packet(cluster, COMMAND_SET_BRIGHTNESS)
+            self.construct_packet(cluster, COMMAND_SET_BRIGHTNESS)
+            print('sent brightness')
             if cluster == 'atrium':
                 continue
+            time.sleep(0.1)
             self.construct_packet(cluster, COMMAND_SET_MATRIX)
+            print('sent matrix')
     def update_bd(self):
         pass
     def construct_packet(self, cluster, cmd):
@@ -121,7 +124,8 @@ class Master:
             self.fill_cluster_array(cluster, i2c_array, leds, rooms)
         elif cmd == COMMAND_SET_BRIGHTNESS:
             i2c_array[0] = int(COMMAND_SET_BRIGHTNESS)
-            i2c_array[1] = self.get_brightness()
+            i2c_array[1] = int(self.get_brightness())
+            print(i2c_array)
         elif cmd == COMMAND_SET_COLORS:
             i2c_array[0] = int(COMMAND_SET_COLORS)
             i2c_array[1] = (COLOR_FREE & 0xff0000) >> 16
@@ -197,6 +201,9 @@ if __name__ == '__main__':
     rpi.init_slaves()
     rpi.init_colors()
     while True:
-        rpi.monitor_clusters()
-        time.sleep(0.5)
+        try:
+            rpi.monitor_clusters()
+            time.sleep(0.5)
+        except:
+            pass
 

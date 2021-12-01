@@ -18,21 +18,38 @@ class Grafana:
         data_url ='/api/datasources/proxy/1/api/v1/query?query=iMacUser_status{instance=~\".*\"}'
         r = requests.get('%s%s' % (HOST, data_url,), headers=self.headers)
         data = r.json()
-        # macs = {}
         print('getting metrics')
         for each in data['data']['result']:
-            status = each['metric']['instance']+': '+each['metric']['login']
-            # 'am-i2.msk.21-school.ru'
-            mac = status.split(": ")[0].split(".")[0]
+            data = each['metric']['instance']
+            mac = data.split(".")[0]
             cluster = mac.split("-")[0]
             mac = mac.split("-")[1]
-            status = status.split(": ")[1]
+            login = each['metric']['login']
             cluster = self.clusters.get(cluster)
             if cluster == None:
                 continue
-            if status == 'empty':
+            status = Status.USED
+            if login == 'empty':
                 status = Status.FREE
-            else:
-                status = Status.USED
             self.db.change_mac_status(cluster, mac, int(status))
-            # macs[each['metric']['instance']] = each['metric']['login']
+        self.get_exams()
+
+    def get_exams(self):
+        data_url ='/api/datasources/proxy/1/api/v1/query?query=iMacExam_status{instance=~\".*\"}'
+        r = requests.get('%s%s' % (HOST, data_url,), headers=self.headers)
+        data = r.json()
+        print('getting exams')
+        for each in data['data']['result']:
+            if each['value'][1] == '0':
+                continue
+            data = each['metric']['instance']
+            mac = data.split(".")[0]
+            cluster = mac.split("-")[0]
+            mac = mac.split("-")[1]
+            cluster = self.clusters.get(cluster)
+            if cluster == None:
+                continue
+            status = Status.EXAM
+            self.db.change_mac_status(cluster, mac, int(status))
+
+
