@@ -8,8 +8,10 @@ from rpi_DB import Status, ClusterDB
 from STM32 import STM32_addr, STM32_leds, STM32_rooms
 from Grafana import Grafana
 
+C_MODE = 1
+
 config = ConfigParser()
-config.read('config.ini')
+config.read('/home/pi/git/software/Raspberry/config.ini')
 BRIGHT = float(config.get('settings', 'BRIGHT')) # Volt
 DARK = float(config.get('settings', 'DARK')) # Volt
 MAX_LUX = float(config.get('settings', 'MAX_LUX'))
@@ -201,9 +203,9 @@ if __name__ == '__main__':
     rpi.init_slaves()
     rpi.init_colors()
     while True:
-        try:
-            rpi.monitor_clusters()
-            time.sleep(0.5)
-        except:
-            pass
+    #    try:
+        rpi.monitor_clusters()
+        time.sleep(0.5)
+    #except:
+    #        pass
 

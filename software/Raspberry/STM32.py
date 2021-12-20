@@ -1,7 +1,7 @@
 from configparser import ConfigParser
 
 config = ConfigParser()
-config.read('config.ini')
+config.read('/home/pi/git/software/Raspberry/config.ini')
 OASIS_ADDR = int(config.get('settings', 'OASIS_ADDR'))
 MIRAGE_ADDR = int(config.get('settings', 'MIRAGE_ADDR'))
 ILLUSION_ADDR = int(config.get('settings', 'ILLUSION_ADDR'))

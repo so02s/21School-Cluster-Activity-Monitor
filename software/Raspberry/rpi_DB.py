@@ -12,7 +12,7 @@ class Status(IntEnum):
 
 
 class ClusterDB:
-    def __init__(self, db_file=r"db/clusters.db"):
+    def __init__(self, db_file=r"/home/pi/git/software/Raspberry/db/clusters.db"):
         self.conn = None
         try:
             self.conn = sqlite3.connect(db_file)
