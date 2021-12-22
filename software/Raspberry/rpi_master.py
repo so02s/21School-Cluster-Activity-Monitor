@@ -8,7 +8,7 @@ from rpi_DB import Status, ClusterDB
 from STM32 import STM32_addr, STM32_leds, STM32_rooms
 from Grafana import Grafana
 
-C_MODE = 1
+C_MODE = 0
 
 config = ConfigParser()
 config.read('/home/pi/git/software/Raspberry/config.ini')
@@ -87,6 +87,7 @@ class Master:
             rooms = STM32_rooms.get(cluster_name)
             self.stm32[stm32] = STM32(i2c_addr, cluster_name, leds, rooms)
     def init_colors(self):
+        print('sending colors')
         for cluster in self.clusters:
             print(cluster)
             self.construct_packet(cluster, COMMAND_SET_COLORS)
@@ -146,6 +147,7 @@ class Master:
             i2c_array[14] = (COLOR_HERE & 0x00ff00) >> 8
             i2c_array[15] = (COLOR_HERE & 0x0000ff)
             print(i2c_array)
+            print(len(i2c_array))
 
         stm32_addr = self.stm32[stm32].addr()
         try:
