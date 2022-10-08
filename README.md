@@ -24,6 +24,6 @@ Monitor has a map embedded in its graphics. It lights up LEDs, showing which Mac
   * 4 wall plug for fixing main body to wall
 * Front PCB's shield made of polycarbonate sheet
 
-(image of back side)
+<img src="https://user-images.githubusercontent.com/21167984/194715495-54764cdb-93ce-4289-a609-c471bc68dd42.png" width="1000">
 
 Done by team: Ricky, Bomanyte.
