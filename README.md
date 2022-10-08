@@ -8,7 +8,7 @@ Monitor has a map embedded in its graphics. It lights up LEDs, showing which Mac
 * Brightness of the LED is dependant on ambient light level, due to embedded light sensor.
 * It should potentially support extra add-ons.
 
-<img src="https://user-images.githubusercontent.com/21167984/194581257-6767a5d4-8eba-4e4f-b2fb-2148377a2d4b.png" width="1000">
+<img src="https://user-images.githubusercontent.com/21167984/194715884-eefa4da9-a811-40f4-8073-a76de493a41c.png" width="500">
 
 ### Monitor consists of:
 * 5 front PCB's which we call "modules", with school claster names (Atrium, Illusion, Oasis, Atlantis and Mirage)
@@ -24,6 +24,6 @@ Monitor has a map embedded in its graphics. It lights up LEDs, showing which Mac
   * 4 wall plug for fixing main body to wall
 * Front PCB's shield made of polycarbonate sheet
 
-<img src="https://user-images.githubusercontent.com/21167984/194715495-54764cdb-93ce-4289-a609-c471bc68dd42.png" width="1000">
+<img src="https://user-images.githubusercontent.com/21167984/194715888-6aa33f46-0d1b-46da-8069-f2797edd023b.png" width="500">
 
 Done by team: Ricky, Bomanyte.
