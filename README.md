@@ -26,4 +26,12 @@ Monitor has a map embedded in its graphics. It lights up LEDs, showing which Mac
 
 <img src="https://user-images.githubusercontent.com/21167984/194715888-6aa33f46-0d1b-46da-8069-f2797edd023b.png" width="500">
 
+<details><summary>Photos</summary>
+<p>
+
+<img src="Pictures/1.jpg" width="500" title="Mac status monitoring">
+<img src="Pictures/2.jpg" width="500" title="Mac status monitoring">
+</p>
+</details>
+
 Done by team: Ricky, Bomanyte.
