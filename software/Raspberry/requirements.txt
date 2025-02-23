@@ -1,0 +1,5 @@
+smbus2
+decouple
+requests
+betterconf
+dotenv

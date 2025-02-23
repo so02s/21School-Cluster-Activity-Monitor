@@ -11,6 +11,8 @@ class Status(IntEnum):
     HERE = 5
 
 
+# TODO изменить на ORM
+
 class ClusterDB:
     def __init__(self, db_file=r"/home/pi/git/software/Raspberry/db/clusters.db"):
         self.conn = None
@@ -124,4 +126,6 @@ class ClusterDB:
         cur = self.conn.cursor()
         cur.execute(cmd)
         self.conn.commit()
+
+
 

@@ -1,28 +1,32 @@
-from configparser import ConfigParser
+from betterconf import betterconf, Alias
+from dotenv import load_dotenv
 
-config = ConfigParser()
-config.read('/home/pi/git/software/Raspberry/config.ini')
-OASIS_ADDR = int(config.get('settings', 'OASIS_ADDR'))
-MIRAGE_ADDR = int(config.get('settings', 'MIRAGE_ADDR'))
-ILLUSION_ADDR = int(config.get('settings', 'ILLUSION_ADDR'))
-ATLANTIS_ADDR = int(config.get('settings', 'ATLANTIS_ADDR'))
-ATRIUM_ADDR = int(config.get('settings', 'ATRIUM_ADDR'))
+@betterconf
+class STM32_addr_conf():
+    oasis: Alias[int, "OASIS_ADDR"]
+    mirage: Alias[int, "MIRAGE_ADDR"]
+    illusion: Alias[int, "ILLUSION_ADDR"]
+    atlantis: Alias[int, "ATLANTIS_ADDR"]
+    atrium: Alias[int, "ATRIUM_ADDR"]
 
-STM32_addr = {"oasis": OASIS_ADDR, "illusion": ILLUSION_ADDR, "mirage": MIRAGE_ADDR, "atlantis": ATLANTIS_ADDR, "atrium":  ATRIUM_ADDR}
+@betterconf
+class STM32_leds_conf():
+    oasis: Alias[int, "OASIS_LEDS"]
+    mirage: Alias[int, "MIRAGE_LEDS"]
+    illusion: Alias[int, "ILLUSION_LEDS"]
+    atlantis: Alias[int, "ATLANTIS_LEDS"]
+    atrium: Alias[int, "ATRIUM_LEDS"]
 
-OASIS_LEDS = int(config.get('settings', 'OASIS_LEDS'))
-MIRAGE_LEDS = int(config.get('settings', 'MIRAGE_LEDS'))
-ILLUSION_LEDS = int(config.get('settings', 'ILLUSION_LEDS'))
-ATLANTIS_LEDS = int(config.get('settings', 'ATLANTIS_LEDS'))
-ATRIUM_LEDS = int(config.get('settings', 'ATRIUM_LEDS'))
+@betterconf
+class STM32_rooms_conf():
+    oasis: Alias[int, "OASIS_ROOM_COUNT"]
+    mirage: Alias[int, "MIRAGE_ROOM_COUNT"]
+    illusion: Alias[int, "ILLUSION_ROOM_COUNT"]
+    atlantis: Alias[int, "ATLANTIS_ROOM_COUNT"]
+    atrium: Alias[int, "ATRIUM_ROOM_COUNT"]
 
-STM32_leds = {"oasis": OASIS_LEDS, "illusion": ILLUSION_LEDS, "mirage": MIRAGE_LEDS, "atlantis": ATLANTIS_LEDS, "atrium":  ATRIUM_LEDS}
+load_dotenv()
 
-OASIS_ROOM_COUNT = int(config.get('settings', 'OASIS_ROOM_COUNT'))
-MIRAGE_ROOM_COUNT = int(config.get('settings', 'MIRAGE_ROOM_COUNT'))
-ILLUSION_ROOM_COUNT = int(config.get('settings', 'ILLUSION_ROOM_COUNT'))
-ATLANTIS_ROOM_COUNT = int(config.get('settings', 'ATLANTIS_ROOM_COUNT'))
-ATRIUM_ROOM_COUNT = int(config.get('settings', 'ATRIUM_ROOM_COUNT'))
-
-
-STM32_rooms = {"oasis": OASIS_ROOM_COUNT, "illusion": ILLUSION_ROOM_COUNT, "mirage": MIRAGE_ROOM_COUNT, "atlantis": ATLANTIS_ROOM_COUNT, "atrium":  ATRIUM_ROOM_COUNT}
+STM32_addr = STM32_addr_conf()
+STM32_leds = STM32_leds_conf()
+STM32_rooms = STM32_rooms_conf()
