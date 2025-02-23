@@ -104,7 +104,7 @@ class Master:
             i2c_array[4:7] = extract_color(colors.RED)
             i2c_array[7:10] = extract_color(colors.BLUE)
             i2c_array[10:13] = extract_color(colors.PURPLE)
-            i2c_array[13:16] = extract_color(colors.PINK)
+            i2c_array[13:16] = extract_color(colors.WHITE)
             # print(i2c_array)
             # print(len(i2c_array))
 
@@ -166,3 +166,6 @@ def main():
     #     except:
     #         # TODO логи
     #         pass
+
+if __name__ == "__main__":
+    main()

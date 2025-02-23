@@ -12,7 +12,7 @@ class ColorsConfig:
     RED: int
     PURPLE: int
     BLUE: int
-    PINK: int
+    WHITE: int
 
 @betterconf
 class ClustersConfig:
