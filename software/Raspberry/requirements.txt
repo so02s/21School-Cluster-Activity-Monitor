@@ -1,5 +1,6 @@
 smbus2
-decouple
+python-decouple
 requests
 betterconf
 dotenv
+sqlalchemy

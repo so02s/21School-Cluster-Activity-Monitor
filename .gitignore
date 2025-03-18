@@ -27,10 +27,13 @@ fp-info-cache
 
 # token file
 software/Raspberry/credentials.py
-
+creds
 
 .env
 .venv
 
 __pycache__/
 *.pyc
+*.db
+
+test_grafana.py

@@ -8,7 +8,7 @@ class Grafana:
     def __init__(self, db):
         self.db = db
         # self.headers = {'Authorization': f'Bearer {config("API_KEY")}'}
-        self.clusters = {'oa' : 'oasis', 'il' : 'illusion', 'mi' : 'mirage', 'at' : 'atlantis', 'am' : 'atrium'}
+        # self.clusters = {'oa' : 'oasis', 'il' : 'illusion', 'mi' : 'mirage', 'at' : 'atlantis', 'am' : 'atrium'}
     
     # TODO метод для трайбов
     def get_metrics_tribes(self):
