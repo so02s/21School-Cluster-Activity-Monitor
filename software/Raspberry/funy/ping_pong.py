@@ -150,13 +150,18 @@ if __name__ == "__main__":
 # 29 строк
 # 26 столбцов
 
+# на самой доске 401 светодиод
+
 array = [[0 for _ in range(26)] for _ in range(29)]
 
 for x, j in enumerate(array):
     for y, _ in enumerate(j):
-        if (x>3 and x<18) and (y>=0 and y<6):
-            array[x][y] = 1
-        
+        if (x>3 and x<18) and (y>=0 and y<6) or \
+            (x>6 and x<14) and (y>6 and y<12) or \
+            (x> and x<) and (y> and y<):
+                array[x][y] += 1
+
+# (x> and x<) and (y> and y<) or \
 
 for i in array:
     print(i)

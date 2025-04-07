@@ -3,27 +3,27 @@ from dotenv import load_dotenv
 
 @betterconf
 class STM32_addr_conf():
-    oasis: Alias[int, "OASIS_ADDR"]
-    mirage: Alias[int, "MIRAGE_ADDR"]
-    illusion: Alias[int, "ILLUSION_ADDR"]
-    atlantis: Alias[int, "ATLANTIS_ADDR"]
-    atrium: Alias[int, "ATRIUM_ADDR"]
+    oa: Alias[int, "OASIS_ADDR"]
+    mi: Alias[int, "MIRAGE_ADDR"]
+    il: Alias[int, "ILLUSION_ADDR"]
+    at: Alias[int, "ATLANTIS_ADDR"]
+    am: Alias[int, "ATRIUM_ADDR"]
 
 @betterconf
 class STM32_leds_conf():
-    oasis: Alias[int, "OASIS_LEDS"]
-    mirage: Alias[int, "MIRAGE_LEDS"]
-    illusion: Alias[int, "ILLUSION_LEDS"]
-    atlantis: Alias[int, "ATLANTIS_LEDS"]
-    atrium: Alias[int, "ATRIUM_LEDS"]
+    oa: Alias[int, "OASIS_LEDS"]
+    mi: Alias[int, "MIRAGE_LEDS"]
+    il: Alias[int, "ILLUSION_LEDS"]
+    at: Alias[int, "ATLANTIS_LEDS"]
+    am: Alias[int, "ATRIUM_LEDS"]
 
 @betterconf
 class STM32_rooms_conf():
-    oasis: Alias[int, "OASIS_ROOM_COUNT"]
-    mirage: Alias[int, "MIRAGE_ROOM_COUNT"]
-    illusion: Alias[int, "ILLUSION_ROOM_COUNT"]
-    atlantis: Alias[int, "ATLANTIS_ROOM_COUNT"]
-    atrium: Alias[int, "ATRIUM_ROOM_COUNT"]
+    oa: Alias[int, "OASIS_ROOM_COUNT"]
+    mi: Alias[int, "MIRAGE_ROOM_COUNT"]
+    il: Alias[int, "ILLUSION_ROOM_COUNT"]
+    at: Alias[int, "ATLANTIS_ROOM_COUNT"]
+    am: Alias[int, "ATRIUM_ROOM_COUNT"]
 
 load_dotenv()
 

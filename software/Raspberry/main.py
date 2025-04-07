@@ -1,10 +1,10 @@
 import time
 from utils.STM32 import STM32_addr, STM32_leds, STM32_rooms
 from smbus2 import SMBus, i2c_msg
-from utils.Grafana import Grafana
 from utils.settings import STM32_command, clusters_conf, colors
 from utils.colors import extract_color
-from utils.db import ClusterDB
+# from utils.db import ClusterDB
+from utils.school_api import SchoolClient
  
 class STM32:
     def __init__(self, addr, name, leds, rooms) -> None:
@@ -23,25 +23,22 @@ class STM32:
 
 
 class Master:
-    def __init__(self, clusters: list) -> None:
+    def __init__(self, clusters: list, usr: str, psw: str) -> None:
         self.clusters = clusters
         self.num_of_clusters = len(clusters)
 
         # бд для пиров и трайбов
-        self.db = ClusterDB()
+        # self.db = ClusterDB()
         # slaves
         self.stm32: list[STM32] = [None]*self.num_of_clusters
         # для шины i2c (взаимодействие с STM32)
         self.bus = SMBus(1)
-        # общение с prometheus
-        self.grafana = Grafana(self.db)
-        # и взаимодействие с api платформы
+        # взаимодействие с api платформы
+        self.school_cli = SchoolClient(usr, psw)
         
-
         # ADC - АЦП, необходимый для работы фоторезистра. Светодиоды слишком яркие (даже на минимальной яркости)
         # из-за чего отказались от изменения яркости. Но в следующих версиях можно использовать часть кода, расположеную в utils/ADC
         # self.adc = ADC(ADC_PIN)
-
 
     # инициализвация всех STM32 - в каждом модуле по 1
     def init_slaves(self) -> None:
@@ -55,63 +52,47 @@ class Master:
     def init_colors(self) -> None:
         print('sending colors')
         for cluster in self.clusters:
-            # print(cluster)
             self.construct_packet(cluster, STM32_command.set_colors)
 
 
-    def check_occupied_places(self) -> None:
-        pass
+    def refresh_occupied_places(self) -> None:
+        for i, cluster in enumerate(self.clusters):
+            leds = self.stm32[i].leds()
+            rooms = self.stm32[i].rooms()
+            # инициализация данных для отправки на stm
+            i2c_array = [0] * (1 + leds + rooms)
+            # команда на перекрас
+            i2c_array[0] = int(STM32_command.set_matrix)
 
-    def check_tribes(self) -> None:
-        pass
+            # i2c_array[1+rooms+led] = 0
 
-    def send_fill_clusters(self) -> None:
-        pass
+            places: list = self.school_cli.get_map(cluster=cluster)
+            for record in places:
+                # if проверка есть ли такое имя в бд
+                tribe = self.school_cli.get_tribe(record['login'])
+                if tribe[0] == 'A':
+                    col = extract_color(colors.GREEN)
+                elif tribe[0] == 'C':
+                    col = extract_color(colors.RED)
+                elif tribe[0] == 'S':
+                    col = extract_color(colors.PURPLE)
+                elif tribe[0] == 'H':
+                    col = extract_color(colors.BLUE)
+                    
+                led = self.place_to_led(cluster, record['row'], record['number'])
+                i2c_array[1+rooms+led] = col
 
+            self.send_packet(self.stm32[i].addr(), i2c_array)
 
-
-
-
-    def monitor_clusters(self) -> None:
-        # parse metrics data for each cluster
-        # ask bd if any changes per mac (try to change status)
-        # based on return value construct msg to stm, at the end update stm32
-
-
-        # self.grafana.get_metrics() # grafana class updates bd
-        for cluster in self.clusters:
-            # get number of leds in cluster
-            # get value by led id
-            # print(cluster)
-            if cluster == 'atrium':
-                continue
-            time.sleep(0.1)
-            self.construct_packet(cluster, STM32_command.set_matrix)
-            # print('sent matrix')
+            # places_tribes:list = self.db.check_tribes(places)
 
     def construct_packet(self, cluster, cmd) -> None:
         stm32 = self.clusters.index(cluster)
         leds = self.stm32[stm32].leds()
         rooms = self.stm32[stm32].rooms()
         i2c_array = [0] * (1 + leds + rooms)
-        if cmd == STM32_command.set_matrix:
-            #i2c_array = [None] * (6 + leds)
-            i2c_array[0] = int(STM32_command.set_matrix)
-            #i2c_array[0] = int(Status.FREE)
-            #i2c_array[1] = int(Status.USED)
-            #i2c_array[2] = int(Status.COVID)
-            #i2c_array[3] = int(Status.EXAM)
-            #i2c_array[4] = 0 # WTF
-            #i2c_array[5] = self.getBrightnessLevel()
-            self.fill_cluster_array(cluster, i2c_array, leds, rooms)
-
-
-        # elif cmd == STM32_command.set_bright:
-        #     i2c_array[0] = int(STM32_command.set_bright)
-        #     i2c_array[1] = int(self.get_brightness())
-        #     print(i2c_array)
-
-        elif cmd == STM32_command.set_colors:
+        
+        if cmd == STM32_command.set_colors:
             i2c_array[0] = int(STM32_command.set_colors)
             i2c_array[1:4] = extract_color(colors.GREEN)
             i2c_array[4:7] = extract_color(colors.RED)
@@ -131,35 +112,25 @@ class Master:
         msg = i2c_msg.write(addr, data)
         self.bus.i2c_rdwr(msg)
 
-        #data = data[32:]
-        #if len(data) > 0:
-        #    self.bus.write_i2c_block_data(addr, 0, data)
-
-    # def fill_cluster_array(self, cluster, data, leds, rooms):
-    #     for room in range(0, rooms):
-    #         data[1+room] = 0
-    #     for led in range(0, leds):
-    #         data[1+rooms+led] = self.db.fetch_cluster_led_status(cluster, led)
-    #         if not data[1+rooms+led]:
-    #             data[1+rooms+led] = int(Status.COVID)
-    #         #data[6+led] = self.db.fetch_cluster_led_status(cluster, led)
-    #     # print(data)
-    #     # print(len(data))
-    #     # cluster_data = []
-    #     # cluster_status = self.db.fetch_cluster_led_status(cluster, 3)
-    #     # cluster_data = self.db.fetch_cluster_data(cluster, cluster_data)
-    #     # print(cluster_status)
-    #     # print(cluster_data)
-    #     # self.db.change_mac_status(cluster, 'b2', 3)
-    #     # cluster_status = self.db.fetch_cluster_led_status(cluster, 6)
-    #     # print(cluster_status)
-
-
     # Запись в bus? пока не понятно как работает и для чего используется
     def writeByte(self, address, value):
         self.bus.write_byte(address, value)
     def readByte(self, address):
         return self.bus.read_byte(address)
+    
+    def place_to_led(self, cluster, row, number):
+        clusters = {
+            "oa": [['a', 5], ['b', 6], ['c', 6], ['d', 6], ['e', 6], ['f', 6], ['g', 6], ['h', 6], ['i', 6], ['j', 6], ['k', 6], ['l', 6], ['m', 6], ['n', 6], ['o', 4]], 
+            'il' : [['a', 3], ['b', 4], ['c', 4], ['d', 6], ['e', 6], ['f', 6], ['g', 6], ['h', 6], ['i', 6], ['j', 6], ['k', 6]], 
+            'mi': [['a', 6], ['b', 6], ['c', 6], ['d', 6], ['e', 6], ['f', 6], ['g', 6], ['h', 6], ['i', 6], ['j', 6], ['k', 6], ['l', 6], ['m', 6], ['n', 6], ['o', 6], ['p', 6], ['q', 6], ['r', 6], ['s', 6], ['t', 6], ['u', 6], ['v', 6], ['w', 6]], 
+            'at': [['a', 2], ['b', 2], ['c', 3], ['d', 6], ['e', 6], ['f', 6], ['g', 6], ['h', 6], ['i', 7], ['j', 6], ['k', 8], ['l', 8], ['m', 8], ['n', 8], ['o', 9], ['p', 9], ['q', 9], ['r', 8]],
+            'am': [['a', 5]]
+        }
+
+        for i, (r, n) in enumerate(clusters[cluster]):
+            if r == row and n == number:
+                return i
+        return None
     
 
 def main():
@@ -171,14 +142,11 @@ def main():
 
     while True:
         try:
-            rpi.check_occupied_places()
-            rpi.check_tribes()
-            rpi.send_fill_clusters()
-            time.sleep(0.5)
+            rpi.refresh_occupied_places()
+            time.sleep(300)
         except:
             # TODO логи
             pass
-
 
 if __name__ == "__main__":
     main()
