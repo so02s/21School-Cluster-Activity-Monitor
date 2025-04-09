@@ -11,7 +11,6 @@ class SchoolClient:
         self.token = None
         self.refresh_token = None
         self.expires_in = None
-        # self.db = db
         self.clust_keys = {"at": 34715, "il": 34718, "mi": 34719,"oa": 34720}
         self.get_token()
 
@@ -58,7 +57,7 @@ class SchoolClient:
             return response.json()
 
     def get_map(self, cluster: str) -> list:
-        cluster_id = self.clust_keys.get()
+        cluster_id = self.clust_keys.get(cluster)
         if cluster_id is None: return
         request = f'/v1/clusters/{cluster_id}/map'
         params = {'occupied': True, 'limit': 140}
