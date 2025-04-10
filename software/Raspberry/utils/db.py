@@ -23,9 +23,10 @@ class User(Base):
 from sqlalchemy import create_engine, inspect
 from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy.exc import SQLAlchemyError
+from decouple import config
 
 class DatabaseManager:
-    def __init__(self, db_url="sqlite:///peer.db"):
+    def __init__(self, db_url=config("DATABASE_URL")):
         self.engine = create_engine(db_url)
         self.Session = scoped_session(sessionmaker(bind=self.engine))
         self.inspector = inspect(self.engine)
