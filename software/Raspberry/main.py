@@ -85,7 +85,7 @@ class Master:
 
             # ALPACAS, CAPYBARS, SALAMANDRAS, HONEYBEARS
             tribe_colors = {'A': 1, 'C': 2, 'S': 4, 'H': 3}
-            col = tribe_colors.get(tribe[0], 0)
+            col = tribe_colors.get(tribe, 0)
 
             led = self.place_to_led(cluster, record['row'], record['number'])
             i2c_array[1+rooms+led] = col
@@ -156,15 +156,23 @@ def main():
     )
     rpi.init_slaves()
     rpi.init_colors()
+    
+    failed_attempts = 0
+    max_failed_attempts = 5
+
     while True:
         try:
             rpi.refresh_occupied_places()
+            failed_attempts = 0
         except KeyboardInterrupt:
             print("Программа прервана пользователем")
             sys.exit(0)
         except Exception as e:
-            logger.error(e)
-        time.sleep(120)
+            failed_attempts += 1
+            logger.error(f"Ошибка (попытка {failed_attempts}/{max_failed_attempts}): {e}")
+            if failed_attempts >= max_failed_attempts:
+                logger.critical(f"Достигнуто максимальное количество ошибок ({max_failed_attempts}). Программа остановлена.")
+        time.sleep(1500)
 
 
 if __name__ == "__main__":

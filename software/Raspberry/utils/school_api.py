@@ -1,17 +1,20 @@
 import time
 import requests
+from requests.structures import CaseInsensitiveDict
 
 class SchoolClient:
     def __init__(self, username: str, password: str):
-        self.url = "https://edu-api.21-school.ru/services/21-school/api"
-        self.auth_url = "https://auth.sberclass.ru/auth/realms/EduPowerKeycloak/protocol/openid-connect/token"
+        self.url = "https://platform.21-school.ru/services/21-school/api"
+        self.auth_url = "https://auth.21-school.ru/auth/realms/EduPowerKeycloak/protocol/openid-connect/token"
+        self.headers = CaseInsensitiveDict()
+        self.headers["Content-Type"] = "application/x-www-form-urlencoded"
         self.client_id = 's21-open-api'
         self.username = username
         self.password = password
         self.token = None
         self.refresh_token = None
         self.expires_in = None
-        self.clust_keys = {"at": 34715, "il": 34718, "mi": 34719,"oa": 34720}
+        self.clust_keys = {"at": 37074, "il": 34718, "mi": 34719,"oa": 34720}
         self.get_token()
 
     def get_token(self):
@@ -21,7 +24,7 @@ class SchoolClient:
             "grant_type": "password",
             "client_id": self.client_id
         }
-        response = requests.post(self.auth_url, data=auth_data)
+        response = requests.post(self.auth_url, data=auth_data, headers=self.headers)
         if response.status_code == 200:
             token_data = response.json()
             self.token = token_data["access_token"]
