@@ -80,8 +80,8 @@ class Master:
         for record in places:
             tribe = self.db.get_user_tribe(record['login'])
             if not tribe:
-                tribe = self.school_cli.get_tribe(record['login'])
-                os.sleep(5)
+                tribe = self.school_cli.get_tribe_with_retry(record['login'])
+                # os.sleep(5)
                 print(tribe)
                 self.db.add_user(record['login'], tribe)
 

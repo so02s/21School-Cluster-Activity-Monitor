@@ -37,7 +37,7 @@ class SchoolClient:
 
     def get_token(self, refresh_token: str = None) -> None:
         """
-        Получение токена (и обновление, если предоставлен refresh_token)
+        Get token (or refresh, if has refresh_token)
         """
         if refresh_token:
             auth_data = {
@@ -79,12 +79,12 @@ class SchoolClient:
         elif response.status_code == 200:
             return response.json()
         else:
-            print(f"Ошибка {response.status_code}: {response.text}")
+            print(f"Error {response.status_code}: {response.text}")
             return {"error": response.status_code, "message": response.text}
 
     def get_map(self, cluster: str) -> list:
         """
-        Получение пиров, которые сидят в трайбе
+        Get peers from cluster
         """
         cluster_id = self.clust_keys.get(cluster)
         if cluster_id is None: return
@@ -95,28 +95,45 @@ class SchoolClient:
 
     def get_tribe(self, login: str) -> str:
         """
-        Получение названия трайба
+        Get tribe name
         """
         request = f'/v1/participants/{login}/coalition'
         r = self.get('%s%s' % (self.url, request))
         return r['name']
+    
+    def get_tribe_with_retry(self, login: str, retry: int = 3):
+        """
+        Get tribe name with retry
+        """
+        for attempt in range(retry):
+            try:
+                tribe = self.get_tribe(login)
+                return tribe
+            except Exception as e:
+                if "rate limit" in str(e).lower() or getattr(e, 'status', 0) == 429:
+                    wait = 2 ** attempt
+                    time.sleep(wait)
+                else:
+                    raise
+        return None
+
 
     def is_token_expired(self) -> bool:
         """
-        Проверка на истек ли срок токена
+        Check if token expired
         """
         return time.time() > self.expires_in
     
     def close(self) -> None:
         """
-        Закрытие сессии
+        Close session
         """
         if hasattr(self, 'session'):
             self.session.close()
-            print("Сессия закрыта")
+            print("Session close")
 
     def __exit__(self, exc_type, exc_val, exc_tb) -> None:
         """
-        Деструктор с закрытием сессии
+        close session in destructor
         """
         self.close()
