@@ -127,6 +127,19 @@ class DatabaseManager:
         finally:
             session.close()
 
+    def delete_all_users(self) -> int:
+        """Удаляет всех пользователей из таблицы users"""
+        session = self.Session()
+        try:
+            deleted = session.query(User).delete()
+            session.commit()
+            return deleted
+        except SQLAlchemyError as e:
+            session.rollback()
+            raise e
+        finally:
+            session.close()
+
     def get_all_users(self):
         """Получает всех пользователей"""
         session = self.Session()
