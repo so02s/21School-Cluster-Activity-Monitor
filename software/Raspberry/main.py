@@ -45,7 +45,7 @@ class Master:
         # slaves
         self.stm32: list[STM32] = [None]*self.num_of_clusters
         # для шины i2c (взаимодействие с STM32)
-        self.bus = SMBus(1)
+        # self.bus = SMBus(1)
         # взаимодействие с api платформы
         self.school_cli = SchoolClient(usr, psw)
         
@@ -81,12 +81,14 @@ class Master:
             tribe = self.db.get_user_tribe(record['login'])
             if not tribe:
                 tribe = self.school_cli.get_tribe(record['login'])
+                os.sleep(5)
+                print(tribe)
                 self.db.add_user(record['login'], tribe)
 
             # ALPACAS, CAPYBARS, SALAMANDRAS, HONEYBEARS
             tribe_colors = {'A': 1, 'C': 2, 'S': 4, 'H': 3}
             col = tribe_colors.get(tribe, 0)
-
+            print(record['row'], record['number'])
             led = self.place_to_led(cluster, record['row'], record['number'])
             i2c_array[1+rooms+led] = col
         # print(i2c_array)
