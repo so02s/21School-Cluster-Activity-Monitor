@@ -79,6 +79,7 @@ class SchoolClient:
         elif response.status_code == 200:
             return response.json()
         else:
+            print(responce)
             print(f"Error {response.status_code}: {response.text}")
             return {"error": response.status_code, "message": response.text}
 

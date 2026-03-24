@@ -42,6 +42,7 @@ class Master:
 
         # бд для пиров и трайбов
         self.db = DatabaseManager()
+        # self.db.delete_all_users()
         # slaves
         self.stm32: list[STM32] = [None]*self.num_of_clusters
         # для шины i2c (взаимодействие с STM32)
@@ -63,32 +64,33 @@ class Master:
 
     # инициализация цвета во всех модулях
     def init_colors(self) -> None:
-        print('sending colors')
+        # print('sending colors')
         for cluster in self.clusters:
             self.construct_packet(cluster, settings.STM32_command.set_colors)
 
 
     def refresh_occupied_places(self) -> None:
-        print('setting matrix')
+        # print('setting matrix')
         for i, cluster in enumerate(self.clusters):
             if cluster == 'am': continue
             self.construct_packet(cluster, settings.STM32_command.set_matrix)
 
     def check_api(self, cluster: str, i2c_array: list[int], rooms: int) -> None:
         places: list = self.school_cli.get_map(cluster=cluster)
+        # print("check apiiiiii")
 
         for record in places:
             tribe = self.db.get_user_tribe(record['login'])
             if not tribe:
-                tribe = self.school_cli.get_tribe_with_retry(record['login'])
-                # os.sleep(5)
-                print(tribe)
+                tribe = self.school_cli.get_tribe(record['login'])
+                time.sleep(1)
+                # print(tribe)
                 self.db.add_user(record['login'], tribe)
-
+            # print(tribe)
             # ALPACAS, CAPYBARS, SALAMANDRAS, HONEYBEARS
-            tribe_colors = {'A': 1, 'C': 2, 'S': 4, 'H': 3}
+            tribe_colors = {'Alpacas': 1, 'Capybaras': 2, 'Salamanders': 4, 'Honeybadgers': 3}
             col = tribe_colors.get(tribe, 0)
-            print(record['row'], record['number'])
+            #print(record['row'], record['number'])
             led = self.place_to_led(cluster, record['row'], record['number'])
             i2c_array[1+rooms+led] = col
         # print(i2c_array)
@@ -174,6 +176,7 @@ def main():
             logger.error(f"Ошибка (попытка {failed_attempts}/{max_failed_attempts}): {e}")
             if failed_attempts >= max_failed_attempts:
                 logger.critical(f"Достигнуто максимальное количество ошибок ({max_failed_attempts}). Программа остановлена.")
+        print("it's okay")
         time.sleep(1500)
 
 
